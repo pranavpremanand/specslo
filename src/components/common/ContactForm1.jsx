@@ -6,11 +6,13 @@ const ContactForm1 = () => {
   return (
     <div className="relative pt-14 pb-4 overflow-hidden">
       <img
+        loading="lazy"
         src={circleImg}
         className="z-[-1] absolute top-[-2rem] left-[-2rem] w-[18rem] h-[18rem] object-contain aspect-square"
         alt=""
       />
       <img
+        loading="lazy"
         src={circleImg}
         className="absolute bottom-1/4 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
         alt=""
@@ -28,27 +30,19 @@ const ContactForm1 = () => {
         <div className="lg:pt-8 grid lg:grid-cols-[55%_1fr]">
           <div className="flex flex-col justify-end h-full">
             <img
+              loading="lazy"
               src={contactImg}
               className="object-contain h-full aspect-[6/5]"
               alt="Contact Us"
             />
           </div>
           <form className="p-5 sm:p-8 border-2 border-primary flex flex-col items-center space-y-5 rounded-xl">
-            <div className="grid sm:grid-cols-2 gap-5 w-full">
-              <div className="flex flex-col gap-1 w-full">
-                <label className="text-sm">First Name</label>
-                <input
-                  type="text"
-                  className="outline-none p-3 bg-white text-black rounded-lg w-full"
-                />
-              </div>
-              <div className="flex flex-col gap-1 w-full">
-                <label className="text-sm">Last Name</label>
-                <input
-                  type="text"
-                  className="outline-none p-3 bg-white text-black rounded-lg w-full"
-                />
-              </div>
+            <div className="flex flex-col gap-1 w-full">
+              <label className="text-sm">Full Name</label>
+              <input
+                type="text"
+                className="outline-none p-3 bg-white text-black rounded-lg w-full"
+              />
             </div>
             <div className="grid sm:grid-cols-2 gap-5 w-full">
               <div className="flex flex-col gap-1 w-full">

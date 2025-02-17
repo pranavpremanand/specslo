@@ -7,6 +7,7 @@ const IndustriesSection = () => {
     <section className="max-h-fit bg-[#242424] relative -z-[1] overflow-hidden">
       <div className="pt-14 wrapper">
         <img
+          loading="lazy"
           src={moonShapeImg}
           width={400}
           height={400}
@@ -14,6 +15,7 @@ const IndustriesSection = () => {
           alt=""
         />
         <img
+          loading="lazy"
           src={moonShapeImg}
           width={400}
           height={400}
@@ -21,6 +23,7 @@ const IndustriesSection = () => {
           alt=""
         />
         <img
+          loading="lazy"
           src={circleImg}
           width={150}
           height={150}
@@ -40,6 +43,7 @@ const IndustriesSection = () => {
             <div className="relative backdrop-blur-lg space-y-5 border border-white/20 p-5 rounded-[1rem] shadow-large shadow-black/20 hover:bg-black transition-all duration-500">
               <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10">
                 <img
+                  loading="lazy"
                   alt={item.title}
                   src={item.image}
                   width={50}
@@ -65,6 +69,7 @@ const IndustriesSection = () => {
               >
                 <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10">
                   <img
+                    loading="lazy"
                     alt={item.title}
                     src={item.image}
                     width={50}

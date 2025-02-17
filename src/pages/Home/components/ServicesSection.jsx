@@ -7,7 +7,7 @@ import { useKeenSlider } from "keen-slider/react";
 const animation = { duration: 40000, easing: (t) => t };
 
 const ServicesSection = () => {
-  const [sliderRef,instanceRef] = useKeenSlider({
+  const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     renderMode: "performance",
     drag: true,
@@ -47,17 +47,17 @@ const ServicesSection = () => {
     },
   });
 
-  const prevClick = ()=>{
-    if(instanceRef.current){
-      instanceRef.current.prev()
+  const prevClick = () => {
+    if (instanceRef.current) {
+      instanceRef.current.prev();
     }
-  }
+  };
 
-  const nextClick = ()=>{
-    if(instanceRef.current){
-      instanceRef.current.next()
+  const nextClick = () => {
+    if (instanceRef.current) {
+      instanceRef.current.next();
     }
-  }
+  };
   return (
     <div className="bg-white text-black py-14">
       <div className="py-3 border-y border-y-black/20">
@@ -65,7 +65,7 @@ const ServicesSection = () => {
           <p className="uppercase">services</p>
           <Link>
             <BsArrowRight
-              className="text-primaryDim"
+              className="text-primary1"
               strokeWidth={0.5}
               size={30}
             />
@@ -74,20 +74,26 @@ const ServicesSection = () => {
       </div>
       <div className="wrapper pt-20 grid md:grid-cols-[40%_1fr] gap-6">
         <div className="relative space-y-4">
-          <div className="w-[7rem] h-[7rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div>
+          <div className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div>
           <div className="flex items-center gap-4 z-[2] relative">
-            <div className="h-[2px] w-[4rem] bg-primaryDim"></div>
+            <div className="h-[2px] w-[4rem] bg-primary1"></div>
             <p className="font-semibold uppercase">our services</p>
           </div>
           <h2 className="text1 z-[2] relative">
-            Some <br /> <span className="text-primaryDim">Services</span> <br />{" "}
+            Some <br /> <span className="text-primary1">Services</span> <br />{" "}
             We provide
           </h2>
           <div className="flex gap-5 z-[2] relative">
-            <button onClick={prevClick} className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-black text-gray-500 btn hover:bg-primary hover:text-black">
+            <button
+              onClick={prevClick}
+              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-black text-gray-500 btn hover:bg-primary hover:text-black"
+            >
               <GoArrowLeft size={35} />
             </button>
-            <button onClick={nextClick} className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-white border-2 border-primaryDim text-black btn hover:bg-primaryDim">
+            <button
+              onClick={nextClick}
+              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-white border-2 border-primary1 text-black btn hover:bg-primary1"
+            >
               <GoArrowRight size={35} />
             </button>
           </div>
@@ -98,6 +104,7 @@ const ServicesSection = () => {
               <img
                 src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
                 alt=""
+                loading="lazy"
                 className="aspect-[19/9] object-cover rounded-xl"
               />
               <div className="space-y-2 pt-3">
@@ -109,7 +116,7 @@ const ServicesSection = () => {
                   seamless online presence.
                 </p>
                 <div className="pt-3">
-                  <Link className="btn border border-primaryDim text-black uppercase hover:bg-primaryDim">
+                  <Link className="btn border border-primary1 text-black uppercase hover:bg-primary1">
                     Read More
                   </Link>
                 </div>

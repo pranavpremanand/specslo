@@ -10,7 +10,8 @@ export const websiteLinks = [
   { id: 1, title: "Home", url: "/" },
   { id: 2, title: "About Specslo", url: "/about-us" },
   { id: 3, title: "Services", url: "/services" },
-  { id: 4, title: "Contact", url: "/contact-us" },
+  { id: 4, title: "Healthcare Solutions", url: "/healthcare" },
+  { id: 5, title: "Contact", url: "/contact-us" },
 ];
 
 const Header = () => {
@@ -41,21 +42,21 @@ const Header = () => {
             {websiteLinks.map((link) => (
               <Link
                 key={link.id}
-                href={link.url}
+                to={link.url}
                 className={`${
-                  pathname === link.url ? "" : "text-white"
-                } uppercase text-sm font-`}
+                  pathname === link.url ? "text-primary" : "text-white"
+                } uppercase text-sm link`}
               >
                 {link.title}
               </Link>
             ))}
           </div>
           <div className="hidden md:flex">
-            <Link href="/" className="relative w-[70px] h-[70px]">
-              <div className="z-[1] flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2 h-[31px] w-full bg-[#E41B23] rounded-[6px] text-sm">
+            <Link href="/" className="group relative w-[70px] h-[70px]">
+              <div className="group-hover:bg-[#b81e23] z-[1] flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2 h-[31px] w-full bg-[#E41B23] rounded-[6px] text-sm transition duration-300">
                 Call Us
               </div>
-              <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[31px] h-full bg-[#E41B23] rounded-[6px]"></div>
+              <div className="group-hover:bg-[#b81e23] absolute left-1/2 top-0 -translate-x-1/2 w-[31px] h-full bg-[#E41B23] rounded-[6px] transition duration-300"></div>
             </Link>
           </div>
 
@@ -81,7 +82,7 @@ const Header = () => {
               <Link
                 key={id}
                 className="text-3xl text-white font-medium transition-colors duration-300 link"
-                href={url}
+                to={url}
                 onClick={toggleDrawer}
               >
                 {title}

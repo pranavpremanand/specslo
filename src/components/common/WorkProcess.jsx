@@ -36,11 +36,13 @@ const WorkProcess = () => {
         src={circleImg}
         className="z-[-1] absolute top-[2rem] left-[-2rem] w-[18rem] h-[18rem] object-contain aspect-square"
         alt=""
+        loading="lazy"
       />
       <img
         src={circleImg}
         className="absolute bottom-0 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
         alt=""
+        loading="lazy"
       />
       <div className="wrapper space-y-3">
         <h3 className="text1 text-center">
@@ -62,7 +64,7 @@ const WorkProcess = () => {
               flex flex-col gap-3 p-5 sm:p-8 rounded-2xl border-2 border-white/40 
               transition-colors duration-500 sm:w-[calc(50%-1.5rem)] lg:w-[calc(33.5%-1.5rem)]"
             >
-              <h4 className="text3 text-primaryDim group-hover:text-white">
+              <h4 className="text3 text-primary1 group-hover:text-white">
                 {item.title}
               </h4>
               <p className="text-[#FEFEFE] group-hover:text-[#D6D6A6]">
