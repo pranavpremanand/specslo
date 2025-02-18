@@ -117,7 +117,7 @@ const ServicesSection = () => {
                     seamless online presence.
                   </p>
                   <div className="pt-3">
-                    <Link className="btn border border-primary1 text-black uppercase hover:bg-primary1">
+                    <Link to="/service-details" className="btn border border-primary1 text-black uppercase hover:bg-primary1">
                       Read More
                     </Link>
                   </div>
