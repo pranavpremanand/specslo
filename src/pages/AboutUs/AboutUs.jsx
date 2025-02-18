@@ -69,20 +69,56 @@ const AboutUs = () => {
           <div className="h-2 w-[18rem] bg-white"></div>
         </div>
         <div className="pt-12">
-          {["Quality First", "Your Peace of Mind", "Security Built-In"].map(
-            (text) => (
-              <div
-                key={text}
-                className="py-7 border-t last:border-b border-primary2"
-              >
-                <p className="text2 text-center">{text}</p>
+          {[
+            {
+              title: "Quality First",
+              image: require("../../assets/images/Quality First.jpeg"),
+              content: `Every Specslo solution undergoes rigorous testing to ensure reliability, speed, and userfriendliness. Our specs-driven quality process includes: 
+
+- Automated & Manual Testing: For smooth and reliable performance. 
+- Usability Checks: Ensuring intuitive functionality aligned with your specs.
+- Continuous Optimization: Ongoing improvements to match evolving specifications.`,
+            },
+            {
+              title: "Your Peace of Mind",
+              image: require("../../assets/images/Your Peace of Mind.png"),
+              content: `At Specslo, your specs guide every aspect of our commitment to quality and security. We deliver solutions that empower your business with:
+
+- Dependable Outcomes: Built for consistency and reliability.
+- Enhanced Protection: Comprehensive data security at every step. 
+- Trusted Support: Confidence in Specslo’s commitment to your long-term success.`,
+            },
+            {
+              title: "Security Built-In",
+              image: require("../../assets/images/Security Built-In.png"),
+              content: `We prioritize safeguarding your specs with: 
+              
+ - Data Encryption: Secures sensitive information.
+ - Access Control: Ensures only authorized access.
+- Security Audits: Identifies and mitigates vulnerabilities.`,
+            },
+          ].map((item) => (
+            <div
+              key={item.title}
+              className="py-7 border-t group last:border-b border-primary2 flex items-center justify-center gap-4"
+            >
+              <p className="text2 text-center group-hover:text-primary2 pr-12">
+                {item.title}
+              </p>
+              <img
+                src={item.image}
+                alt={item.title}
+                className="opacity-0 group-hover:opacity-100 w-0 group-hover:w-[15rem] h-0 group-hover:h-fit transition-all duration-500 aspect-square object-cover -rotate-12 border-4 border-primary"
+              />
+              <div className="opacity-0 group-hover:opacity-100 hidden group-hover:block whitespace-pre-line max-w-[30rem] pl-12">
+                {item.content}
               </div>
-            )
-          )}
+            </div>
+          ))}
         </div>
       </section>
       <section className="py-14 relative bg-white text-black overflow-hidden z-0">
-        <div className="absolute z-[-1] top-[-3rem] lef-[-3rem] h-[18rem] w-[12rem] bg-primary rounded-ee-full"></div>
+        <div className="absolute z-[-1] top-[-3rem] left-[-3rem] h-[18rem] w-[12rem] bg-primary rounded-ee-full"></div>
         <div className="wrapper flex flex-col items-center gap-3">
           <h2 className="text1 max-w-3xl text-center">
             Client Engagement & Support: Specslo's Commitment to You
@@ -257,7 +293,7 @@ const AboutUs = () => {
             {futureGoals.map((item) => (
               <div
                 key={item.title}
-                className="bg-black text-start text-white rounded-xl p-7 space-y-3"
+                className="bg-black hover:bg-primary hover:text-black text-start text-white rounded-xl p-7 space-y-3 transition-all duration-300"
               >
                 <div className="pb-7 text-primary">{item.icon}</div>
                 <h6 className="text3">{item.title}</h6>

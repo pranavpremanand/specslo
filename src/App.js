@@ -5,6 +5,7 @@ import AboutUs from "./pages/AboutUs/AboutUs";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import Services from "./pages/Services/Services";
 import Healthcare from "./pages/Healthcare/Healthcare";
+import ServiceDetails from "./pages/ServiceDetails/ServiceDetails";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="contact-us" element={<ContactUs />} />
           <Route path="services" element={<Services />} />
           <Route path="healthcare" element={<Healthcare />} />
+          <Route path="service-details" element={<ServiceDetails />} />
         </Route>
       </Routes>
     </BrowserRouter>

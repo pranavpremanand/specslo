@@ -37,10 +37,10 @@ html {
     @apply text-[1.05rem] sm:text-[1.10rem] font-bold leading-tight;
   }
   .desc {
-    @apply text-base font-light leading-relaxed;
+    @apply text-base leading-relaxed;
   }
   .btn {
-    @apply p-3 text-sm text-center rounded-full transition-all duration-500;
+    @apply cursor-pointer p-3 text-sm text-center rounded-full transition-all duration-500;
   }
   .link {
     @apply hover:text-primary;

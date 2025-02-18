@@ -14,6 +14,7 @@
     "react-modern-drawer": "^1.4.0",
     "react-router-dom": "^7.1.5",
     "react-scripts": "5.0.1",
+    "react-scroll": "^1.9.2",
     "react-swiper": "^0.1.5",
     "slider": "^1.0.4",
     "swiper": "^11.2.4",

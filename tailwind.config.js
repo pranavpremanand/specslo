@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#FEFF05",
-        primary1: "#E5E608",
+        primary1: "#DFDE02",
         primary2: "#FFD63C",
       },
       boxShadow: {

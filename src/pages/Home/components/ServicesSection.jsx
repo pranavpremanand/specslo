@@ -100,25 +100,27 @@ const ServicesSection = () => {
         </div>
         <div ref={sliderRef} className="keen-slider md:!w-[60vw] py-10 md:px-2">
           {[2, 4, 4, 5, 6, 76].map((item) => (
-            <div className="keen-slider__slide bg-[#eeefef] border border-white shadow-large shadow-black/20 p-7 rounded-xl space-y-3">
-              <img
-                src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
-                alt=""
-                loading="lazy"
-                className="aspect-[19/9] object-cover rounded-xl"
-              />
-              <div className="space-y-2 pt-3">
-                <h6 className="text4">Web Development</h6>
-                <p className="desc">
-                  Build sleek, responsive, and user-friendly websites that
-                  captivate your audience. From custom designs to scalable
-                  e-commerce platforms, our web development team ensures a
-                  seamless online presence.
-                </p>
-                <div className="pt-3">
-                  <Link className="btn border border-primary1 text-black uppercase hover:bg-primary1">
-                    Read More
-                  </Link>
+            <div className="keen-slider__slide rounded-2xl">
+              <div className="bg-[#eeefef] border border-white shadow-large p-7 rounded-xl space-y-3 hover:bg-primary1 transition-all duration-300 shadow-black/20">
+                <img
+                  src="https://letsenhance.io/static/73136da51c245e80edc6ccfe44888a99/1015f/MainBefore.jpg"
+                  alt=""
+                  loading="lazy"
+                  className="aspect-[19/9] object-cover rounded-xl"
+                />
+                <div className="space-y-2 pt-3">
+                  <h6 className="text4">Web Development</h6>
+                  <p className="desc">
+                    Build sleek, responsive, and user-friendly websites that
+                    captivate your audience. From custom designs to scalable
+                    e-commerce platforms, our web development team ensures a
+                    seamless online presence.
+                  </p>
+                  <div className="pt-3">
+                    <Link className="btn border border-primary1 text-black uppercase hover:bg-primary1">
+                      Read More
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

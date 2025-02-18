@@ -74,13 +74,13 @@ export default function Home() {
             </h5>
             <div className="flex gap-10 pt-4">
               <Link
-                to="/"
+                to="/about-us"
                 className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white"
               >
                 About Us
               </Link>
               <Link
-                to="/"
+                to="/contact-us"
                 className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white"
               >
                 Quick Inquiry
@@ -94,7 +94,7 @@ export default function Home() {
               width={500}
               height={600}
               alt=""
-              className="w-full h-full object-contain"
+              className="max-w-[20rem] md:max-w-max mx-auto w-full h-full object-contain"
               placeholder="blur"
             />
           </div>

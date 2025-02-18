@@ -1,17 +1,16 @@
 import React from "react";
-import { circleImg, industries } from "../../data/constant";
-import moonShapeImg from "../../assets/images/yellow-moon-shape.png";
+import { circleImg, industries, moonShapeImg } from "../../data/constant";
 
 const IndustriesSection = () => {
   return (
-    <section className="max-h-fit bg-[#242424] relative -z-[1] overflow-hidden">
+    <section className="max-h-fit bg-[#242424] relative overflow-hidden">
       <div className="pt-14 wrapper">
         <img
           loading="lazy"
           src={moonShapeImg}
           width={400}
           height={400}
-          className="object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] -z-[1]"
+          className="object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] -z-0"
           alt=""
         />
         <img
@@ -36,12 +35,12 @@ const IndustriesSection = () => {
         </h2>
       </div>
       <div className="relative h-full pb-7 xl:pb-10">
-        <div className="z-[-1] absolute top-0 h-1/2 w-full"></div>
-        <div className="z-[-1] absolute top-1/2 h-1/2 w-full bg-black"></div>
+        <div className="z-0 absolute top-0 h-1/2 w-full"></div>
+        <div className="z-0 absolute top-1/2 h-1/2 w-full bg-black"></div>
         <div className="wrapper grid sm:grid-cols-2 xl:grid-cols-4 gap-7 pt-10">
           {industries.slice(0, 4).map((item) => (
-            <div className="relative backdrop-blur-lg space-y-5 border border-white/20 p-5 rounded-[1rem] shadow-large shadow-black/20 hover:bg-black transition-all duration-500">
-              <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10">
+            <div className="relative group backdrop-blur-lg space-y-5 border border-white/20 p-5 rounded-[1rem] shadow-large shadow-black/20 hover:bg-primary hover:text-black transition-all duration-500">
+              <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10 group-hover:bg-black group-hover:border-white transition-all duration-500">
                 <img
                   loading="lazy"
                   alt={item.title}
@@ -52,7 +51,9 @@ const IndustriesSection = () => {
                 />
               </div>
               <h6 className="text4">{item.title}</h6>
-              <p className="desc text-[#A4B4C3]">{item.desc}</p>
+              <p className="desc text-[#A4B4C3] group-hover:text-black">
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
@@ -63,11 +64,8 @@ const IndustriesSection = () => {
           <div className="z-[-1] absolute top-1/2 h-2/3 w-full bg-black"></div>
           <div className="wrapper grid sm:grid-cols-2 xl:grid-cols-3 xl:max-w-5xl gap-7 xl:pt-4">
             {industries.slice(4, 7).map((item) => (
-              <div
-                key={item.id}
-                className="sm:last:col-span-2 sm:last:w-1/2 xl:last:col-span-1 xl:last:w-full mx-auto backdrop-blur-lg space-y-5 border border-white/20 p-5 rounded-[1rem] shadow-large shadow-black/20"
-              >
-                <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10">
+              <div className="relative group backdrop-blur-lg space-y-5 border border-white/20 p-5 rounded-[1rem] shadow-large shadow-black/20 hover:bg-primary hover:text-black transition-all duration-500">
+                <div className="bg-white/5 flex justify-center items-center w-[3rem] h-[3rem] rounded-full border-2 border-white/10 group-hover:bg-black group-hover:border-white transition-all duration-500">
                   <img
                     loading="lazy"
                     alt={item.title}
@@ -78,7 +76,7 @@ const IndustriesSection = () => {
                   />
                 </div>
                 <h6 className="text4">{item.title}</h6>
-                <p className="desc text-[#A4B4C3]">{item.desc}</p>
+                <p className="desc text-[#A4B4C3] group-hover:text-black">{item.desc}</p>
               </div>
             ))}
           </div>
