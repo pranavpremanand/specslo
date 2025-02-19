@@ -76,19 +76,19 @@ const ServicesSlider = ({ service, data }) => {
           </div>
           <h2 data-aos="fade-right" className="text1 z-[2] relative">
             Our <br />
-            <span className="text-primary1">{service} Development</span> <br />
+            <span className="text-primary">{service} Development</span> <br />
             Services
           </h2>
           <div data-aos="fade-right" className="flex gap-5 z-[2] relative">
             <button
               onClick={prevClick}
-              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-black border-2 border-primary1 text-gray-500 btn hover:bg-primary hover:text-black"
+              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-black border-2 border-primary text-gray-500 btn hover:bg-primary hover:text-black"
             >
               <GoArrowLeft size={35} />
             </button>
             <button
               onClick={nextClick}
-              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-white border-2 border-primary1 text-black btn hover:bg-primary1"
+              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-white border-2 border-primary text-black btn hover:bg-primary1"
             >
               <GoArrowRight size={35} />
             </button>
