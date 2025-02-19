@@ -13,7 +13,7 @@ const ContactForm2 = ({ isDark }) => {
     >
       {isDark ? (
         <img
-          data-aos="fade-up-left"
+          data-aos="fade-up-right"
           loading="lazy"
           src={circleImg}
           width={150}
@@ -23,7 +23,7 @@ const ContactForm2 = ({ isDark }) => {
         />
       ) : (
         <div
-          data-aos="fade-up-left"
+          data-aos="fade-up-right"
           className="z-0 w-[8rem] md:w-[12rem] h-[8rem] md:h-[12rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute -bottom-4 -right-4 drop-shadow-2xl"
         ></div>
       )}

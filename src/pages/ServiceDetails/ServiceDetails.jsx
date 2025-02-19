@@ -42,7 +42,7 @@ const ServiceDetails = () => {
         </div>
         <div className="wrapper flex justify-end -translate-y-1/2">
           <img
-            data-aos="fade-up-left"
+            data-aos="fade-up-right"
             src={serviceDetails.img1}
             className="hidden lg:block object-cover aspect-[3/4] h-fit overflow-hidden rounded-xl max-w-[17rem] -rotate-[4deg]"
             alt=""

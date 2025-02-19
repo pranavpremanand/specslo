@@ -185,7 +185,7 @@ const AboutUs = () => {
           alt=""
         />
         <img
-          data-aos="fade-up-left"
+          data-aos="fade-up-right"
           loading="lazy"
           src={circleImg}
           className="absolute bottom-0 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
@@ -242,7 +242,7 @@ const AboutUs = () => {
           className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"
         ></div>
         <div
-          data-aos="fade-up-left"
+          data-aos="fade-up-right"
           className="z-[-1] w-[15rem] h-[20rem] rounded-t-[6rem] bg-gradient-to-b from-primary to-transparent absolute bottom-[-2rem] right-[-2rem] drop-shadow-2xl"
         ></div>
         <div className="wrapper grid md:grid-cols-[40%_1fr] items-center gap-7">
@@ -302,7 +302,7 @@ const AboutUs = () => {
         />
         <div className="wrapper relative text-center space-y-3">
           <div
-            data-aos="fade-up-left"
+            data-aos="fade-up-right"
             className="z-[-1] w-[6rem] h-[6rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-full right-[15%] drop-shadow-2xl"
           ></div>
           <h2 data-aos="fade-up" className="text1 text-primary2">

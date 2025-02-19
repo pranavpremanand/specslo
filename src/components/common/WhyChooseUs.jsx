@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
         className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"
       ></div>
       <div
-        data-aos="fade-up-left"
+        data-aos="fade-up-right"
         className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-1/3 right-4 sm:right-[4rem] drop-shadow-2xl"
       ></div>
 

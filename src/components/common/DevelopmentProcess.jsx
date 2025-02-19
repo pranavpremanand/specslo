@@ -8,7 +8,7 @@ const DevelopmentProcess = ({ content }) => {
         className="z-0 w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[10rem] left-[5rem] drop-shadow-2xl"
       ></div>
       <div
-        data-aos="fade-up-left"
+        data-aos="fade-up-right"
         className="z-0 w-[10rem] h-[10rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute -bottom-4 -right-4 drop-shadow-2xl"
       ></div>
       <div className="wrapper text-center space-y-3 z-[1] relative">

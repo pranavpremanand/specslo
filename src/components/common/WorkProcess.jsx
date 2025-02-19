@@ -40,7 +40,7 @@ const WorkProcess = () => {
         loading="lazy"
       />
       <img
-        data-aos="fade-up-left"
+        data-aos="fade-up-right"
         src={circleImg}
         className="absolute bottom-0 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
         alt=""

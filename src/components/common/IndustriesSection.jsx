@@ -23,7 +23,7 @@ const IndustriesSection = () => {
           alt=""
         />
         <img
-          data-aos="fade-down-left"
+          data-aos="fade-down-right"
           loading="lazy"
           src={circleImg}
           width={150}

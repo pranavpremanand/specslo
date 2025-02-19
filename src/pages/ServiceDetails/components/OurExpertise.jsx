@@ -6,7 +6,7 @@ const OurExpertise = ({ content }) => {
   return (
     <div className="py-14 lg:py-0 lg:-translate-y-[10rem] relative">
       <img
-        data-aos="fade-down-left"
+        data-aos="fade-down-right"
         loading="lazy"
         src={circleImg}
         width={150}
