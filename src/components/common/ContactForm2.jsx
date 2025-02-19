@@ -7,6 +7,7 @@ import { IoLocation, IoMail } from "react-icons/io5";
 const ContactForm2 = ({ isDark }) => {
   return (
     <div
+      id="contact"
       className={`${
         isDark ? "bg-black text-white" : "bg-white text-black"
       } text-black py-14 relative overflow-hidden`}
@@ -28,7 +29,10 @@ const ContactForm2 = ({ isDark }) => {
         ></div>
       )}
       <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7 relative z-[1]">
-        <form data-aos='fade-right' className="bg-black text-white p-7 border-[2px] border-primary rounded-[2.5rem] space-y-5">
+        <form
+          data-aos="fade-right"
+          className="bg-black text-white p-7 border-[2px] border-primary rounded-[2.5rem] space-y-5"
+        >
           <div className="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-4">
             <div className="space-y-1 grid">
               <label className="text-sm">Full Name</label>
@@ -74,7 +78,7 @@ const ContactForm2 = ({ isDark }) => {
             Submit
           </button>
         </form>
-        <div  data-aos='fade-up' className="space-y-4">
+        <div data-aos="fade-up" className="space-y-4">
           <h2 className="text1">Get It Touch</h2>
           <div className="h-2 w-[18rem] bg-black"></div>
           <h5 className="text2">
