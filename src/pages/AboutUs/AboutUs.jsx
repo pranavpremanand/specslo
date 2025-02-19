@@ -113,13 +113,13 @@ const AboutUs = () => {
               className="py-7 border-t group last:border-b border-primary2 flex lg:flex-row flex-col items-center justify-center gap-4"
               data-aos="fade-up"
             >
-              <p className="text2 text-center group-hover:text-primary2 pr-12">
+              <p className="text2 text-center group-hover:text-primary2 lg:pr-12 translate-y-2 lg:translate-y-0 group-hover:translate-y-0">
                 {item.title}
               </p>
               <img
                 src={item.image}
                 alt={item.title}
-                className="opacity-0 group-hover:opacity-100 w-0 group-hover:w-[15rem] h-0 group-hover:h-fit transition-all duration-500 aspect-square object-cover lg:-rotate-12 border-4 border-primary"
+                className="opacity-0 group-hover:opacity-100 w-0 group-hover:w-[15rem] h-0 group-hover:h-fit transition-all duration-500 aspect-square object-cover lg:-rotate-12 group-hover:border-4 group-hover:border-primary"
               />
               <div className="opacity-0 group-hover:opacity-100 hidden group-hover:block whitespace-pre-line max-w-[30rem] pl-12">
                 {item.content}

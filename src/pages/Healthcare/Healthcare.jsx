@@ -2,10 +2,11 @@ import React from "react";
 import Button from "../../components/common/Button";
 import banner from "../../assets/images/banners/healthcare.png";
 import aboutImg from "../../assets/images/about.png";
-import { Link } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 import ContactForm1 from "../../components/common/ContactForm1";
 import WebsiteSolutions from "./components/WebsiteSolutions";
 import Industries from "./components/Industries";
+import { Link } from "react-router-dom";
 
 const Healthcare = () => {
   return (
@@ -47,7 +48,7 @@ const Healthcare = () => {
               ensure seamless innovation.
             </p>
             <div className="pt-5 flex justify-center">
-              <Button scrollTo="contact" offset={80}>
+              <Button scrollTo="contact" offset={-100}>
                 Get Started
               </Button>
             </div>
@@ -99,10 +100,20 @@ const Healthcare = () => {
             </ul>
 
             <div className="flex gap-10 pt-4">
-              <Link className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white">
+              <Scroll
+                offset={-70}
+                smooth
+                spy
+                duration={500}
+                to="contact"
+                className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white"
+              >
                 Quick inquiry
-              </Link>
-              <Link className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white">
+              </Scroll>
+              <Link
+                to="/contact-us"
+                className="btn uppercase min-w-[8rem] border border-black text-black bg-transparent hover:bg-black hover:text-white"
+              >
                 contact us
               </Link>
             </div>
