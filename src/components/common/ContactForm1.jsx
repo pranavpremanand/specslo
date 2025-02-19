@@ -41,6 +41,7 @@ const ContactForm1 = () => {
               <input
                 type="text"
                 className="outline-none p-3 bg-white text-black rounded-lg w-full"
+                placeholder="Enter your full name"
               />
             </div>
             <div className="grid sm:grid-cols-2 gap-5 w-full">
@@ -49,6 +50,7 @@ const ContactForm1 = () => {
                 <input
                   type="email"
                   className="outline-none p-3 bg-white text-black rounded-lg"
+                  placeholder="Enter your email address"
                 />
               </div>
               <div className="flex flex-col gap-1 w-full">
@@ -56,6 +58,7 @@ const ContactForm1 = () => {
                 <input
                   type="tel"
                   className="outline-none p-3 bg-white text-black rounded-lg"
+                  placeholder="Enter your phone number"
                 />
               </div>
             </div>
@@ -64,6 +67,7 @@ const ContactForm1 = () => {
               <input
                 type="text"
                 className="outline-none p-3 bg-white text-black rounded-lg"
+                placeholder="Enter subject"
               />
             </div>
             <div className="flex flex-col gap-1 w-full">
@@ -71,6 +75,7 @@ const ContactForm1 = () => {
               <textarea
                 rows="5"
                 className="outline-none p-3 bg-white text-black rounded-lg"
+                placeholder="Enter message"
               />
             </div>
             <button className="btn w-full sm:w-fit bg-primary text-black hover:bg-black hover:text-white border border-primary">
