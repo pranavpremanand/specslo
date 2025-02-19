@@ -71,7 +71,7 @@ const ServicesSlider = ({ service, data }) => {
             data-aos="fade-right"
             className="flex items-center gap-4 z-[2] relative"
           >
-            <div className="h-[2px] w-[4rem] bg-primary1"></div>
+            <div className="h-[2px] w-[4rem] bg-primary"></div>
             <p className="font-semibold uppercase">our services</p>
           </div>
           <h2 data-aos="fade-right" className="text1 z-[2] relative">
