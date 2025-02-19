@@ -15,7 +15,7 @@ const CTA = () => {
               className="w-full h-full object-cover scale-[101%]"
             />
           </div>
-          <div data-aos="fade-left" className="wrapper space-y-7 text-black px-[3rem] sm:px-[5rem] py-[3rem]">
+          <div data-aos="fade-up" className="wrapper space-y-7 text-black px-[3rem] sm:px-[5rem] py-[3rem]">
             <img
               src={avatarsImg}
               className="w-[9rem] h-fit object-contain"

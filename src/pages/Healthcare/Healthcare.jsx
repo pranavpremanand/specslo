@@ -68,7 +68,7 @@ const Healthcare = () => {
               placeholder="blur"
             />
           </div>
-          <div data-aos="fade-left" className="space-y-5 py-4">
+          <div data-aos="fade-up" className="space-y-5 py-4">
             <h3 className="text2">
               Welcome to Specslo -{" "}
               <span className="text-primary1">

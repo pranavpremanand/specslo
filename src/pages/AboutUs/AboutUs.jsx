@@ -25,7 +25,7 @@ const AboutUs = () => {
       </section>
       <section className="py-14 bg-white text-black relative z-0">
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           className="bg-primary absolute z-[-1] right-0 top-14 w-[6rem] h-[20rem]"
         ></div>
         <div className="wrapper">
@@ -42,7 +42,7 @@ const AboutUs = () => {
                 alt=""
               />
             </div>
-            <div data-aos="fade-left">
+            <div data-aos="fade-up">
               <p className="desc">
                 At Specslo, we see every spec as a story waiting to be told—a
                 unique set of needs and aspirations that, when combined with the
@@ -149,7 +149,7 @@ const AboutUs = () => {
               alt="Client Engagement & Support"
             />
           </div>
-          <div data-aos="fade-left" className="space-y-5">
+          <div data-aos="fade-up" className="space-y-5">
             <h4 className="text2">Engaged from Day One</h4>
             <p className="desc">
               At Specslo, we prioritize understanding your specs and keeping you
@@ -192,7 +192,7 @@ const AboutUs = () => {
           alt=""
         />
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
-          <div data-aos="fade-left" className="space-y-3">
+          <div data-aos="fade-up" className="space-y-3">
             <h3 className="text2">Ongoing Support</h3>
             <p className="desc">
               Our commitment goes beyond delivery, offering:
@@ -254,7 +254,7 @@ const AboutUs = () => {
               className="object-contain w-full"
             />
           </div>
-          <div data-aos="fade-left" className="space-y-3">
+          <div data-aos="fade-up" className="space-y-3">
             <h3 className="text2">Partnership Beyond Projects</h3>
             <p className="desc">
               At Specslo, we’re committed to your growth, even after project

@@ -132,7 +132,7 @@ export default function LandingPage({ page }) {
 
           <div className="w-full flex flex-col">
             <img
-              data-aos="fade-left"
+              data-aos="fade-up"
               loading="lazy"
               src={isWeb ? webAboutImg : appAboutImg}
               width={500}

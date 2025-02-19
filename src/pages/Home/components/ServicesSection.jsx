@@ -110,7 +110,7 @@ const ServicesSection = () => {
           </div>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="fade-up"
           ref={sliderRef}
           className="keen-slider md:!w-[60vw] py-10 md:px-2"
         >

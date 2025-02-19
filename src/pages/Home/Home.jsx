@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="w-full flex flex-col">
             <img
-              data-aos="fade-left"
+              data-aos="fade-up"
               loading="lazy"
               src={aboutImg}
               width={500}

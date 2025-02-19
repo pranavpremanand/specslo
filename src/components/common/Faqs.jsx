@@ -19,7 +19,7 @@ const Faqs = () => {
 
         <div className="lg:row-start-1 row-start-2 lg:row-span-6">
           <img
-            data-aos="fade-left"
+            data-aos="fade-up"
             src={img}
             alt="FAQ"
             loading="lazy"

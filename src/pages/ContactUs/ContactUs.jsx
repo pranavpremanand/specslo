@@ -72,7 +72,7 @@ const ContactUs = () => {
               Submit Now
             </button>
           </form>
-          <div data-aos="fade-left" className="space-y-4">
+          <div data-aos="fade-up" className="space-y-4">
             <h2 className="text1 text-primary">Get It Touch</h2>
             <div className="h-2 w-[18rem] bg-white"></div>
             <h5 className="text2">
