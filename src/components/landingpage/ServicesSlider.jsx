@@ -57,7 +57,7 @@ const ServicesSlider = ({ service, data }) => {
     }
   };
   return (
-    <div className="py-14 relative">
+    <div id='services' className="py-14 relative">
       <img
         data-aos="fade-down-right"
         src={circleImg}
