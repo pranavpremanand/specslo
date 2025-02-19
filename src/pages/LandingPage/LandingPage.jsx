@@ -84,32 +84,35 @@ export default function LandingPage({ page }) {
                   : "Ideas Turn into Powerful Apps"}
               </span>
             </h3>
-            <p className="desc whitespace-pre-line hyphens-auto w-full">
-              {isWeb
-                ? `At Specslo, we specialize in building high-performance,
+            <p
+              className="desc hyphens-auto w-full"
+              dangerouslySetInnerHTML={{
+                __html: isWeb
+                  ? `At Specslo, we specialize in building high-performance,
               scalable, and visually stunning websites that drive business
               growth. Our team of experts transforms your ideas into powerful
               digital experiences, ensuring a strong online presence for your
-              brand. \n Our services include custom website development, e-commerce
+              brand. <br/> Our services include custom website development, e-commerce
               solutions, web application development, UI/UX design, SEO
               optimization, and CMS integrations. We leverage the latest
               technologies and best practices to deliver fast, secure, and
               user-friendly web solutions tailored to your business needs.
-              \n Collaboration is at the heart of what we do. By prioritizing your
+              <br/> Collaboration is at the heart of what we do. By prioritizing your
               requirements, we craft web solutions that enhance engagement,
               boost conversions, and ensure long-term success in the digital
               landscape.`
-                : `At Specslo, we specialize in building high-performance, scalable, and 
+                  : `At Specslo, we specialize in building high-performance, scalable, and 
     user-friendly mobile and web applications that bring your vision to life. 
     Whether you need a native mobile app, cross-platform solution, or a custom 
     web application, we leverage the latest technologies to create seamless 
-    digital experiences. \n Our expertise includes iOS and Android app development, progressive web apps 
+    digital experiences. <br/> Our expertise includes iOS and Android app development, progressive web apps 
     (PWAs), UI/UX design, app integrations, API development, and cloud-based 
     solutions. We ensure your app is optimized for performance, security, and 
     user engagement, helping your business stand out in the competitive digital 
-    space. \n Collaboration is at the core of what we do. By prioritizing your requirements, 
-    we develop apps that are innovative, efficient, and built for long-term success.`}
-            </p>
+    space. <br/> Collaboration is at the core of what we do. By prioritizing your requirements, 
+    we develop apps that are innovative, efficient, and built for long-term success.`,
+              }}
+            ></p>
             <h5 className="text4">
               <span className="text-[#FFD63C]">Specslo:</span>{" "}
               {isWeb
