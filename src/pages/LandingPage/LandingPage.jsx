@@ -138,7 +138,7 @@ export default function LandingPage({ page }) {
               width={500}
               height={600}
               alt=""
-              className="max-w-[20rem] md:max-w-max mx-auto w-full h-full object-cover"
+              className="w-full h-full object-cover"
               placeholder="blur"
             />
           </div>
