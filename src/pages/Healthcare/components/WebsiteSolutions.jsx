@@ -3,7 +3,7 @@ import {
   circleImg,
   healthcareWebSolutions,
   moonShapeImg,
-} from "../../../data/constant";
+} from "../../../content/constant";
 import { useKeenSlider } from "keen-slider/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 
@@ -61,6 +61,7 @@ const WebsiteSolutions = () => {
     <section className="max-h-fit bg-[#242424] relative z-0 overflow-hidden">
       <div className="pt-14 wrapper">
         <img
+          data-aos="fade-down-right"
           loading="lazy"
           src={moonShapeImg}
           width={400}
@@ -77,6 +78,7 @@ const WebsiteSolutions = () => {
           alt=""
         />
         <img
+          data-aos="fade-down-left"
           loading="lazy"
           src={circleImg}
           width={150}
@@ -84,7 +86,7 @@ const WebsiteSolutions = () => {
           className="object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] z-[-1]"
           alt=""
         />
-        <h2 className="text1 text-center">
+        <h2 data-aos="fade-up" className="text1 text-center">
           Explore Healthcare <br />
           <span className="text-primary"> Website Solutions</span>
         </h2>
@@ -94,7 +96,10 @@ const WebsiteSolutions = () => {
         <div className="z-[-1] absolute top-[20%] h-[80%] w-full bg-black"></div>
         <div className="wrapper py-10 relative z-0">
           {/* Navigation Buttons (Outside the Slider) */}
-          <div className="flex justify-center items-center gap-4 mb-6 mx-auto">
+          <div
+            data-aos="fade-up"
+            className="flex justify-center items-center gap-4 mb-6 mx-auto"
+          >
             <button
               onClick={prevClick}
               className="bg-white text-black btn hover:bg-white/80 p-2"
@@ -110,7 +115,7 @@ const WebsiteSolutions = () => {
           </div>
 
           {/* Slider Content */}
-          <div ref={sliderRef} className="keen-slider">
+          <div data-aos="fade-up" ref={sliderRef} className="keen-slider">
             {healthcareWebSolutions.map((item) => (
               <div key={item.id} className="keen-slider__slide space-y-10">
                 <div className="flex justify-center items-center gap-4 mx-auto">

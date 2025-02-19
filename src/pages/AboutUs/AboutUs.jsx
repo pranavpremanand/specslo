@@ -3,7 +3,7 @@ import img1 from "../../assets/images/our-story.png";
 import img2 from "../../assets/images/client-engagement-and-support.png";
 import img3 from "../../assets/images/ongoing-support.png";
 import img4 from "../../assets/images/Partnership Beyond Projects.png";
-import { circleImg, futureGoals } from "../../data/constant";
+import { circleImg, futureGoals } from "../../content/constant";
 import ContactForm1 from "../../components/common/ContactForm1";
 import Testimonials from "../../components/common/Testimonials";
 
@@ -13,29 +13,36 @@ const AboutUs = () => {
       <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
         <div className="absolute inset-0 h-full w-full bg-black/20 z-[-1]"></div>
         <img
-          loading="lazy"
           src={banner}
           className="object-cover w-full h-full absolute inset-0 z-[-2]"
           alt="Banner"
         />
         <div className="wrapper flex h-full py-16 items-end">
-          <h1 className="text_xl">About Us</h1>
+          <h1 data-aos="fade-right" className="text_xl">
+            About Us
+          </h1>
         </div>
       </section>
       <section className="py-14 bg-white text-black relative z-0">
-        <div className="bg-primary absolute z-[-1] right-0 top-14 w-[6rem] h-[20rem]"></div>
+        <div
+          data-aos="fade-left"
+          className="bg-primary absolute z-[-1] right-0 top-14 w-[6rem] h-[20rem]"
+        ></div>
         <div className="wrapper">
-          <h2 className="text1 text-center">Our Story</h2>
+          <h2 data-aos="fade-up" className="text1 text-center">
+            Our Story
+          </h2>
           <div className="grid md:grid-cols-[40%_1fr] gap-8 pt-5">
             <div className="rounded-xl overflow-hidden">
               <img
+                data-aos="fade-right"
                 loading="lazy"
                 src={img1}
                 className="w-full h-full aspect-square object-cover"
                 alt=""
               />
             </div>
-            <div className="">
+            <div data-aos="fade-left">
               <p className="desc">
                 At Specslo, we see every spec as a story waiting to be told—a
                 unique set of needs and aspirations that, when combined with the
@@ -62,7 +69,10 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="py-14">
-        <div className="wrapper flex flex-col items-center gap-3">
+        <div
+          data-aos="fade-up"
+          className="wrapper flex flex-col items-center gap-3"
+        >
           <h2 className="text1 text-primary2 max-w-3xl text-center">
             Quality Assurance & Security: Specs for Peace of Mind
           </h2>
@@ -100,7 +110,8 @@ const AboutUs = () => {
           ].map((item) => (
             <div
               key={item.title}
-              className="py-7 border-t group last:border-b border-primary2 flex items-center justify-center gap-4"
+              className="py-7 border-t group last:border-b border-primary2 flex lg:flex-row flex-col items-center justify-center gap-4"
+              data-aos="fade-up"
             >
               <p className="text2 text-center group-hover:text-primary2 pr-12">
                 {item.title}
@@ -108,7 +119,7 @@ const AboutUs = () => {
               <img
                 src={item.image}
                 alt={item.title}
-                className="opacity-0 group-hover:opacity-100 w-0 group-hover:w-[15rem] h-0 group-hover:h-fit transition-all duration-500 aspect-square object-cover -rotate-12 border-4 border-primary"
+                className="opacity-0 group-hover:opacity-100 w-0 group-hover:w-[15rem] h-0 group-hover:h-fit transition-all duration-500 aspect-square object-cover lg:-rotate-12 border-4 border-primary"
               />
               <div className="opacity-0 group-hover:opacity-100 hidden group-hover:block whitespace-pre-line max-w-[30rem] pl-12">
                 {item.content}
@@ -119,7 +130,10 @@ const AboutUs = () => {
       </section>
       <section className="py-14 relative bg-white text-black overflow-hidden z-0">
         <div className="absolute z-[-1] top-[-3rem] left-[-3rem] h-[18rem] w-[12rem] bg-primary rounded-ee-full"></div>
-        <div className="wrapper flex flex-col items-center gap-3">
+        <div
+          data-aos="fade-up"
+          className="wrapper flex flex-col items-center gap-3"
+        >
           <h2 className="text1 max-w-3xl text-center">
             Client Engagement & Support: Specslo's Commitment to You
           </h2>
@@ -128,13 +142,14 @@ const AboutUs = () => {
         <div className="wrapper pt-12 grid md:grid-cols-2 lg:grid-cols-[40%_1fr] items-center gap-8">
           <div className="">
             <img
+              data-aos="fade-right"
               loading="lazy"
               src={img2}
               className="object-contain w-full aspect-square max-h-[30rem]"
               alt="Client Engagement & Support"
             />
           </div>
-          <div className="space-y-5">
+          <div data-aos="fade-left" className="space-y-5">
             <h4 className="text2">Engaged from Day One</h4>
             <p className="desc">
               At Specslo, we prioritize understanding your specs and keeping you
@@ -163,19 +178,21 @@ const AboutUs = () => {
       </section>
       <section className="py-14 relative">
         <img
+          data-aos="fade-down-right"
           loading="lazy"
           src={circleImg}
           className="z-[-1] absolute top-[-4rem] left-[-3rem] w-[18rem] h-[18rem] object-contain aspect-square"
           alt=""
         />
         <img
+          data-aos="fade-up-left"
           loading="lazy"
           src={circleImg}
           className="absolute bottom-0 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
           alt=""
         />
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
-          <div className="space-y-3">
+          <div data-aos="fade-left" className="space-y-3">
             <h3 className="text2">Ongoing Support</h3>
             <p className="desc">
               Our commitment goes beyond delivery, offering:
@@ -209,7 +226,7 @@ const AboutUs = () => {
               </li>
             </ul>
           </div>
-          <div className="">
+          <div data-aos="fade-right">
             <img
               loading="lazy"
               src={img3}
@@ -220,10 +237,16 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="z-[-2] bg-white text-black py-14 relative overflow-hidden">
-        <div className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"></div>
-        <div className="z-[-1] w-[15rem] h-[20rem] rounded-t-[6rem] bg-gradient-to-b from-primary to-transparent absolute bottom-[-2rem] right-[-2rem] drop-shadow-2xl"></div>
+        <div
+          data-aos="fade-down-right"
+          className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"
+        ></div>
+        <div
+          data-aos="fade-up-left"
+          className="z-[-1] w-[15rem] h-[20rem] rounded-t-[6rem] bg-gradient-to-b from-primary to-transparent absolute bottom-[-2rem] right-[-2rem] drop-shadow-2xl"
+        ></div>
         <div className="wrapper grid md:grid-cols-[40%_1fr] items-center gap-7">
-          <div className="">
+          <div data-aos="fade-right" className="">
             <img
               loading="lazy"
               src={img4}
@@ -231,7 +254,7 @@ const AboutUs = () => {
               className="object-contain w-full"
             />
           </div>
-          <div className="space-y-3">
+          <div data-aos="fade-left" className="space-y-3">
             <h3 className="text2">Partnership Beyond Projects</h3>
             <p className="desc">
               At Specslo, we’re committed to your growth, even after project
@@ -272,12 +295,20 @@ const AboutUs = () => {
       </section>
 
       <Testimonials />
-      <section className="py-14 bg-white text-black relative overflow-hidden z-[-2]">
-        <div className="absolute z-[-1] top-[-3rem] lef-[-3rem] h-[18rem] w-[8rem] bg-primary rounded-ee-[8rem]" />
+      <section className="py-14 bg-white text-black relative overflow-hidden z-0">
+        <div
+          data-aos="fade-down"
+          className="absolute z-[-1] top-[-3rem] lef-[-3rem] h-[18rem] w-[8rem] bg-primary rounded-ee-[8rem]"
+        />
         <div className="wrapper relative text-center space-y-3">
-          <div className="z-[-1] w-[6rem] h-[6rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-full right-[15%] drop-shadow-2xl"></div>
-          <h2 className="text1 text-primary2">Vision</h2>
-          <p className="desc max-w-4xl mx-auto">
+          <div
+            data-aos="fade-up-left"
+            className="z-[-1] w-[6rem] h-[6rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-full right-[15%] drop-shadow-2xl"
+          ></div>
+          <h2 data-aos="fade-up" className="text1 text-primary2">
+            Vision
+          </h2>
+          <p data-aos="fade-up" className="desc max-w-4xl mx-auto">
             To lead the next wave of digital transformation by turning specs
             into intelligent, AI-powered solutions. Specslo is committed to
             redefining how businesses innovate, fostering sustainable growth,
@@ -288,16 +319,19 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="wrapper py-16 text-center">
-          <h2 className="text1 text-primary2">Future Goals</h2>
+          <h2 data-aos="fade-up" className="text1 text-primary2">
+            Future Goals
+          </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7 pt-7">
             {futureGoals.map((item) => (
-              <div
-                key={item.title}
-                className="bg-black hover:bg-primary hover:text-black text-start text-white rounded-xl p-7 space-y-3 transition-all duration-300"
-              >
-                <div className="pb-7 text-primary">{item.icon}</div>
-                <h6 className="text3">{item.title}</h6>
-                <p className="desc">{item.description}</p>
+              <div key={item.title} data-aos='fade-up'>
+                <div
+                  className="bg-black group hover:bg-primary hover:text-black text-start text-white rounded-xl p-7 space-y-3 transition-all duration-300 h-full"
+                >
+                  <div className="pb-7 text-primary group-hover:text-black">{item.icon}</div>
+                  <h6 className="text3">{item.title}</h6>
+                  <p className="desc">{item.description}</p>
+                </div>
               </div>
             ))}
           </div>

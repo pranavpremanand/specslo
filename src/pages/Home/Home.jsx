@@ -23,7 +23,10 @@ export default function Home() {
             alt=""
           />
         </div>
-        <div className="wrapper space-y-3 relative z-10 py-[6rem]">
+        <div
+          data-aos="fade-right"
+          className="wrapper space-y-3 relative z-10 py-[6rem]"
+        >
           <h1 className="text1 font-montserrat max-w-[60rem]">
             Shaping the{" "}
             <span className="text-primary font-montserrat">
@@ -44,7 +47,7 @@ export default function Home() {
       </section>
       <section className="py-14 bg-white text-black">
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-[60%_1fr] gap-7">
-          <div className="space-y-5 py-4">
+          <div data-aos="fade-right" className="space-y-5 py-4">
             <h3 className="text2">
               Welcome to{" "}
               <span className="text-primary1">Specslo Software Solutions</span>
@@ -89,6 +92,7 @@ export default function Home() {
           </div>
           <div className="w-full flex flex-col">
             <img
+              data-aos="fade-left"
               loading="lazy"
               src={aboutImg}
               width={500}

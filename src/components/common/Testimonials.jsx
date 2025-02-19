@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
-import { circleImg, testimonials } from "../../data/constant";
+import { circleImg, testimonials } from "../../content/constant";
 import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 
 export default function Testimonials() {
@@ -12,11 +12,12 @@ export default function Testimonials() {
   return (
     <div className="py-14 relative overflow-hidden">
       <img
+        data-aos="fade-down-right"
         src={circleImg}
         className="z-[-1] absolute top-[-4rem] left-[-3rem] w-[18rem] h-[18rem] object-contain aspect-square"
         alt=""
       />
-      <div className="wrapper text-center space-y-3 mb-8">
+      <div data-aos="fade-up" className="wrapper text-center space-y-3 mb-8">
         <h2 className="text1 text-primary2">What People Say?</h2>
         <p className="desc max-w-4xl mx-auto">
           Our testimonials highlight the success stories of healthcare
@@ -26,6 +27,7 @@ export default function Testimonials() {
         </p>
       </div>
       <Swiper
+        data-aos="fade-up"
         effect={"coverflow"}
         modules={[EffectCoverflow, Autoplay]}
         centeredSlides={true}
@@ -81,7 +83,7 @@ export default function Testimonials() {
         ))}
       </Swiper>
 
-      <div className="flex justify-center gap-3 md:mt-6">
+      <div data-aos="fade-up" className="flex justify-center gap-3 md:mt-6">
         <button
           onClick={() => swiperRef.current?.slidePrev()}
           className="p-2 bg-white rounded-full text-black border-2 border-primary2 transition duration-300 hover:bg-black hover:text-primary2"

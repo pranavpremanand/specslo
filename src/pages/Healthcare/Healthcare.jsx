@@ -22,30 +22,35 @@ const Healthcare = () => {
             alt=""
           />
         </div>
-        <div className="wrapper text-center space-y-3 relative z-10 translate-y-[2rem] py-[4rem]">
-          <h1 className="text_xl font-atkinson">
-            <span className="text-stroke font-atkinson">EMPOWERING</span>{" "}
-            <span className="text_xl text-primary font-atkinson">
-              HEALTHCARE
-            </span>
-          </h1>
-          <h2 className="text1 font-atkinson uppercase">
-            <span className="text-primary font-atkinson">Through</span>{" "}
-            <span className="text1 text-stroke font-atkinson">
-              digital transformation
-            </span>
-          </h2>
-          <p className="desc max-w-4xl mx-auto pb-3">
-            In today’s fast-paced world, technology is reshaping healthcare. At
-            Specslo, we specialize in guiding healthcare providers through their
-            digital transformation journey. Whether you’re new to technology or
-            looking to update systems, our tailored solutions ensure seamless
-            innovation.
-          </p>
-          <div className="pt-5">
-            <Button scrollTo="contact" offset={80}>
-              Get Started
-            </Button>
+        <div
+          data-aos="fade-up"
+          className="wrapper text-center relative z-10 py-[6rem] md:py-[4rem]"
+        >
+          <div className="space-y-3 translate-y-[3rem]">
+            <h1 className="text_xl font-atkinson">
+              <span className="text-stroke font-atkinson">EMPOWERING</span>{" "}
+              <span className="text_xl text-primary font-atkinson">
+                HEALTHCARE
+              </span>
+            </h1>
+            <h2 className="text1 font-atkinson uppercase">
+              <span className="text-primary font-atkinson">Through</span>{" "}
+              <span className="text1 text-stroke font-atkinson">
+                digital transformation
+              </span>
+            </h2>
+            <p className="desc max-w-4xl mx-auto pb-3">
+              In today’s fast-paced world, technology is reshaping healthcare.
+              At Specslo, we specialize in guiding healthcare providers through
+              their digital transformation journey. Whether you’re new to
+              technology or looking to update systems, our tailored solutions
+              ensure seamless innovation.
+            </p>
+            <div className="pt-5 flex justify-center">
+              <Button scrollTo="contact" offset={80}>
+                Get Started
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -53,6 +58,7 @@ const Healthcare = () => {
         <div className="wrapper flex flex-col md:grid grid-cols-[1fr_55%] gap-7">
           <div className="w-full flex flex-col">
             <img
+              data-aos="fade-right"
               loading="lazy"
               src={aboutImg}
               width={500}
@@ -62,7 +68,7 @@ const Healthcare = () => {
               placeholder="blur"
             />
           </div>
-          <div className="space-y-5 py-4">
+          <div data-aos="fade-left" className="space-y-5 py-4">
             <h3 className="text2">
               Welcome to Specslo -{" "}
               <span className="text-primary1">

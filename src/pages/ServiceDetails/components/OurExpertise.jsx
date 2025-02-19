@@ -1,10 +1,12 @@
 import React from "react";
-import { circleImg } from "../../../data/constant";
+import { circleImg } from "../../../content/constant";
 
-const OurExpertise = ({ img }) => {
+const OurExpertise = ({ content }) => {
+  if (!content) return null;
   return (
     <div className="py-14 lg:py-0 lg:-translate-y-[10rem] relative">
       <img
+        data-aos="fade-down-left"
         loading="lazy"
         src={circleImg}
         width={150}
@@ -14,31 +16,32 @@ const OurExpertise = ({ img }) => {
       />
       <div className="wrapper">
         <div className="max-w-6xl mx-auto space-y-3">
-          <h2 className="text2 text-primary text-center">Our Expertise</h2>
-          <div className="">
-            {[2, 4, 5, 6, 7, 8].map(() => (
+          <h2 data-aos="fade-up" className="text2 text-primary text-center">
+            Our Expertise
+          </h2>
+          <div data-aos="fade-up">
+            {content.map((item, i) => (
               <div
-                key={Math.random()}
-                className="py-4 md:py-2 px-2 odd:bg-white even:bg-primary text-black flex flex-col md:odd:flex-row md:even:flex-row-reverse items-center gap-5 w-full"
+                key={item.title}
+                className="py-4 md:py-3 px-3 odd:bg-white even:bg-primary text-black flex flex-col md:odd:flex-row md:even:flex-row-reverse items-center gap-5 w-full first:rounded-t-3xl last:rounded-b-3xl"
               >
                 <img
-                  src={img}
-                  className="object-cover rounded-full w-[12rem] aspect-square"
-                  alt=""
+                  src={item.img}
+                  className="object-cover rounded-full w-[12rem] aspect-[4/3.8]"
+                  alt={item.title}
                 />
-                <div className="space-y-4">
-                  <h5 className="text3">Lorem ipsum dolor sit,</h5>
+                <div className="space-y-4 md:pl-5">
+                  <h5
+                    className={`text3 ${
+                      i % 2 === 0 ? "text-start" : "md:text-end"
+                    }`}
+                  >
+                    {item.title}
+                  </h5>
                   <ul className="list-disc pl-5">
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Odio tempore, aliquam impedit facer
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Odio tempore, aliquam impedit facer
-                    </li>
-                    <li>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                      Odio tempore, aliquam impedit facer
-                    </li>
+                    {item.list.map((text) => (
+                      <li key={text}>{text}</li>
+                    ))}
                   </ul>
                 </div>
               </div>

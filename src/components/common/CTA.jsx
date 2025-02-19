@@ -7,7 +7,7 @@ const CTA = () => {
     <div className="pt-8">
       <div className="wrapper !px-0">
         <div className="grid md:grid-cols-[30%,1fr] bg-primary">
-          <div>
+          <div data-aos="fade-right">
             <img
               src={img}
               alt="CTA"
@@ -15,7 +15,7 @@ const CTA = () => {
               className="w-full h-full object-cover scale-[101%]"
             />
           </div>
-          <div className="wrapper space-y-7 text-black px-[3rem] sm:px-[5rem] py-[3rem]">
+          <div data-aos="fade-left" className="wrapper space-y-7 text-black px-[3rem] sm:px-[5rem] py-[3rem]">
             <img
               src={avatarsImg}
               className="w-[9rem] h-fit object-contain"

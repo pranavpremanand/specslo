@@ -1,5 +1,5 @@
 import React from "react";
-import { circleImg } from "../../data/constant";
+import { circleImg } from "../../content/constant";
 import contactImg from "../../assets/images/contact.png";
 
 const ContactForm1 = () => {

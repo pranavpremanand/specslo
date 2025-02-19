@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Divide as Hamburger } from "hamburger-react";
-import { logo } from "../../data/constant";
+import { logo } from "../../content/constant";
 import Drawer from "react-modern-drawer";
 import { Link, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
@@ -51,7 +51,7 @@ const Header = () => {
               </Link>
             ))}
           </div>
-          <div className="hidden lg:flex">
+          <div data-aos="fade-down" className="hidden lg:flex">
             <Link href="/" className="group relative w-[70px] h-[70px]">
               <div className="group-hover:bg-[#b81e23] z-[1] flex items-center justify-center absolute top-1/2 left-0 -translate-y-1/2 h-[31px] w-full bg-[#E41B23] rounded-[6px] text-sm transition duration-300">
                 Call Us

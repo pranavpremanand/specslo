@@ -1,32 +1,35 @@
-import React from "react";
 import banner from "../../assets/images/banners/contactus.png";
 import { Link } from "react-router-dom";
 import { IoLocation, IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
-import { companyDetails } from "../../data/constant";
+import { companyDetails } from "../../content/constant";
 import MapComponent from "../../components/website/MapComponent";
 
 const ContactUs = () => {
   return (
     <>
       <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-white/10 z-[-1]"></div>
+        <div className="absolute inset-0 h-full w-full bg-black/30 z-[-1]"></div>
         <img
           src={banner}
-          loading="lazy"
           className="object-cover w-full h-full absolute inset-0 z-[-2]"
           alt="Banner"
         />
-        <div className="wrapper flex h-full py-[6rem] md:pt-[8rem] pb-16 items-start">
-          <h1 className="text_xl text-black">Contact Us</h1>
+        <div className="wrapper flex h-full py-[6rem] md:pt-[8rem] pb-16 items-end">
+          <h1 data-aos="fade-right" className="text_xl text-white">
+            Contact Us
+          </h1>
         </div>
       </section>
       <section className="py-14">
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
-          <form className="p-6 space-y-4 rounded-2xl bg-[#EDEDED] text-black">
+          <form
+            data-aos="fade-right"
+            className="p-6 space-y-4 rounded-2xl bg-[#EDEDED] text-black"
+          >
             <div className="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-4">
               <div className="space-y-1 grid">
-                <label className="text-sm">Full Name *</label>
+                <label className="text-sm">Full Name</label>
                 <input
                   type="text"
                   className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
@@ -34,7 +37,7 @@ const ContactUs = () => {
                 />
               </div>
               <div className="space-y-1 grid">
-                <label className="text-sm">Email *</label>
+                <label className="text-sm">Email</label>
                 <input
                   type="email"
                   className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
@@ -43,7 +46,7 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="space-y-1 grid">
-              <label className="text-sm">Phone Number *</label>
+              <label className="text-sm">Phone Number</label>
               <input
                 type="tel"
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
@@ -51,7 +54,7 @@ const ContactUs = () => {
               />
             </div>
             <div className="space-y-1 grid">
-              <label className="text-sm">Subject *</label>
+              <label className="text-sm">Subject</label>
               <input
                 type="text"
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
@@ -59,7 +62,7 @@ const ContactUs = () => {
               />
             </div>
             <div className="space-y-1 grid">
-              <label className="text-sm">Message *</label>
+              <label className="text-sm">Message</label>
               <textarea
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter your message here"
@@ -69,7 +72,7 @@ const ContactUs = () => {
               Submit Now
             </button>
           </form>
-          <div className="space-y-3">
+          <div data-aos="fade-left" className="space-y-4">
             <h2 className="text1 text-primary">Get It Touch</h2>
             <div className="h-2 w-[18rem] bg-white"></div>
             <h5 className="text2">

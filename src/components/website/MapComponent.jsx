@@ -5,7 +5,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
 import markerShadow from "leaflet/dist/images/marker-shadow.png";
-import { companyDetails } from "../../data/constant";
+import { companyDetails } from "../../content/constant";
 
 // Fix for default icon
 let DefaultIcon = L.icon({

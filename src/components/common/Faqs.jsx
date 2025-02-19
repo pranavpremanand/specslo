@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faqs } from "../../data/constant";
+import { faqs } from "../../content/constant";
 import { AiFillMinusCircle, AiFillPlusCircle } from "react-icons/ai";
 import img from "../../assets/images/faq.jpeg";
 
@@ -13,10 +13,13 @@ const Faqs = () => {
   return (
     <div className="py-14 bg-white text-black">
       <div className="wrapper grid lg:grid-cols-[55%,1fr] lg:grid-rows-6 gap-7">
-        <h2 className="text1 row-start-1 row-span-1">Answer for Questions</h2>
+        <h2 data-aos="fade-up" className="text1 row-start-1 row-span-1">
+          Answer for Questions
+        </h2>
 
         <div className="lg:row-start-1 row-start-2 lg:row-span-6">
           <img
+            data-aos="fade-left"
             src={img}
             alt="FAQ"
             loading="lazy"
@@ -27,6 +30,7 @@ const Faqs = () => {
         <div className="space-y-3 col-start-1 row-start-3 lg:row-start-2 lg:row-span-5">
           {faqs.map((item) => (
             <div
+              data-aos="fade-up"
               key={item.id}
               className="overflow-hidden transition-all duration-500"
             >

@@ -57,9 +57,13 @@ const Industries = () => {
             <span className="text-primary1">Industries</span> We Serve
           </h2>
         </div>
+
         <div ref={sliderRef} className="keen-slider">
           {industries.map((item) => (
-            <div key={item.id} className="keen-slider__slide text-center space-y-3 p-5">
+            <div
+              key={item.id}
+              className="keen-slider__slide text-center space-y-3 p-5"
+            >
               <img
                 src={item.image}
                 alt={item.image}
