@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 import { useKeenSlider } from "keen-slider/react";
 import { createUrlParam } from "../../../utils/helper";
 import { ourServices } from "../../../content/ourServices";
+import useScrollTriggerAnimations from "../../../hooks/useScrollTriggerAnimations";
 
 const animation = { duration: 40000, easing: (t) => t };
 
 const ServicesSection = () => {
+  const scrollRef = useScrollTriggerAnimations();
   const [sliderRef, instanceRef] = useKeenSlider({
     loop: true,
     renderMode: "performance",
@@ -77,12 +79,12 @@ const ServicesSection = () => {
           </Link>
         </div>
       </div>
-      <div className="wrapper pt-20 grid md:grid-cols-[40%_1fr] gap-6">
+      <div
+        ref={scrollRef}
+        className="wrapper pt-20 grid md:grid-cols-[40%_1fr] gap-6"
+      >
         <div className="relative space-y-4">
-          <div
-            data-aos="fade-up"
-            className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"
-          ></div>
+          <div className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div>
           <div
             data-aos="fade-right"
             className="flex items-center gap-4 z-[2] relative"

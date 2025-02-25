@@ -6,8 +6,10 @@ import {
 } from "../../../content/constant";
 import { useKeenSlider } from "keen-slider/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
+import useScrollTriggerAnimations from "../../../hooks/useScrollTriggerAnimations";
 
 const WebsiteSolutions = () => {
+  const scrollRef = useScrollTriggerAnimations();
   const [sliderRef, instanceRef] = useKeenSlider(
     {
       loop: true,
@@ -59,7 +61,7 @@ const WebsiteSolutions = () => {
 
   return (
     <section className="max-h-fit bg-[#242424] relative z-0 overflow-hidden">
-      <div className="pt-14 wrapper">
+      <div ref={scrollRef} className="pt-14 wrapper">
         <img
           data-aos="fade-down-right"
           loading="lazy"
@@ -83,7 +85,7 @@ const WebsiteSolutions = () => {
           src={circleImg}
           width={150}
           height={150}
-          className="object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] z-[-1]"
+          className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] z-[-1]"
           alt=""
         />
         <h2 data-aos="fade-up" className="text1 text-center">

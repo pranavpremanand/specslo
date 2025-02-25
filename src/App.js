@@ -22,7 +22,7 @@ const ServiceDetails = lazy(() =>
 );
 
 Aos.init({
-  once: true,
+  once: false,
   duration: 700,
 });
 
@@ -31,28 +31,28 @@ function App() {
     <Suspense fallback={<LoadingSpinner />}>
       <BrowserRouter>
         <SpinnerContextProvider>
-          <ScrollToTop />
-          <LoadingSpinnerContext />
-          <Routes>
-            <Route path="/" element={<WebsiteLayout />}>
-              <Route index element={<Home />} />
-              <Route path="about-us" element={<AboutUs />} />
-              <Route path="contact-us" element={<ContactUs />} />
-              <Route path="healthcare" element={<Healthcare />} />
-              <Route path="services" element={<Services />} />
-              <Route path="services/:param" element={<ServiceDetails />} />
-            </Route>
-            <Route path="/" element={<LandingPageLayout />}>
-              <Route
-                path="web-development"
-                element={<LandingPage page="web" />}
-              />
-              <Route
-                path="app-development"
-                element={<LandingPage page="app" />}
-              />
-            </Route>
-          </Routes>
+            <ScrollToTop />
+            <LoadingSpinnerContext />
+            <Routes>
+              <Route path="/" element={<WebsiteLayout />}>
+                <Route index element={<Home />} />
+                <Route path="about-us" element={<AboutUs />} />
+                <Route path="contact-us" element={<ContactUs />} />
+                <Route path="healthcare" element={<Healthcare />} />
+                <Route path="services" element={<Services />} />
+                <Route path="services/:param" element={<ServiceDetails />} />
+              </Route>
+              <Route path="/" element={<LandingPageLayout />}>
+                <Route
+                  path="web-development"
+                  element={<LandingPage page="web" />}
+                />
+                <Route
+                  path="app-development"
+                  element={<LandingPage page="app" />}
+                />
+              </Route>
+            </Routes>
         </SpinnerContextProvider>
       </BrowserRouter>
     </Suspense>

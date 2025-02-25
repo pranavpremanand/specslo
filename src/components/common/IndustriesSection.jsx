@@ -1,17 +1,20 @@
-import React from "react";
 import { circleImg, industries, moonShapeImg } from "../../content/constant";
+import useScrollTriggerAnimations from "../../hooks/useScrollTriggerAnimations";
 
 const IndustriesSection = () => {
+  const scrollRef = useScrollTriggerAnimations();
   return (
-    <section className="max-h-fit bg-[#242424] relative overflow-hidden">
+    <section
+      ref={scrollRef}
+      className="max-h-fit bg-[#242424] relative overflow-hidden"
+    >
       <div className="pt-14 wrapper">
         <img
-          data-aos="fade-down-right"
           loading="lazy"
           src={moonShapeImg}
           width={400}
           height={400}
-          className="object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] -z-0"
+          className="toTopLeft object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] -z-0"
           alt=""
         />
         <img
@@ -19,7 +22,7 @@ const IndustriesSection = () => {
           src={moonShapeImg}
           width={400}
           height={400}
-          className="object-contain absolute w-[28rem] h-[20rem] bottom-[-7.5rem] right-[-9rem] scale-x-[-1] scale-y-[-1] -z-0"
+          className="toBottomRight object-contain absolute w-[28rem] h-[20rem] bottom-[-7.5rem] right-[-9rem] scale-x-[-1] scale-y-[-1] -z-0"
           alt=""
         />
         <img
@@ -28,7 +31,7 @@ const IndustriesSection = () => {
           src={circleImg}
           width={150}
           height={150}
-          className="object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] -z-0"
+          className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] -z-0"
           alt=""
         />
         <h2 data-aos="fade-up" className="text1 text-center">
