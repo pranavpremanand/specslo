@@ -78,7 +78,6 @@ export default function Home() {
               className=""
               scene="https://prod.spline.design/4q-1rQRL9NalrNPY/scene.splinecode"
             />
-            {/* <div className="absolute right-0 h-[4rem] bottom-0 w-full bg-black"></div> */}
           </div>
         </div>
       </section>
