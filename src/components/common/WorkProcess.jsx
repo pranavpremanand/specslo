@@ -47,13 +47,13 @@ const WorkProcess = () => {
         loading="lazy"
       />
       <div className="wrapper space-y-3">
-        <h3 data-aos="fade-up" className="text1 text-center">
+        <h3 className="text1 text-center">
           How We Bring Your
           <br />
           <span className="text-primary">Specs to Life</span>
         </h3>
         <p
-          data-aos="fade-up"
+         
           className="desc text-center max-w-4xl mx-auto text-[#FEFEFE]"
         >
           From concept to completion, Specslo ensures that your specifications
@@ -64,7 +64,7 @@ const WorkProcess = () => {
         <div className="pt-5 flex flex-wrap justify-center gap-5 sm:gap-7 max-w-5xl mx-auto">
           {workProcess.map((item) => (
             <div
-              data-aos="fade-up"
+             
               key={item.id}
               className="group hover:bg-gradient-to-b from-primary/30 to-primary/10 
               flex flex-col gap-3 p-5 sm:p-8 rounded-2xl border-2 border-white/40 
