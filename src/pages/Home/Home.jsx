@@ -8,8 +8,25 @@ import WorkProcess from "../../components/common/WorkProcess";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
 import ContactForm1 from "../../components/common/ContactForm1";
 import Spline from "@splinetool/react-spline";
+import { useEffect } from "react";
+import gsap from "gsap";
+import robot from "../../assets/images/ai-robot.png";
 
 export default function Home() {
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.to("#robot", {
+      translateY: -80,
+      duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
   return (
     <>
       <section className="min-h-screen flex items-center relative">
@@ -33,7 +50,7 @@ export default function Home() {
             alt=""
           /> */}
         {/* </div> */}
-        <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center gap-5">
+        <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center lg:items-end gap-5">
           <div
             data-aos="fade-right"
             className="space-y-3 relative z-10 py-[6rem]"
@@ -73,10 +90,24 @@ export default function Home() {
             <Button to="/home">Get Started</Button>
           </div>
 
-          <div className="h-[50vh] translate-y-[5rem] lg:h-full w-full lg:w-2/3 lg:absolute -right-[10%] top-1/2 lg:-translate-y-1/2">
-            <Spline
+          <div className="h-[38vh] lg:h-[50vh] flex justify-start translate-y-2/3 lg:translate-y-0">
+            {/* translate-y-[5rem] lg:h-full w-full lg:w-2/3 lg:absolute -right-[10%] top-1/2 lg:-translate-y-1/2 */}
+            {/* <Spline
               className=""
               scene="https://prod.spline.design/4q-1rQRL9NalrNPY/scene.splinecode"
+            /> */}
+            <img
+              loading="lazy"
+              id="robot"
+              src={robot}
+              srcset={`${robot} 300w,
+             ${robot} 600w,
+             ${robot} 1200w`}
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 600px"
+              alt="robot"
+              width="600"
+              height="400"
+              className="h-[32vh] lg:h-[40vh] w-fit object-contain"
             />
           </div>
         </div>
