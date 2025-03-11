@@ -11,12 +11,15 @@ import SpinnerContextProvider, {
   LoadingSpinnerContext,
 } from "./components/common/SpinnerContext";
 import LandingPage from "./pages/LandingPage/LandingPage";
+import { Toaster } from "react-hot-toast";
+import WhatsappButton from "./components/common/WhatsappButton";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
 const ContactUs = lazy(() => import("./pages/ContactUs/ContactUs"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const Healthcare = lazy(() => import("./pages/Healthcare/Healthcare"));
+const ThankYou = lazy(() => import("./pages/ThankYou"));
 const ServiceDetails = lazy(() =>
   import("./pages/ServiceDetails/ServiceDetails")
 );
@@ -32,6 +35,8 @@ function App() {
       <BrowserRouter>
         <SpinnerContextProvider>
             <ScrollToTop />
+            <WhatsappButton />
+            <Toaster />
             <LoadingSpinnerContext />
             <Routes>
               <Route path="/" element={<WebsiteLayout />}>
@@ -52,6 +57,7 @@ function App() {
                   element={<LandingPage page="app" />}
                 />
               </Route>
+               <Route path='/thank-you' element={<ThankYou/>}/>
             </Routes>
         </SpinnerContextProvider>
       </BrowserRouter>

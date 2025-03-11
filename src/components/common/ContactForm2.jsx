@@ -1,10 +1,73 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ImPhone } from "react-icons/im";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { circleImg, companyDetails } from "../../content/constant";
 import { IoLocation, IoMail } from "react-icons/io5";
+import { SpinnerContext } from "./SpinnerContext";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const ContactForm2 = ({ isDark }) => {
+  const { setLoading } = useContext(SpinnerContext);
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    mode: "all",
+  });
+
+  const onSubmit = async (values) => {
+    setLoading(true);
+    try {
+      let body =
+        "Full Name : " +
+        values.fullName +
+        "\n\n" +
+        "Email : " +
+        values.email +
+        "\n\n" +
+        "Phone : " +
+        values.phone +
+        "\n\n" +
+        "Message : " +
+        values.message +
+        "\n\n";
+
+      const data = {
+        body,
+        name: "SPECSLO",
+        subject: values.subject,
+        to: companyDetails.email,
+      };
+
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        data
+      );
+
+      if (res.data.success) {
+        toast.success(res.data.message);
+        reset();
+        navigate("/thank-you");
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div
       id="contact"
@@ -30,6 +93,7 @@ const ContactForm2 = ({ isDark }) => {
       )}
       <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7 relative z-[1]">
         <form
+          onSubmit={handleSubmit(onSubmit)}
           data-aos="fade-right"
           className="bg-black text-white p-7 border-[2px] border-primary rounded-[2.5rem] space-y-5"
         >
@@ -40,7 +104,20 @@ const ContactForm2 = ({ isDark }) => {
                 type="text"
                 className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
                 placeholder="Enter your full name"
+                {...register("fullName", {
+                  required: "Full Name is required",
+                  validate: (value) => {
+                    if (value.trim() === "") {
+                      return "Full Name is required";
+                    }
+                  },
+                })}
               />
+              {errors.fullName && (
+                <small className="text-red-500">
+                  {errors.fullName.message}
+                </small>
+              )}
             </div>
             <div className="space-y-1 grid">
               <label className="text-sm">Email</label>
@@ -48,7 +125,17 @@ const ContactForm2 = ({ isDark }) => {
                 type="email"
                 className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
                 placeholder="Enter your email address"
+                {...register("email", {
+                  required: "Email is required",
+                  pattern: {
+                    value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                    message: "Invalid email address",
+                  },
+                })}
               />
+              {errors.email && (
+                <small className="text-red-500">{errors.email.message}</small>
+              )}
             </div>
           </div>
           <div className="space-y-1 grid">
@@ -57,7 +144,15 @@ const ContactForm2 = ({ isDark }) => {
               type="tel"
               className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
               placeholder="Enter your phone number"
+              {...register("phone", {
+                required: "Phone number is required",
+                pattern: {
+                  value: /^\+?[\d\s\-()]{6,14}\d$/,
+                  message: "Entered phone number is invalid",
+                },
+              })}
             />
+            <small className="text-red-500">{errors.phone?.message}</small>
           </div>
           <div className="space-y-1 grid">
             <label className="text-sm">Subject</label>
@@ -65,16 +160,41 @@ const ContactForm2 = ({ isDark }) => {
               type="text"
               className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
               placeholder="Enter subject"
+              {...register("subject", {
+                required: "Subject is required",
+                validate: (value) => {
+                  if (value.trim() === "") {
+                    return "Subject is required";
+                  }
+                },
+              })}
             />
+            {errors.subject && (
+              <small className="text-red-500">{errors.subject.message}</small>
+            )}
           </div>
           <div className="space-y-1 grid">
             <label className="text-sm">Message</label>
             <textarea
               className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
               placeholder="Enter your message here"
+              {...register("message", {
+                required: "Message is required",
+                validate: (value) => {
+                  if (value.trim() === "") {
+                    return "Message is required";
+                  }
+                },
+              })}
             />
+            {errors.message && (
+              <small className="text-red-500">{errors.message.message}</small>
+            )}
           </div>
-          <button className="btn w-full bg-white text-black hover:bg-primary border border-primary">
+          <button
+            type="submit"
+            className="btn w-full bg-white text-black hover:bg-primary border border-primary"
+          >
             Submit
           </button>
         </form>

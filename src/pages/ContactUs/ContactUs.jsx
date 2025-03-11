@@ -1,11 +1,75 @@
 import banner from "../../assets/images/banners/contactus.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { IoLocation, IoMail } from "react-icons/io5";
 import { ImPhone } from "react-icons/im";
 import { companyDetails } from "../../content/constant";
 import MapComponent from "../../components/website/MapComponent";
+import { useContext } from "react";
+import { SpinnerContext } from "../../components/common/SpinnerContext";
+import { useForm } from "react-hook-form";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const ContactUs = () => {
+  const { setLoading } = useContext(SpinnerContext);
+  const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({
+    defaultValues: {
+      fullName: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    mode: "all",
+  });
+
+  const onSubmit = async (values) => {
+    setLoading(true);
+    try {
+      let body =
+        "Full Name : " +
+        values.fullName +
+        "\n\n" +
+        "Email : " +
+        values.email +
+        "\n\n" +
+        "Phone : " +
+        values.phone +
+        "\n\n" +
+        "Message : " +
+        values.message +
+        "\n\n";
+
+      const data = {
+        body,
+        name: "SPECSLO",
+        subject: values.subject,
+        to: companyDetails.email,
+      };
+
+      const res = await axios.post(
+        "https://send-mail-redirect-boostmysites.vercel.app/send-email",
+        data
+      );
+
+      if (res.data.success) {
+        toast.success(res.data.message);
+        reset();
+        navigate("/thank-you");
+      } else {
+        toast.error(res.data.message);
+      }
+    } catch (err) {
+      toast.error("Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <>
       <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
@@ -24,6 +88,7 @@ const ContactUs = () => {
       <section className="py-14">
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
           <form
+            onSubmit={handleSubmit(onSubmit)}
             data-aos="fade-right"
             className="p-6 space-y-4 rounded-2xl bg-[#EDEDED] text-black"
           >
@@ -34,7 +99,20 @@ const ContactUs = () => {
                   type="text"
                   className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                   placeholder="Enter your full name"
+                  {...register("fullName", {
+                    required: "Full Name is required",
+                    validate: (value) => {
+                      if (value.trim() === "") {
+                        return "Full Name is required";
+                      }
+                    },
+                  })}
                 />
+                {errors.fullName && (
+                  <small className="text-red-500">
+                    {errors.fullName.message}
+                  </small>
+                )}
               </div>
               <div className="space-y-1 grid">
                 <label className="text-sm">Email</label>
@@ -42,7 +120,17 @@ const ContactUs = () => {
                   type="email"
                   className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                   placeholder="Enter your email address"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+                      message: "Invalid email address",
+                    },
+                  })}
                 />
+                {errors.email && (
+                  <small className="text-red-500">{errors.email.message}</small>
+                )}
               </div>
             </div>
             <div className="space-y-1 grid">
@@ -51,7 +139,15 @@ const ContactUs = () => {
                 type="tel"
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter your phone number"
+                {...register("phone", {
+                  required: "Phone number is required",
+                  pattern: {
+                    value: /^\+?[\d\s\-()]{6,14}\d$/,
+                    message: "Entered phone number is invalid",
+                  },
+                })}
               />
+              <small className="text-red-500">{errors.phone?.message}</small>
             </div>
             <div className="space-y-1 grid">
               <label className="text-sm">Subject</label>
@@ -59,16 +155,41 @@ const ContactUs = () => {
                 type="text"
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter subject"
+                {...register("subject", {
+                  required: "Subject is required",
+                  validate: (value) => {
+                    if (value.trim() === "") {
+                      return "Subject is required";
+                    }
+                  },
+                })}
               />
+              {errors.subject && (
+                <small className="text-red-500">{errors.subject.message}</small>
+              )}
             </div>
             <div className="space-y-1 grid">
               <label className="text-sm">Message</label>
               <textarea
                 className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter your message here"
+                {...register("message", {
+                  required: "Message is required",
+                  validate: (value) => {
+                    if (value.trim() === "") {
+                      return "Message is required";
+                    }
+                  },
+                })}
               />
+              {errors.message && (
+                <small className="text-red-500">{errors.message.message}</small>
+              )}
             </div>
-            <button className="btn bg-[#222222] hover:bg-black w-full text-white">
+            <button
+              type="submit"
+              className="btn bg-[#222222] hover:bg-black w-full text-white"
+            >
               Submit Now
             </button>
           </form>
