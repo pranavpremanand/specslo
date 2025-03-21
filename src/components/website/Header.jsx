@@ -11,7 +11,8 @@ export const websiteLinks = [
   { id: 2, title: "About Specslo", url: "/about-us" },
   { id: 3, title: "Services", url: "/services" },
   { id: 4, title: "Healthcare Solutions", url: "/healthcare" },
-  { id: 5, title: "Contact", url: "/contact-us" },
+  { id: 5, title: "Blogs", url: "/blogs" },
+  { id: 6, title: "Contact", url: "/contact-us" },
 ];
 
 const Header = () => {
