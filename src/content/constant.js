@@ -12,7 +12,12 @@ export const companyDetails = {
   email: "support@specslo.com",
   location: "Archi Peace Park, Sector-4, Udaipur, India",
   phone: "+91-7597406130",
-  whatsapp:"https://wa.me/917597406130"
+  whatsapp: "https://wa.me/917597406130",
+  instagram: "https://instagram.com/specslo",
+  linkedin: "https://www.linkedin.com/company/specslo/",
+  youtube: "https://www.youtube.com/@speccslo",
+  twitter: "https://x.com/specslo",
+  facebook: "https://www.facebook.com/specslo",
 };
 
 // industries
@@ -654,4 +659,3 @@ export const appDevelopmentServices = [
       "Before launching your app, we conduct thorough testing to ensure it’s bug-free, secure, and optimized. Our testing includes performance, usability, and compatibility checks across multiple devices and platforms. Once your app passes all tests, we guide you through the deployment process, ensuring a smooth launch on the App Store or Google Play.",
   },
 ];
-

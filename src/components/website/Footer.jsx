@@ -9,40 +9,50 @@ import {
   SlSocialInstagram,
   SlSocialLinkedin,
   SlSocialTwitter,
+  SlSocialYoutube,
 } from "react-icons/sl";
 
 const Footer = () => {
   return (
     <div className="bg-white/10 py-12">
-      <div
-        className="wrapper flex md:flex-row flex-col flex-wrap justify-between gap-10 md:gap-7"
-      >
+      <div className="wrapper flex md:flex-row flex-col flex-wrap justify-between gap-10 md:gap-7">
         <div className="flex flex-col md:items-center gap-3">
           <img src={logo} alt="Logo" className="w-[14rem] object-contain" />
           <div className="flex gap-3">
             <Link
-              to=""
+              to={companyDetails.linkedin}
+              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialLinkedin size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.instagram}
+              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialInstagram size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.facebook}
+              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialFacebook size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.twitter}
+              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialTwitter size={18} strokeWidth={0.5} className="" />
+            </Link>
+            <Link
+              to={companyDetails.youtube}
+              target="_blank"
+              className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
+            >
+              <SlSocialYoutube size={18} strokeWidth={0.5} className="" />
             </Link>
           </div>
         </div>
