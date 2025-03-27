@@ -13,10 +13,10 @@ export const companyDetails = {
   location: "Archi Peace Park, Sector-4, Udaipur, India",
   phone: "+91-7597406130",
   whatsapp: "https://wa.me/917597406130",
-  instagram: "https://instagram.com/specslo",
+  instagram: "https://www.instagram.com/specslo",
   linkedin: "https://www.linkedin.com/company/specslo/",
   youtube: "https://www.youtube.com/@speccslo",
-  twitter: "https://x.com/specslo",
+  x: "https://x.com/specslo",
   facebook: "https://www.facebook.com/specslo",
 };
 

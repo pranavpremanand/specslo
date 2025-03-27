@@ -21,35 +21,30 @@ const Footer = () => {
           <div className="flex gap-3">
             <Link
               to={companyDetails.linkedin}
-              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialLinkedin size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
               to={companyDetails.instagram}
-              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialInstagram size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
               to={companyDetails.facebook}
-              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialFacebook size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to={companyDetails.twitter}
-              target="_blank"
+              to={companyDetails.x}
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialTwitter size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
               to={companyDetails.youtube}
-              target="_blank"
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialYoutube size={18} strokeWidth={0.5} className="" />

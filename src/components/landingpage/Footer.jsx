@@ -9,6 +9,7 @@ import {
   SlSocialInstagram,
   SlSocialLinkedin,
   SlSocialTwitter,
+  SlSocialYoutube,
 } from "react-icons/sl";
 
 const Footer = () => {
@@ -19,28 +20,34 @@ const Footer = () => {
           <img src={logo} alt="Logo" className="w-[14rem] object-contain" />
           <div className="flex gap-3">
             <Link
-              to=""
+              to={companyDetails.linkedin}
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialLinkedin size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.instagram}
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialInstagram size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.facebook}
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialFacebook size={18} strokeWidth={0.5} className="" />
             </Link>
             <Link
-              to=""
+              to={companyDetails.x}
               className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
             >
               <SlSocialTwitter size={18} strokeWidth={0.5} className="" />
+            </Link>
+            <Link
+              to={companyDetails.youtube}
+              className="w-8 h-8 flex items-center justify-center bg-primary rounded-full transition-all duration-300 hover:bg-primary/80 text-black"
+            >
+              <SlSocialYoutube size={18} strokeWidth={0.5} className="" />
             </Link>
           </div>
         </div>
