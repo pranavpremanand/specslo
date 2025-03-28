@@ -34,10 +34,18 @@ const IndustriesSection = () => {
           className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] -z-0"
           alt=""
         />
-        <h2 data-aos="fade-up" className="text1 text-center">
-          Industry-Specific Specs <br />
-          <span className="text-primary">We Excel In</span>
-        </h2>
+        <div data-aos="fade-up" className="z-0 relative text-center space-y-3">
+          <h2 className="text1">
+            <span className="text-primary">Specs </span>
+            in Every Industry
+          </h2>
+          <h4 className="text2">Your Specs. Our Tech. Real Impact.</h4>
+          <p className="desc max-w-4xl mx-auto">
+            We don’t just serve industries — we decode their specs and deliver
+            exactly what’s needed. From custom workflows to AI-powered tools, we
+            build solutions that align perfectly with each sector’s demands.
+          </p>
+        </div>
       </div>
       <div className="relative h-full pb-7 xl:pb-10">
         <div className="z-0 absolute top-0 h-1/2 w-full"></div>

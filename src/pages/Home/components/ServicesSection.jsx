@@ -90,12 +90,18 @@ const ServicesSection = () => {
             className="flex items-center gap-4 z-[2] relative"
           >
             <div className="h-[2px] w-[4rem] bg-primary1"></div>
-            <p className="font-semibold uppercase">our services</p>
+            <p className="font-semibold uppercase">Specs Inspired Services</p>
           </div>
           <h2 data-aos="fade-right" className="text1 z-[2] relative">
-            Some <br /> <span className="text-primary1">Services</span> <br />{" "}
-            We provide
+            We Don’t Just Code — <br />{" "}
+            <span className="text-primary1">We Build Around Your </span>Specs
+            <br />
           </h2>
+          <p className="desc z-[2] relative">
+            At Specslo , every service starts with your specifications. We don’t
+            believe in one-size-fits-all. We craft smart, scalable, and
+            purpose-built digital solutions — designed to fit, built to perform.
+          </p>
           <div data-aos="fade-right" className="flex gap-5 z-[2] relative">
             <button
               onClick={prevClick}
@@ -127,12 +133,13 @@ const ServicesSection = () => {
                   // className="aspect-[19/9] object-cover rounded-xl"
                 />
                 <div className="space-y-2 pt-3">
-                  <h6 className="text4">{item.title}</h6>
+                  <h4 className="text3">{item.title}</h4>
+                  <h6 className="text4 !font-medium text-gray-700">{item.subHeading}</h6>
                   <p className="desc">{item.desc}</p>
                   <div className="pt-3">
                     <Link
                       to={`/services/${createUrlParam(item.title)}`}
-                      className="btn border border-primary1 hover:border-black text-black uppercase hover:bg-primary1"
+                      className="btn border border-black text-black uppercase hover:bg-primary1"
                     >
                       Read More
                     </Link>

@@ -27,10 +27,12 @@ const Faqs = () => {
           />
         </div>
 
-        <div className="space-y-3 col-start-1 row-start-3 lg:row-start-2 lg:row-span-5">
+        <div
+          data-aos="fade-up"
+          className="space-y-3 col-start-1 row-start-3 lg:row-start-2 lg:row-span-5"
+        >
           {faqs.map((item) => (
             <div
-              data-aos="fade-up"
               key={item.id}
               className="overflow-hidden transition-all duration-500"
             >

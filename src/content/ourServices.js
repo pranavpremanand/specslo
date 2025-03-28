@@ -3,8 +3,9 @@ export const ourServices = [
   {
     id: 1,
     title: "Web Development",
+    subHeading: "Custom sites. Seamless experiences. Built around your brand.",
     image: require("../assets/images/services/web-dev1.jpeg"),
-    desc: "Website development is the process of building and maintaining a website. It involves planning, designing, coding, and testing.",
+    desc: "From sleek landing pages to powerful e-commerce platforms, we build websites that load fast, look great, and convert — all aligned with your specs.",
     serviceDetails: {
       banner: require("../assets/images/services/web-dev/banner.jpeg"),
       img1: require("../assets/images/services/web-dev/1.jpeg"),
@@ -151,8 +152,9 @@ export const ourServices = [
   {
     id: 2,
     title: "App Development",
+    subHeading: "Apps that move with your users — and your goals.",
     image: require("../assets/images/services/app-dev1.jpeg"),
-    desc: "App development is the process of creating software applications to meet business needs and improve customer experience. It involves planning, designing, developing, and testing the app.",
+    desc: "Whether Android or iOS, we create intuitive, feature-rich mobile apps tailored to your business logic, user flow, and long-term growth.",
     serviceDetails: {
       banner: require("../assets/images/services/app-dev/banner.jpeg"),
       img1: require("../assets/images/services/app-dev/1.jpeg"),
@@ -308,8 +310,9 @@ export const ourServices = [
   {
     id: 3,
     title: "Custom Software Development",
+    subHeading: "Your business is unique. Your software should be too.",
     image: require("../assets/images/services/custom-software1.jpeg"),
-    desc: "Building software specifically for a client's exact requirements, providing tailored features and functionality not found in off-the-shelf solutions.",
+    desc: "We build scalable, secure, high-performance solutions that solve your real problems — not generic tools, but software shaped by your specs.",
     serviceDetails: {
       banner: require("../assets/images/services/custom-software/banner.jpeg"),
       img1: require("../assets/images/services/custom-software/1.jpeg"),
@@ -455,9 +458,10 @@ export const ourServices = [
   },
   {
     id: 4,
-    title: "AI Services",
+    title: "AI Solutions",
+    subHeading: "Make your systems smarter — the way you need them.",
     image: require("../assets/images/services/ai1.png"),
-    desc: "AI services are a collection of offerings that use artificial intelligence (AI) to help businesses and individuals solve problems.",
+    desc: "We integrate AI where it matters most : automation, predictions, chatbots, and beyond — customized to optimize your workflows and decisions.",
     serviceDetails: {
       banner: require("../assets/images/services/ai/banner.jpeg"),
       img1: require("../assets/images/services/ai/1.png"),
@@ -620,9 +624,10 @@ export const ourServices = [
   },
   {
     id: 5,
-    title: "Data Service",
+    title: "Data Science & Analytics",
+    subHeading: "From raw data to real impact.",
     image: require("../assets/images/services/data-science1.jpeg"),
-    desc: "Data science is the practice of extracting meaningful insights from large datasets using statistical methods, programming, and machine learning to inform decision-making.",
+    desc: "We turn your data into actionable insights with predictive models, dashboards, and trend analysis — helping you stay three steps ahead.",
     serviceDetails: {
       banner: require("../assets/images/services/data-science/banner.jpeg"),
       img1: require("../assets/images/services/data-science/1.png"),
@@ -782,8 +787,9 @@ export const ourServices = [
   {
     id: 6,
     title: "Game Development",
+    subHeading: "Bring your game specs to life — across any platform.",
     image: require("../assets/images/services/game-dev1.jpeg"),
-    desc: "Game development, production, or design is a process that starts from an idea or concept. Often the idea is based on a modification of an existing game concept. The game idea may fall within one or several genres.",
+    desc: "From concept to launch, we develop immersive 2D/3D games, multiplayer systems, and real-time environments tailored to your creative vision.",
     serviceDetails: {
       banner: require("../assets/images/services/game-dev/banner.jpeg"),
       img1: require("../assets/images/services/game-dev/1.jpeg"),
@@ -926,8 +932,9 @@ export const ourServices = [
   {
     id: 7,
     title: "UI/UX Design",
+    subHeading: "Specs-led design that speaks to your users.",
     image: require("../assets/images/services/uiux1.jpeg"),
-    desc: "UI/UX design is the practice of crafting visually appealing and user-friendly interfaces that seamlessly guide users through a digital product, ensuring a positive overall experience.",
+    desc: "Our design team creates interfaces that are not just beautiful — but functional, accessible, and aligned with your user journey and goals.",
     serviceDetails: {
       banner: require("../assets/images/services/uiux/banner.jpeg"),
       img1: require("../assets/images/services/uiux/1.jpeg"),

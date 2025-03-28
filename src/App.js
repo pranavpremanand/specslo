@@ -21,6 +21,7 @@ const ContactUs = lazy(() => import("./pages/ContactUs/ContactUs"));
 const Services = lazy(() => import("./pages/Services/Services"));
 const Healthcare = lazy(() => import("./pages/Healthcare/Healthcare"));
 const ThankYou = lazy(() => import("./pages/ThankYou"));
+const Portfolio = lazy(() => import("./pages/Portfolio"));
 const ServiceDetails = lazy(() =>
   import("./pages/ServiceDetails/ServiceDetails")
 );
@@ -28,6 +29,7 @@ const ServiceDetails = lazy(() =>
 Aos.init({
   once: false,
   duration: 700,
+  offset: -250,
 });
 
 function App() {
@@ -35,32 +37,33 @@ function App() {
     <Suspense fallback={<LoadingSpinner />}>
       <BrowserRouter>
         <SpinnerContextProvider>
-            <ScrollToTop />
-            <WhatsappButton />
-            <Toaster />
-            <LoadingSpinnerContext />
-            <Routes>
-              <Route path="/" element={<WebsiteLayout />}>
-                <Route index element={<Home />} />
-                <Route path="about-us" element={<AboutUs />} />
-                <Route path="contact-us" element={<ContactUs />} />
-                <Route path="healthcare" element={<Healthcare />} />
-                <Route path="blogs" element={<Blogs />} />
-                <Route path="services" element={<Services />} />
-                <Route path="services/:param" element={<ServiceDetails />} />
-              </Route>
-              <Route path="/" element={<LandingPageLayout />}>
-                <Route
-                  path="web-development"
-                  element={<LandingPage page="web" />}
-                />
-                <Route
-                  path="app-development"
-                  element={<LandingPage page="app" />}
-                />
-              </Route>
-               <Route path='/thank-you' element={<ThankYou/>}/>
-            </Routes>
+          <ScrollToTop />
+          <WhatsappButton />
+          <Toaster />
+          <LoadingSpinnerContext />
+          <Routes>
+            <Route path="/" element={<WebsiteLayout />}>
+              <Route index element={<Home />} />
+              <Route path="about-us" element={<AboutUs />} />
+              <Route path="contact-us" element={<ContactUs />} />
+              <Route path="healthcare" element={<Healthcare />} />
+              <Route path="blogs" element={<Blogs />} />
+              <Route path="services" element={<Services />} />
+              <Route path="services/:param" element={<ServiceDetails />} />
+              <Route path="portfolio" element={<Portfolio />} />
+            </Route>
+            <Route path="/" element={<LandingPageLayout />}>
+              <Route
+                path="web-development"
+                element={<LandingPage page="web" />}
+              />
+              <Route
+                path="app-development"
+                element={<LandingPage page="app" />}
+              />
+            </Route>
+            <Route path="/thank-you" element={<ThankYou />} />
+          </Routes>
         </SpinnerContextProvider>
       </BrowserRouter>
     </Suspense>

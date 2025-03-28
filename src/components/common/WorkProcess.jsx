@@ -5,27 +5,47 @@ const workProcess = [
   {
     id: 1,
     title: "Discovery",
-    desc: "Understanding your specs in depth—your business goals, audience needs, and challenges.",
+    desc: "We dive deep into your specs, goals, and business challenges to understand exactly what you need.",
   },
   {
     id: 2,
-    title: "Planning & Strategy Development",
-    desc: "A well-defined roadmap ensures clarity, with deliverables, timelines, and milestones clearly outlined.",
+    title: "Planning",
+    desc: "We turn specs into a solid strategy — outlining timelines, tech stacks, and milestones.",
   },
   {
     id: 3,
-    title: "Design & Prototyping",
-    desc: "Crafting wireframes and prototypes to visualize the user journey, incorporating your feedback at every stage.",
+    title: "Design",
+    desc: "UI/UX designs that reflect your vision and align with your audience.",
   },
   {
     id: 4,
-    title: "Development & Testing",
-    desc: "Leveraging modern tech stacks, we turn designs into functional solutions, rigorously tested for high performance and security.",
+    title: "Prototyping",
+    desc: "Interactive prototypes that bring your idea to life — fast feedback, faster decisions.",
   },
   {
     id: 5,
-    title: "Launch & Deployment",
-    desc: "Efficiently deploying your solution to minimize downtime and maximize impact.",
+    title: "Development",
+    desc: "We code your solution with precision — scalable, secure, and built to perform.",
+  },
+  {
+    id: 6,
+    title: "Testing",
+    desc: "Every feature is tested across devices to ensure performance, security, and usability.",
+  },
+  {
+    id: 7,
+    title: "Launch",
+    desc: "Your solution goes live — with a smooth, stress-free rollout.",
+  },
+  {
+    id: 8,
+    title: "Deployment",
+    desc: "We deploy across environments — ready for scale and real-world use.",
+  },
+  {
+    id: 9,
+    title: "Post-Launch Support",
+    desc: "Your specs evolve, and so do we. We offer updates, maintenance, and optimization to keep everything running at its best.",
   },
 ];
 
@@ -52,19 +72,13 @@ const WorkProcess = () => {
           <br />
           <span className="text-primary">Specs to Life</span>
         </h3>
-        <p
-         
-          className="desc text-center max-w-4xl mx-auto text-[#FEFEFE]"
-        >
-          From concept to completion, Specslo ensures that your specifications
-          are the foundation of every solution we create. Our structured
-          approach ensures clarity, collaboration, and measurable results at
-          every stage.
+        <p className="desc text-center max-w-4xl mx-auto text-[#FEFEFE]">
+          From first idea to final launch — every step is built around your
+          specs.
         </p>
         <div className="pt-5 flex flex-wrap justify-center gap-5 sm:gap-7 max-w-5xl mx-auto">
           {workProcess.map((item) => (
             <div
-             
               key={item.id}
               className="group hover:bg-gradient-to-b from-primary/30 to-primary/10 
               flex flex-col gap-3 p-5 sm:p-8 rounded-2xl border-2 border-white/40 

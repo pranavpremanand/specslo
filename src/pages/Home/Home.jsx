@@ -6,11 +6,20 @@ import IndustriesSection from "../../components/common/IndustriesSection";
 import ServicesSection from "./components/ServicesSection";
 import WorkProcess from "../../components/common/WorkProcess";
 import WhyChooseUs from "../../components/common/WhyChooseUs";
-import ContactForm1 from "../../components/common/ContactForm1";
 import Spline from "@splinetool/react-spline";
 import { useEffect } from "react";
 import gsap from "gsap";
 import robot from "../../assets/images/ai-robot.png";
+import ContactForm2 from "../../components/common/ContactForm2";
+import {
+  appDevelopmentPortfolio,
+  webDevelopmentPortfolio,
+} from "../../content/constant";
+import PortfolioItem from "../../components/common/PortfolioItem";
+import { blogs } from "../../content/blogs";
+import BlogItem from "../../components/website/BlogItem";
+import Testimonials from "../../components/common/Testimonials";
+import Faqs from "../../components/common/Faqs";
 
 export default function Home() {
   useEffect(() => {
@@ -29,73 +38,27 @@ export default function Home() {
   }, []);
   return (
     <>
-      <section className="min-h-screen flex items-center relative">
-        {/* <div className="absolute w-full h-full sm:h-full sm:w-1/2 md:w-1/3 right-0 top-0"> */}
-        {/* <div className="h-full flex items-center w-full bg-black/30 absolute z-10"> */}
-        {/* <iframe
-              src="https://my.spline.design/droid-4885fba4273b2070eb5a2a73fe76d768/"
-              frameborder="0"
-              width="100%"
-              height="100%"
-              className='bg-black'
-            ></iframe> */}
-        {/* </div> */}
-
-        {/* <img
-            loading="lazy"
-            src={bannerImg}
-            height={1000}
-            width={400}
-            className="h-full w-full object-cover object-top"
-            alt=""
-          /> */}
-        {/* </div> */}
+      <section className="min-h- lg:pt-[10rem] flex flex-col justify-center relative">
         <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center lg:items-end gap-5">
           <div
             data-aos="fade-right"
             className="space-y-3 relative z-10 py-[6rem]"
           >
-            {/* <h1 className="text1 font-montserrat max-w-[60rem]">
-              Shaping the{" "}
-              <span className="text-primary font-montserrat">
-                Future of Technology
-              </span>{" "}
-              with
-              <span className="text-primary font-montserrat">
-                {" "}
-                Custom{" "}
-              </span>{" "}
-              Software
-            </h1> */}
-            <h2 className="text2 font-montserrat max-w-[60rem]">
-              Welcome to{" "}
-              <span className="text-primary font-montserrat">
-                Specslo Software Solutions
-              </span>
-            </h2>
             <h1 className="text1 font-montserrat max-w-[60rem]">
-              Where Your{" "}
-              <span className="text-primary font-montserrat"> Specs </span> Meet
+              Got Specs,{" "}
               <span className="text-primary font-montserrat">
-                {" "}
-                Our Solutions
+                But No One’s Building What You Actually Need ?
               </span>
             </h1>
             <p className="desc max-w-2xl pb-3">
-              At Specslo Software Solutions, we transform your visions into
-              innovative digital realities. Whether you’re a startup, a growing
-              business, or an enterprise, our expert team delivers cutting-edge
-              technology solutions tailored to your unique needs.
+              Let’s fix that. At <span className="font-bold">Specslo</span> ,
+              with 20+ successful deployments across 7 industries, we merge AI,
+              design, and development to transform your specs into smart,
+              scalable digital products — built for what’s next.
             </p>
-            <Button to="/home">Get Started</Button>
           </div>
 
           <div className="h-[38vh] lg:h-[50vh] flex justify-start translate-y-2/3 lg:translate-y-0">
-            {/* translate-y-[5rem] lg:h-full w-full lg:w-2/3 lg:absolute -right-[10%] top-1/2 lg:-translate-y-1/2 */}
-            {/* <Spline
-              className=""
-              scene="https://prod.spline.design/4q-1rQRL9NalrNPY/scene.splinecode"
-            /> */}
             <img
               loading="lazy"
               id="robot"
@@ -111,22 +74,42 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="wrapper relative z-[10] -translate-y-[4rem] lg:-translate-y-[3rem] w-full">
+          <div
+            data-aos="fade-up"
+            className="w-full lg:col-span-2 flex sm:flex-row flex-col justify-center gap-7"
+          >
+            <Link
+              className="btn bg-black border border-white min-w-[15rem] uppercase hover:bg-primary hover:text-black hover:border-primary hover:shadow-large hover:shadow-primary/60"
+              to="/contact-us"
+            >
+              Start Your Project
+            </Link>
+            <Link
+              className="btn bg-primary text-black border border-primary min-w-[15rem] uppercase hover:bg-black hover:text-white hover:border-white hover:shadow-large hover:shadow-primary/60"
+              to="/portfolio"
+            >
+              View Our Works
+            </Link>
+            {/* <Button to="/">View Our Work</Button> */}
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          className="w-full py-[4rem] wrapper text-center"
+        >
+          <h2 className="text1 font-montserrat">
+            What You Can Expect From Us?
+          </h2>
+        </div>
       </section>
-      <section className="py-14 bg-white text-black">
+      {/* <section className="py-14 bg-white text-black">
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-[60%_1fr] gap-7">
           <div data-aos="fade-right" className="space-y-5 py-4">
             <h3 className="text2">
               <span className="text-primary1">Specslo:</span> Where Your Specs
               Shape Tomorrow's Technology.
             </h3>
-            {/* <h3 className="text2">
-              Welcome to{" "}
-              <span className="text-primary1">Specslo Software Solutions</span>
-            </h3>
-            <h3 className="text2">
-              Where Your{" "}
-              <span className="text-primary1">Specs Meet Our Solutions</span>
-            </h3> */}
             <p className="desc hyphens-auto">
               At Specslo, your specs are the foundation of intelligent,
               future-ready solutions. We leverage advanced IT and AI
@@ -142,10 +125,6 @@ export default function Home() {
               enable growth, efficiency, and leadership in the next wave of
               digital transformation.
             </p>
-            {/* <h5 className="text4">
-              <span className="text-[#FFD63C]">Specslo:</span> Where Your Specs
-              Shape Tomorrow's Technology.
-            </h5> */}
             <div className="flex gap-10 pt-4">
               <Link
                 to="/about-us"
@@ -174,12 +153,93 @@ export default function Home() {
             />
           </div>
         </div>
-      </section>
-      <IndustriesSection />
+      </section> */}
       <ServicesSection />
+      <IndustriesSection />
       <WorkProcess />
       <WhyChooseUs />
-      <ContactForm1 />
+      <section className="py-14">
+        <div className="wrapper">
+          <h2 data-aos="fade-up" className="text1 text-center">
+            Few of <span className="text-primary"> Our Works</span>
+          </h2>
+          <div className="flex flex-wrap justify-center gap-7 pt-8">
+            {webDevelopmentPortfolio
+              .slice(0, 2)
+              .concat(appDevelopmentPortfolio[0])
+              .map((item) => (
+                <PortfolioItem key={item.id} item={item} />
+              ))}
+          </div>
+          <div data-aos="fade-up" className="mt-10 flex justify-center">
+            <Link
+              to="/portfolio"
+              className="btn bg-primary text-black border border-primary min-w-[15rem] uppercase hover:bg-black hover:text-white hover:border-white hover:shadow-large hover:shadow-primary/60"
+            >
+              View All Works
+            </Link>
+          </div>
+        </div>
+      </section>
+      <section className="py-14 bg-[#242424]">
+        <div data-aos="fade-up" className="wrapper">
+          <h2 className="text1 text-center">
+            Our Latest <span className="text-primary">Blogs</span>
+          </h2>
+          <div className="grid grid-cols-3 max-w- mx-auto gap-7 pt-8">
+            {blogs.OTHER.sort((a, b) => b.id - a.id).map((blog) => (
+              <div
+                key={blog.id}
+                className="p-3 border border-primary2 rounded-xl flex justify-between flex-col gap-6"
+              >
+                <div className="flex flex-col gap-3">
+                  <Link
+                    to={blog.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group"
+                  >
+                    <div className="overflow-hidden aspect-[5/3] rounded-xl">
+                      <img
+                        src={blog.image}
+                        alt="Blog"
+                        className="object-cover w-full aspect-[5/3] group-hover:brightness-90 group-hover:scale-105 transition-all duration-300"
+                      />
+                    </div>
+                  </Link>
+                  <Link
+                    to={blog.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text3 !font-medium mt-2 link"
+                  >
+                    {blog.title}
+                  </Link>
+                </div>
+                {/* <Link
+                  to={blog.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn bg-primary text-black hover:bg-black hover:text-white border border-primary h-fit"
+                >
+                  Read More
+                </Link> */}
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 flex justify-center">
+            <Link
+              to="/blogs"
+              className="btn bg-primary text-black border border-primary min-w-[15rem] uppercase hover:bg-black hover:text-white hover:border-white hover:shadow-large hover:shadow-primary/60"
+            >
+              View All Blogs
+            </Link>
+          </div>
+        </div>
+      </section>
+      <Testimonials />
+      <Faqs />
+      <ContactForm2 isDark={true} />
     </>
   );
 }

@@ -12,60 +12,66 @@ const WhyChooseUs = () => {
         className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-1/3 right-4 sm:right-[4rem] drop-shadow-2xl"
       ></div>
 
-      <div className="wrapper">
+      <div className="wrapper space-y-3">
         <h2 className="text1 text-center">
-          Why Choose <span className="text-primary1">Specslo?</span>
+          Why Brands Choose <span className="text-primary1">Specslo?</span>
         </h2>
 
-        <ul className="space-y-4 mt-7 max-w-5xl mx-auto">
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+        <p className="desc max-w-4xl mx-auto text-center">
+          We’re not just developers — we’re your strategic tech partner, turning
+          ideas into intelligent, scalable digital solutions. Here’s what sets
+          us apart:
+        </p>
+
+        <ul className="space-y-5 sm:space-y-8 pt-3 max-w-2xl mx-auto">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               S
             </span>{" "}
-            - Solutions that Fit: Every project is built around your unique
-            specs—no cookie-cutter solutions, just what your business needs.
+            - <span className="font-bold text4">Smart Solutions</span> : Custom-built
+            tech aligned with your exact needs.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               P
             </span>{" "}
-            - Pushing Boundaries: From AI to machine learning, we bring
-            future-forward tech that gives you a competitive edge.
+            - <span className="font-bold text4">Progressive Thinking</span> : We lead
+            with AI, automation, and next-gen tools.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               E
             </span>{" "}
-            - End-to-End Excellence: We handle it all—from planning to launch
-            and beyond—delivering a seamless, stress-free experience.
+            - <span className="font-bold text4">End-to-End Delivery</span> : From idea
+            to launch — we’ve got you covered.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               C
             </span>{" "}
-            - Customer-Centric: Your vision and feedback drive our work,
-            ensuring every solution feels like it was made just for you.
+            - <span className="font-bold text4">Customer-Centric</span> : Your vision
+            drives everything we create.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               S
             </span>{" "}
-            - Scale as You Grow: Our designs are built to grow with you,
-            adapting effortlessly to new needs.
+            - <span className="font-bold text4">Scalable Systems</span> : Solutions
+            that grow with your business.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               L
             </span>{" "}
-            - Loyal Support: We don’t stop at launch. Count on us for ongoing
-            updates, support, and insights as your business evolves.
+            - <span className="font-bold text4">Long-Term Support</span> : Continuous
+            updates, improvements, and care.
           </li>
-          <li className="relative pl-[1.1rem] sm:pl-[1.8rem]">
-            <span className="text-primary1 text2 absolute inset-0 -top-0 sm:-top-[.5rem]">
+          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
+            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
               O
             </span>{" "}
-            - Outcomes That Matter: We’re not just here to complete a project;
-            we’re here to make a real impact that helps you succeed.
+            - <span className="font-bold text4">Outcome-Focused</span> : We don’t just
+            build. We help you succeed.
           </li>
         </ul>
       </div>

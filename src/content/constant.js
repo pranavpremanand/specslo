@@ -3,8 +3,9 @@ import circleImg from "../assets/images/circle.png";
 import moonShapeImg from "../assets/images/yellow-moon-shape.png";
 import { IoChatbubblesOutline, IoDiamondOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
-import { IoMdCheckmarkCircleOutline, IoMdGlobe } from "react-icons/io";
+import { IoMdGlobe } from "react-icons/io";
 import { LuBrainCircuit } from "react-icons/lu";
+import { FaBrain } from "react-icons/fa";
 
 export { logo, circleImg, moonShapeImg };
 
@@ -26,43 +27,43 @@ export const industries = [
     id: 1,
     title: "FinTech and Banking",
     image: "/assets/images/icons/FinTech and Banking.png",
-    desc: "Addressing financial specs with secure payment systems.",
+    desc: "Your financial specs become secure, scalable platforms. We build payment systems, personalized experiences, and blockchain-backed tools that keep your services fast and compliant.",
   },
   {
     id: 2,
     title: "Healthcare and Biotech",
     image: "/assets/images/icons/Healthcare and Biotech.png",
-    desc: "Turning healthcare specs into solutions that advance patient care and optimize operations.",
+    desc: "We transform healthcare specs into intelligent systems — from AI diagnostics and telemedicine to secure health data platforms — enabling precise, patient-first care.",
   },
   {
     id: 3,
     title: "E-commerce and Retail",
     image: "/assets/images/icons/E-commerce and Retail.png",
-    desc: "Meeting retail specs with scalable,e-commerce platforms, predictive analytics, and AI-powered chatbots.",
+    desc: "Retail specs guide every build — from high-converting e-commerce sites to AI-driven product suggestions and chatbot integrations that elevate the shopping experience.",
   },
   {
     id: 4,
     title: "Gaming and Entertainment",
     image: "/assets/images/icons/Gaming and Entertainment.png",
-    desc: "Crafting specs into immersive gaming experiences with AR/VR and real time player.",
+    desc: "We turn creative gaming specs into interactive realities — with AR/VR environments, multiplayer engines, and story-driven mechanics tailored to your vision.",
   },
   {
     id: 5,
     title: "Logistics and Supply Chain Management",
     image: "/assets/images/icons/Logistics and Supply Chain Management.png",
-    desc: "Fulfilling supply chain specs with IoT-driven tracking systems, predictive analytics.",
+    desc: "Your operational specs become smart logistics solutions — with IoT tracking, predictive workflows, and dashboards designed to optimize every move.",
   },
   {
     id: 6,
     title: "Education and E-Learning",
     image: "/assets/images/icons/Education and E-Learning.png",
-    desc: "Shaping educational specs into adaptive learning platforms, virtual classrooms.",
+    desc: "We shape educational specs into adaptive platforms — virtual classrooms, AI tutoring, and intuitive interfaces that make learning more personalized and impactful.",
   },
   {
     id: 7,
     title: "Restaurants and Hotels",
     image: "/assets/images/icons/Restaurants and Hotels.png",
-    desc: "Designing hospitality specs to elevate guest experiences with AI-powered.",
+    desc: "Hospitality specs are transformed into smart systems — from AI-powered reservations to personalized guest experiences and analytics that improve every interaction.",
   },
 ];
 
@@ -95,40 +96,40 @@ export const testimonials = [
 
 export const futureGoals = [
   {
+    icon: <LuBrainCircuit size={30} />,
+    title: "Lead with AI Innovation",
+    description:
+      "Advance real-world AI applications — especially in healthcare, where smart diagnostics, predictive care, and automated systems can transform patient outcomes.",
+  },
+  {
+    icon: <IoMdGlobe size={30} />,
+    title: "Go Global, Stay Custom",
+    description:
+      "Expand Specslo’s global reach while delivering personalized, specs-based solutions to every client, everywhere.",
+  },
+  {
+    icon: <RiTeamLine size={30} />,
+    title: "Redefine User Experience",
+    description:
+      "Deliver seamless, intuitive digital experiences across all platforms — making every interaction meaningful and efficient.",
+  },
+  {
     icon: <IoChatbubblesOutline size={30} />,
     title: "Expand Solutions for Modern Business",
     description:
       "Grow our services to meet evolving digital needs and become your go-to partner for transformative technology.",
   },
   {
-    icon: <RiTeamLine size={30} />,
-    title: "Innovate Sustainably",
-    description:
-      "Blend future-focused tech with eco-friendly practices to create a greener, smarter tomorrow.",
-  },
-  {
     icon: <IoDiamondOutline size={30} />,
-    title: "Built Around Your Specs",
+    title: "Build Sustainable Tech",
     description:
-      "Every solution starts with your goals and evolves through your feedback.",
+      "Blend innovation with responsibility by integrating eco-conscious, ethical development practices into everything we build.",
   },
   {
-    icon: <IoMdGlobe size={30} />,
-    title: "Go Global, Stay Personal",
+    icon: <FaBrain size={30} />,
+    title: "Empower Through Data & Intelligence",
     description:
-      "Strengthen our international presence while customizing solutions to align with each client’s unique specifications.",
-  },
-  {
-    icon: <IoMdCheckmarkCircleOutline size={30} />,
-    title: "Enhance User Experience",
-    description:
-      "Deliver intuitive, engaging, and user-friendly designs that make every interaction meaningful and specs-driven.",
-  },
-  {
-    icon: <LuBrainCircuit size={30} />,
-    title: "Lead with AI, ML, and Future Tech",
-    description:
-      "Leverage AI, machine learning, and cutting-edge technologies to build solutions that anticipate tomorrow’s challenges.",
+      "Leverage AI, ML, and data science to help businesses make smarter decisions, faster — shaping a future that’s proactive, not reactive.",
   },
 ];
 
@@ -490,41 +491,49 @@ export const webDevelopmentPortfolio = [
     id: 1,
     title: "5G Homes",
     image: require("../assets/images/portfolio/web development/5ghomes.webp"),
+    serviceType: "Web Development",
   },
   {
     id: 2,
     title: "Autopilot",
     image: require("../assets/images/portfolio/web development/Autopilot.png"),
+    serviceType: "Web Development",
   },
   {
     id: 3,
     title: "Bayut",
     image: require("../assets/images/portfolio/web development/bayut.webp"),
+    serviceType: "Web Development",
   },
   {
     id: 4,
     title: "Cold Creekcap",
     image: require("../assets/images/portfolio/web development/cold creekcap.webp"),
+    serviceType: "Web Development",
   },
   {
     id: 5,
     title: "College Nutritionist",
     image: require("../assets/images/portfolio/web development/collegenutritionist.png"),
+    serviceType: "Web Development",
   },
   {
     id: 6,
     title: "Leadership.net",
     image: require("../assets/images/portfolio/web development/leadership.net.png"),
+    serviceType: "Web Development",
   },
   {
     id: 7,
     title: "Menissa Caterings",
     image: require("../assets/images/portfolio/web development/menissa caterings.webp"),
+    serviceType: "Web Development",
   },
   {
     id: 8,
     title: "Think Reality",
     image: require("../assets/images/portfolio/web development/think reality.webp"),
+    serviceType: "Web Development",
   },
 ];
 
@@ -534,51 +543,61 @@ export const appDevelopmentPortfolio = [
     id: 1,
     title: "Cryptopadie",
     image: require("../assets/images/portfolio/app development/cryptopadie.png"),
+    serviceType: "App Development",
   },
   {
     id: 2,
     title: "Doctor Plus",
     image: require("../assets/images/portfolio/app development/doctorplus.png"),
+    serviceType: "App Development",
   },
   {
     id: 3,
     title: "Dubai Travel Guide",
     image: require("../assets/images/portfolio/app development/dubai travel guide.webp"),
+    serviceType: "App Development",
   },
   {
     id: 4,
     title: "Elora Hair Palour",
     image: require("../assets/images/portfolio/app development/elora hair palour.webp"),
+    serviceType: "App Development",
   },
   {
     id: 5,
     title: "Evans Francis",
     image: require("../assets/images/portfolio/app development/evans francis.webp"),
+    serviceType: "App Development",
   },
   {
     id: 6,
     title: "House of Deliverance",
     image: require("../assets/images/portfolio/app development/house of deliverance.png"),
+    serviceType: "App Development",
   },
   {
     id: 7,
     title: "MyBitsShop",
     image: require("../assets/images/portfolio/app development/mybitsshop.webp"),
+    serviceType: "App Development",
   },
   {
     id: 8,
     title: "Namaz",
     image: require("../assets/images/portfolio/app development/namaz.webp"),
+    serviceType: "App Development",
   },
   {
     id: 9,
     title: "Potea",
     image: require("../assets/images/portfolio/app development/potea.webp"),
+    serviceType: "App Development",
   },
   {
     id: 10,
     title: "Rentop",
     image: require("../assets/images/portfolio/app development/rentop.png"),
+    serviceType: "App Development",
   },
 ];
 

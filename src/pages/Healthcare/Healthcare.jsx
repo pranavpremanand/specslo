@@ -1,26 +1,47 @@
 import React from "react";
 import Button from "../../components/common/Button";
-import banner from "../../assets/images/banners/healthcare.png";
+// import banner from "../../assets/images/banners/healthcare.png";
+import banner from "../../assets/videos/banner.mp4";
 import aboutImg from "../../assets/images/about.png";
 import { Link as Scroll } from "react-scroll";
 import ContactForm1 from "../../components/common/ContactForm1";
-import WebsiteSolutions from "./components/WebsiteSolutions";
+import Solutions from "./components/Solutions";
 import Industries from "./components/Industries";
 import { Link } from "react-router-dom";
+import ReactPlayer from "react-player";
 
 const Healthcare = () => {
   return (
     <>
-      <section className="min-h-screen flex items-center relative">
+      <section className="min-h-screen video-banner flex items-center relative">
         <div className="absolute w-full h-full right-0 top-0 opacity-70">
-          <div className="h-full flex items-center w-full bg-black/20 absolute"></div>
-          <img
+          <div className="h-full flex items-center w-full bg-black/40 absolute"></div>
+          {/* <img
             loading="lazy"
             src={banner}
             height={1000}
             width={900}
             className="h-full w-full object-cover object-top opacity-60"
             alt=""
+          /> */}
+          <ReactPlayer
+            className="h-full w-full object-cover"
+            url={banner}
+            width="100%"
+            height="100%"
+            pip={false}
+            playsinline={true}
+            playing
+            loop
+            muted
+            config={{
+              file: {
+                attributes: {
+                  controlsList: "nodownload noplaybackrate",
+                  disablePictureInPicture: true,
+                },
+              },
+            }}
           />
         </div>
         <div
@@ -120,7 +141,7 @@ const Healthcare = () => {
           </div>
         </div>
       </section>
-      <WebsiteSolutions />
+      <Solutions />
       <Industries />
       <section className="py-20">
         <div className="wrapper space-y-3">

@@ -1,25 +1,26 @@
-import banner from "../../assets/images/banners/aboutus.png";
+import banner from "../../assets/images/banners/banner.webp";
 import img1 from "../../assets/images/our-story.png";
 import img2 from "../../assets/images/client-engagement-and-support.png";
 import img3 from "../../assets/images/ongoing-support.png";
 import img4 from "../../assets/images/Partnership Beyond Projects.png";
 import { circleImg, futureGoals } from "../../content/constant";
-import ContactForm1 from "../../components/common/ContactForm1";
 import Testimonials from "../../components/common/Testimonials";
+import ContactForm2 from "../../components/common/ContactForm2";
+import { Link } from "react-router-dom";
 
 const AboutUs = () => {
   return (
     <>
       <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-black/20 z-[-1]"></div>
+        <div className="absolute inset-0 h-full w-full bg-black/40 z-[-1]"></div>
         <img
           src={banner}
           className="object-cover w-full h-full absolute inset-0 z-[-2]"
           alt="Banner"
         />
-        <div className="wrapper flex h-full py-16 items-end">
+        <div className="wrapper flex h-full py-16 items-center">
           <h1 data-aos="fade-right" className="text_xl">
-            About Us
+            About Specslo
           </h1>
         </div>
       </section>
@@ -28,41 +29,51 @@ const AboutUs = () => {
           data-aos="fade-up"
           className="bg-primary absolute z-[-1] right-0 top-14 w-[6rem] h-[20rem]"
         ></div>
-        <div className="wrapper">
-          <h2 data-aos="fade-up" className="text1 text-center">
-            Our Story
+        <div className="wrapper space-y-4">
+          <h2
+            data-aos="fade-up"
+            className="text1 text-center max-w-6xl mx-auto"
+          >
+            Built Around Your Specs. Designed for the Future.
           </h2>
-          <div className="grid md:grid-cols-[40%_1fr] gap-8 pt-5">
+          <p className="desc max-w-5xl mx-auto text-center">
+            At <b>Specslo Software Solutions</b>, we see every{" "}
+            <b>specification</b> as more than a requirement — it's a{" "}
+            <b>blueprint for innovation</b>. We specialize in transforming
+            business specs into powerful, scalable, and AI-driven digital
+            solutions that drive meaningful impact.
+          </p>
+          <p className="desc max-w-5xl mx-auto text-center">
+            Our name says it all: <br />
+            <b>"Specs"</b> for specifications, and <b>"Lo"</b> (from Hindi,
+            meaning take) — together, Specslo means we take your specs and build
+            technology that fits perfectly. No templates. No assumptions. Just
+            custom-built solutions shaped by your vision.
+          </p>
+          <div className="grid md:grid-cols-[40%_1fr] gap-8 pt-10">
             <div className="rounded-xl overflow-hidden">
               <img
                 data-aos="fade-right"
                 loading="lazy"
                 src={img1}
-                className="w-full h-full aspect-square object-cover"
+                className="w-full h-full aspect-[4/3] object-cover"
                 alt=""
               />
             </div>
             <div data-aos="fade-up">
-              <p className="desc">
-                At Specslo, we see every spec as a story waiting to be told—a
-                unique set of needs and aspirations that, when combined with the
-                right technology, can create something extraordinary. Founded
-                with the belief that great technology starts with understanding,
-                our mission is to transform your specs into meaningful solutions
-                that drive innovation and success.
-                <br />
-                Our name, "Specs" (specifications) and "Lo" (meaning "take" in
-                Hindi), reflects this philosophy: to take your vision and
-                deliver solutions that not only meet your needs but exceed your
-                expectations. We embrace each challenge as an opportunity to
-                co-create with you, ensuring every project is a step toward a
-                brighter, more connected future.
-                <br />
-                At Specslo, we don’t just develop technology—we craft
-                transformative experiences. By seamlessly integrating your
-                unique specifications into future-ready solutions, we help
-                businesses adapt, grow, and thrive in an ever-evolving digital
-                world.
+              <h2 className="text1">Our Story</h2>
+              <p className="desc mt-3">
+                Every project begins with <b>understanding</b>. We founded
+                Specslo with the belief that{" "}
+                <b>great technology starts with listening</b> — listening to
+                your goals, your needs, and your specs. <br />
+                Since our inception, we’ve delivered{" "}
+                <b>20+ successful solutions across 7+ industries</b>, turning
+                complex challenges into future-ready platforms — combining{" "}
+                <b>AI, data, design, and development</b> in ways that unlock
+                growth. <br />
+                At Specslo, we don’t just code — we co-create. Your specs guide
+                every decision, and your success is our mission.
               </p>
             </div>
           </div>
@@ -298,37 +309,73 @@ const AboutUs = () => {
       <section className="py-14 bg-white text-black relative overflow-hidden z-0">
         <div
           data-aos="fade-down"
-          className="absolute z-[-1] top-[-3rem] lef-[-3rem] h-[18rem] w-[8rem] bg-primary rounded-ee-[8rem]"
+          className="absolute z-[-1] top-[-3rem] left-[-3rem] h-[18rem] w-[8rem] bg-primary rounded-ee-[8rem]"
         />
-        <div className="wrapper relative text-center space-y-3">
+        <div
+          data-aos="fade-down"
+          className="absolute z-[-1] top-[-3rem] right-0 h-[18rem] w-[8rem] bg-primary rounded-bl-[8rem]"
+        />
+        <div className="wrapper relative space-y-10">
           <div
             data-aos="fade-up-right"
             className="z-[-1] w-[6rem] h-[6rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-full right-[15%] drop-shadow-2xl"
           ></div>
-          <h2 data-aos="fade-up" className="text1 text-primary2">
-            Vision
-          </h2>
-          <p data-aos="fade-up" className="desc max-w-4xl mx-auto">
-            To lead the next wave of digital transformation by turning specs
-            into intelligent, AI-powered solutions. Specslo is committed to
-            redefining how businesses innovate, fostering sustainable growth,
-            and building meaningful connections in a future shaped by advanced
-            technologies. With a focus on adaptability, precision, and
-            collaboration, we aim to empower businesses to navigate tomorrow’s
-            challenges with confidence and creativity.
-          </p>
+          <div className="space-y-3 flex flex-col items-start">
+            <h2 data-aos="fade-up" className="text1">
+              Vision
+            </h2>
+            <p data-aos="fade-up" className="desc max-w-4xl">
+              To lead the next wave of digital transformation by building
+              specs-first, AI-powered solutions that help businesses adapt,
+              grow, and connect in an ever-evolving world.
+            </p>
+            <div data-aos="fade-up" className="space-y-3 pt-3">
+              <p className="desc">We aim to empower organizations through:</p>
+              <ul className="space-y-3 list-disc list-inside">
+                <li>Adaptive, intelligent technologies</li>
+                <li>Sustainable innovation</li>
+                <li>Precision-led development</li>
+                <li>Global impact with a personal touch</li>
+              </ul>
+            </div>
+          </div>
+          <div className="space-y-3 flex flex-col items-end">
+            <h2 data-aos="fade-up" className="text1">
+              Mission
+            </h2>
+
+            <div data-aos="fade-up" className="space-y-3 pt-3">
+              <ul className="space-y-3 list-disc list-inside">
+                <li>
+                  To build custom solutions that perfectly match each client’s
+                  specs
+                </li>
+                <li>
+                  To blend creativity, data, and emerging tech into every
+                  project
+                </li>
+                <li>
+                  To deliver with precision, transparency, and partnership
+                </li>
+                <li>To empower businesses through innovation that matters</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="wrapper py-16 text-center">
-          <h2 data-aos="fade-up" className="text1 text-primary2">
-            Future Goals
+        <div className="wrapper py-16 space-y-3">
+          <h2 data-aos="fade-up" className="text1 text-center">
+            Our Future Goals
           </h2>
+          <h3 className="text2 text-center">
+            Driven by Specs. Designed for the Future.
+          </h3>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7 pt-7">
             {futureGoals.map((item) => (
-              <div key={item.title} data-aos='fade-up'>
-                <div
-                  className="bg-black group hover:bg-primary hover:text-black text-start text-white rounded-xl p-7 space-y-3 transition-all duration-300 h-full"
-                >
-                  <div className="pb-7 text-primary group-hover:text-black">{item.icon}</div>
+              <div key={item.title} data-aos="fade-up">
+                <div className="bg-black group hover:bg-primary hover:text-black text-start text-white rounded-xl p-7 space-y-3 transition-all duration-300 h-full">
+                  <div className="pb-7 text-primary group-hover:text-black">
+                    {item.icon}
+                  </div>
                   <h6 className="text3">{item.title}</h6>
                   <p className="desc">{item.description}</p>
                 </div>
@@ -337,7 +384,71 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <ContactForm1 />
+      <section className="py-16 bg-[#242424]">
+        <div className="wrapper space-y-5">
+          <h2 data-aos="fade-up" className="text1 text-center">
+            A Message from <span className="text-primary">Our CEO</span>
+          </h2>
+          <h3
+            data-aos="fade-up"
+            className="text2 text-center max-w-5xl mx-auto"
+          >
+            ❝ The world doesn’t need more software. It needs smarter, sharper
+            solutions built around real problems — and that’s where{" "}
+            <span className="text-primary">Specslo </span>
+            comes in. ❞
+          </h3>
+          <p
+            data-aos="fade-up"
+            className="desc max-w-5xl mx-auto pt-3 text-center"
+          >
+            ❝ When I started Specslo, I wasn’t chasing trends — I was chasing
+            purpose. Too many businesses struggle with off-the-shelf tech that
+            doesn’t really solve their problems. I wanted to change that.
+            <br />
+            At Specslo, we don’t just write code — we decode what your business
+            truly needs and build with precision, passion, and future-ready tech
+            like AI, automation, and clean design.
+            <br />
+            We believe in the power of specs — your specs. Every project we take
+            on is a chance to co-create something meaningful that drives impact.
+            <br />
+            This isn’t just about building software. It’s about building
+            solutions that{" "}
+            <b>work today, scale tomorrow, and lead the future.</b>
+            <br />
+            Let’s build smart. Let’s build bold. Let’s build yours. ❞
+          </p>
+          <p data-aos="fade-up" className="text3 text-end max-w-5xl mx-auto">
+            — <b>Ruchir Mandora</b> <br />
+            <span className="!font-normal">Founder & CEO, Specslo</span>
+          </p>
+        </div>
+      </section>
+      <section className="py-16 bg-white text-black">
+        <div data-aos="fade-up" className="wrapper space-y-4 text-center">
+          <h4 className="text2">Download Our Company Brochure</h4>
+          <h5 className="text3">
+            Looking for a detailed breakdown of our services, industry use
+            cases, and successful deployments?
+          </h5>
+          <p>
+            <Link
+              to="https://heyzine.com/flip-book/afc660e209.html"
+              target="_blank"
+              className="text-primary2 bg-black px-2 py-1 rounded"
+            >
+              📥{" "}
+              <span className="underline">
+                Download the Specslo Company Brochure
+              </span>
+            </Link>{" "}
+            to learn how we can help your business grow with custom, AI-powered
+            technology.
+          </p>
+        </div>
+      </section>
+      <ContactForm2 isDark={true} />
     </>
   );
 };

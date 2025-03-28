@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import banner from "../../assets/images/banners/services.jpg";
+import banner from "../../assets/images/banners/banner.webp";
 import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
 import CTA from "../../components/common/CTA";
@@ -10,7 +10,7 @@ const Services = () => {
   return (
     <>
       <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-black/50 z-[-1]"></div>
+        <div className="absolute inset-0 h-full w-full bg-black/40 z-[-1]"></div>
         <img
           src={banner}
           className="object-cover w-full h-full absolute inset-0 z-[-2]"

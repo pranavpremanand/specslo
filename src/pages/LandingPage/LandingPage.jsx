@@ -19,6 +19,7 @@ import Spline from "@splinetool/react-spline";
 import { useEffect } from "react";
 import gsap from "gsap";
 import robot from "../../assets/images/ai-robot.png";
+import PortfolioItem from "../../components/common/PortfolioItem";
 
 export default function LandingPage({ page }) {
   const isWeb = page === "web";
@@ -30,19 +31,19 @@ export default function LandingPage({ page }) {
   const portfolio = isWeb ? webDevelopmentPortfolio : appDevelopmentPortfolio;
 
   useEffect(() => {
-      const tl = gsap.timeline();
-      tl.to("#robot", {
-        translateY: -80,
-        duration: 2,
-        ease: "power1.inOut",
-        repeat: -1,
-        yoyo: true,
-      });
-  
-      return () => {
-        tl.kill();
-      };
-    }, []);
+    const tl = gsap.timeline();
+    tl.to("#robot", {
+      translateY: -80,
+      duration: 2,
+      ease: "power1.inOut",
+      repeat: -1,
+      yoyo: true,
+    });
+
+    return () => {
+      tl.kill();
+    };
+  }, []);
   return (
     <>
       <section className="min-h-screen flex items-center relative">
@@ -197,20 +198,7 @@ export default function LandingPage({ page }) {
           </h2>
           <div className="flex flex-wrap justify-center gap-7 pt-8">
             {portfolio.map((item) => (
-              <div
-                data-aos="fade-up"
-                key={item.id}
-                className="group relative aspect-square sm:w-[calc(100%/2-1.75rem)] lg:w-[calc(100%/3-1.75rem)] rounded-2xl overflow-hidden"
-              >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full group-hover:scale-110 transition-all duration-500"
-                />
-                <h5 className="text3 absolute w-full bottom-0 left-0 py-3 bg-primary text-black text-center">
-                  {item.title}
-                </h5>
-              </div>
+              <PortfolioItem key={item.id} item={item} />
             ))}
           </div>
         </div>

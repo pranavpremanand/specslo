@@ -8,7 +8,7 @@ import { useKeenSlider } from "keen-slider/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import useScrollTriggerAnimations from "../../../hooks/useScrollTriggerAnimations";
 
-const WebsiteSolutions = () => {
+const Solutions = () => {
   const scrollRef = useScrollTriggerAnimations();
   const [sliderRef, instanceRef] = useKeenSlider(
     {
@@ -89,8 +89,7 @@ const WebsiteSolutions = () => {
           alt=""
         />
         <h2 data-aos="fade-up" className="text1 text-center">
-          Explore Healthcare <br />
-          <span className="text-primary"> Website Solutions</span>
+          Explore Healthcare <span className="text-primary"> Solutions</span>
         </h2>
       </div>
       <div className="relative h-full pb-7 xl:pb-10">
@@ -143,4 +142,4 @@ const WebsiteSolutions = () => {
   );
 };
 
-export default WebsiteSolutions;
+export default Solutions;
