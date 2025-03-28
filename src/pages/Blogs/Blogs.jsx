@@ -24,7 +24,7 @@ const Blogs = () => {
         <div className="wrapper space-y-[3rem]">
           <div className="space-y-2">
             <h2 className="text1 mb-4">Healthcare</h2>
-            <div className="grid grid-cols-3 gap-7">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7">
               {blogs.HEALTHCARE.sort((a, b) => b.id - a.id).map((blog) => (
                 <BlogItem blog={blog} key={blog.id} />
               ))}
@@ -32,7 +32,7 @@ const Blogs = () => {
           </div>
           <div className="space-y-2">
             <h2 className="text1 mb-4">Others</h2>
-            <div className="grid grid-cols-3 gap-7">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7">
               {blogs.OTHER.sort((a, b) => b.id - a.id).map((blog) => (
                 <BlogItem blog={blog} key={blog.id} />
               ))}
