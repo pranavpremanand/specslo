@@ -20,6 +20,8 @@ import { blogs } from "../../content/blogs";
 import BlogItem from "../../components/website/BlogItem";
 import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
+import ReactPlayer from "react-player";
+import banner from "../../assets/videos/banner.mp4";
 
 export default function Home() {
   useEffect(() => {
@@ -38,7 +40,27 @@ export default function Home() {
   }, []);
   return (
     <>
-      <section className="min-h- lg:pt-[10rem] flex flex-col justify-center relative">
+      <section className="min-h- video-banner lg:pt-[10rem] flex flex-col justify-center relative">
+        <div className="h-full flex items-center w-full bg-black/40 absolute inset-0"></div>
+        <ReactPlayer
+          className="h-full w-full object-cover"
+          url={banner}
+          width="100%"
+          height="100%"
+          pip={false}
+          playsinline={true}
+          playing
+          loop
+          muted
+          config={{
+            file: {
+              attributes: {
+                controlsList: "nodownload noplaybackrate",
+                disablePictureInPicture: true,
+              },
+            },
+          }}
+        />
         <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center lg:items-end gap-5">
           <div
             data-aos="fade-right"
