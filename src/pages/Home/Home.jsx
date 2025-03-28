@@ -208,7 +208,7 @@ export default function Home() {
           <h2 className="text1 text-center">
             Our Latest <span className="text-primary">Blogs</span>
           </h2>
-          <div className="grid grid-cols-3 max-w- mx-auto gap-7 pt-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7 pt-8">
             {blogs.OTHER.sort((a, b) => b.id - a.id).map((blog) => (
               <div
                 key={blog.id}
