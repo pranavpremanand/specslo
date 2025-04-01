@@ -1,4 +1,3 @@
-import bannerImg from "../../assets/images/banner.jpg";
 import Button from "../../components/common/Button";
 import webAboutImg from "../../assets/images/landing page/web-about.jpg";
 import appAboutImg from "../../assets/images/landing page/app-about.png";
@@ -15,11 +14,11 @@ import {
 } from "../../content/constant";
 import ServicesSlider from "../../components/landingpage/ServicesSlider";
 import ClientLogos from "../../components/common/ClientLogos";
-import Spline from "@splinetool/react-spline";
 import { useEffect } from "react";
 import gsap from "gsap";
 import robot from "../../assets/images/ai-robot.png";
 import PortfolioItem from "../../components/common/PortfolioItem";
+import ContactForm3 from "../../components/common/ContactForm3";
 
 export default function LandingPage({ page }) {
   const isWeb = page === "web";
@@ -46,7 +45,7 @@ export default function LandingPage({ page }) {
   }, []);
   return (
     <>
-      <section className="min-h-screen flex items-center relative">
+      <section id="banner" className="min-h-screen flex items-center relative">
         <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center lg:items-end gap-5">
           <div
             data-aos="fade-right"
@@ -76,19 +75,7 @@ export default function LandingPage({ page }) {
               Get Started
             </Button>
           </div>
-
-          {/* <div className="h-[50vh] translate-y-[5rem] lg:h-full w-full lg:w-2/3 lg:absolute -right-[10%] top-1/2 lg:-translate-y-1/2 z-10">
-            <Spline
-              className=""
-              scene="https://prod.spline.design/4q-1rQRL9NalrNPY/scene.splinecode"
-            />
-          </div> */}
           <div className="h-[38vh] lg:h-[50vh] flex justify-start translate-y-2/3 lg:translate-y-0">
-            {/* translate-y-[5rem] lg:h-full w-full lg:w-2/3 lg:absolute -right-[10%] top-1/2 lg:-translate-y-1/2 */}
-            {/* <Spline
-              className=""
-              scene="https://prod.spline.design/4q-1rQRL9NalrNPY/scene.splinecode"
-            /> */}
             <img
               loading="lazy"
               id="robot"
@@ -105,6 +92,7 @@ export default function LandingPage({ page }) {
           </div>
         </div>
       </section>
+      <ContactForm3 />
       <section id="about" className="py-14 bg-white text-black">
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-[60%_1fr] gap-7">
           <div data-aos="fade-right" className="space-y-5 py-4 w-full">

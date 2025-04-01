@@ -1,7 +1,6 @@
 import React from "react";
 import banner from "../../assets/images/banners/banner.webp";
 import { blogs } from "../../content/blogs";
-import { Link } from "react-router-dom";
 import BlogItem from "../../components/website/BlogItem";
 
 const Blogs = () => {

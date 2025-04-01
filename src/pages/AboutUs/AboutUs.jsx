@@ -7,6 +7,7 @@ import { circleImg, futureGoals } from "../../content/constant";
 import Testimonials from "../../components/common/Testimonials";
 import ContactForm2 from "../../components/common/ContactForm2";
 import { Link } from "react-router-dom";
+import ceo from "../../assets/images/ceo.webp";
 
 const AboutUs = () => {
   return (
@@ -385,44 +386,54 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="py-16 bg-[#242424]">
-        <div className="wrapper space-y-5">
-          <h2 data-aos="fade-up" className="text1 text-center">
-            A Message from <span className="text-primary">Our CEO</span>
-          </h2>
-          <h3
-            data-aos="fade-up"
-            className="text2 text-center max-w-5xl mx-auto"
-          >
-            ❝ The world doesn’t need more software. It needs smarter, sharper
-            solutions built around real problems — and that’s where{" "}
-            <span className="text-primary">Specslo </span>
-            comes in. ❞
-          </h3>
-          <p
-            data-aos="fade-up"
-            className="desc max-w-5xl mx-auto pt-3 text-center"
-          >
-            ❝ When I started Specslo, I wasn’t chasing trends — I was chasing
-            purpose. Too many businesses struggle with off-the-shelf tech that
-            doesn’t really solve their problems. I wanted to change that.
-            <br />
-            At Specslo, we don’t just write code — we decode what your business
-            truly needs and build with precision, passion, and future-ready tech
-            like AI, automation, and clean design.
-            <br />
-            We believe in the power of specs — your specs. Every project we take
-            on is a chance to co-create something meaningful that drives impact.
-            <br />
-            This isn’t just about building software. It’s about building
-            solutions that{" "}
-            <b>work today, scale tomorrow, and lead the future.</b>
-            <br />
-            Let’s build smart. Let’s build bold. Let’s build yours. ❞
-          </p>
-          <p data-aos="fade-up" className="text3 text-end max-w-5xl mx-auto">
-            — <b>Ruchir Mandora</b> <br />
-            <span className="!font-normal">Founder & CEO, Specslo</span>
-          </p>
+        <div className="wrapper space-y-9">
+          <div className="space-y-3 flex flex-col items-center">
+            <h2 data-aos="fade-up" className="text1 text-center">
+              A Message from <span className="text-primary">Our CEO</span>
+              <hr className="border-2 border-white mt-2" />
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-[23rem,1fr] gap-4 md:gap-8">
+            <div
+              data-aos="fade-up"
+              className="p-3 border border-primary rounded-xl"
+            >
+              <img
+                src={ceo}
+                alt="CEO"
+                className="h-full bg-[#FFD63B] w-full aspect-[4/3] lg:aspect-auto object-contain lg:object-cover rounded-xl"
+              />
+            </div>
+            <div className="space-y-5 py-3">
+              <h3 data-aos="fade-up" className="text3 !font-semibold">
+                ❝ The world doesn’t need more software. It needs smarter,
+                sharper solutions built around real problems — and that’s where{" "}
+                <span className="text-primary">Specslo </span>
+                comes in. ❞
+              </h3>
+              <p data-aos="fade-up" className="desc pt-3">
+                ❝ When I started Specslo, I wasn’t chasing trends — I was
+                chasing purpose. Too many businesses struggle with off-the-shelf
+                tech that doesn’t really solve their problems. I wanted to
+                change that.
+                <br />
+                At Specslo, we don’t just write code — we decode what your
+                business truly needs and build with precision, passion, and
+                future-ready tech like AI, automation, and clean design. We
+                believe in the power of specs — your specs. Every project we
+                take on is a chance to co-create something meaningful that
+                drives impact. This isn’t just about building software. It’s
+                about building solutions that{" "}
+                <b>work today, scale tomorrow, and lead the future.</b>
+                <br />
+                Let’s build smart. Let’s build bold. Let’s build yours. ❞
+              </p>
+              <p data-aos="fade-up" className="text3 text-end">
+                — <b>Ruchir Mandora</b> <br />
+                <span className="!font-normal">Founder & CEO, Specslo</span>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       <section className="py-16 bg-white text-black">

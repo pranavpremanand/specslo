@@ -1,14 +1,14 @@
-import React, { useContext } from "react";
-import { ImPhone } from "react-icons/im";
-import { Link, useNavigate } from "react-router-dom";
-import { circleImg, companyDetails } from "../../content/constant";
-import { IoLocation, IoMail } from "react-icons/io5";
+import { useContext } from "react";
 import { SpinnerContext } from "./SpinnerContext";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { companyDetails } from "../../content/constant";
 import axios from "axios";
 import toast from "react-hot-toast";
+import { ImPhone } from "react-icons/im";
+import { IoLocation, IoMail } from "react-icons/io5";
 
-const ContactForm2 = ({ isDark }) => {
+const ContactForm3 = ({ isBlackBg }) => {
   const { setLoading } = useContext(SpinnerContext);
   const navigate = useNavigate();
   const {
@@ -69,39 +69,19 @@ const ContactForm2 = ({ isDark }) => {
     }
   };
   return (
-    <div
-      id="contact"
-      className={`${
-        isDark ? "bg-black text-white" : "bg-white text-black"
-      } text-black py-14 relative overflow-hidden`}
-    >
-      {isDark ? (
-        <img
-          data-aos="fade-up-right"
-          loading="lazy"
-          src={circleImg}
-          width={150}
-          height={150}
-          className="object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] -z-0"
-          alt=""
-        />
-      ) : (
-        <div
-          data-aos="fade-up-right"
-          className="z-0 w-[8rem] md:w-[12rem] h-[8rem] md:h-[12rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute -bottom-4 -right-4 drop-shadow-2xl"
-        ></div>
-      )}
-      <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7 relative z-[1]">
+    <section className={`${isBlackBg ? "bg-black" : "bg-[#222222]"} py-14`}>
+      <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="bg-black text-white p-7 border-[2px] border-primary rounded-[2.5rem] space-y-5"
+          data-aos="fade-right"
+          className="p-6 space-y-4 rounded-2xl bg-[#EDEDED] text-black"
         >
           <div className="grid sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-4">
-            <div className="">
+            <div className="space-y-1 grid">
               <label className="text-sm">Full Name</label>
               <input
                 type="text"
-                className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
+                className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter your full name"
                 {...register("fullName", {
                   required: "Full Name is required",
@@ -118,11 +98,11 @@ const ContactForm2 = ({ isDark }) => {
                 </small>
               )}
             </div>
-            <div className="">
+            <div className="space-y-1 grid">
               <label className="text-sm">Email</label>
               <input
                 type="email"
-                className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
+                className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
                 placeholder="Enter your email address"
                 {...register("email", {
                   required: "Email is required",
@@ -137,11 +117,11 @@ const ContactForm2 = ({ isDark }) => {
               )}
             </div>
           </div>
-          <div className="">
+          <div className="space-y-1 grid">
             <label className="text-sm">Phone Number</label>
             <input
               type="tel"
-              className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
+              className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
               placeholder="Enter your phone number"
               {...register("phone", {
                 required: "Phone number is required",
@@ -153,11 +133,11 @@ const ContactForm2 = ({ isDark }) => {
             />
             <small className="text-red-500">{errors.phone?.message}</small>
           </div>
-          <div className="">
+          <div className="space-y-1 grid">
             <label className="text-sm">Subject</label>
             <input
               type="text"
-              className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
+              className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
               placeholder="Enter subject"
               {...register("subject", {
                 required: "Subject is required",
@@ -172,10 +152,10 @@ const ContactForm2 = ({ isDark }) => {
               <small className="text-red-500">{errors.subject.message}</small>
             )}
           </div>
-          <div className="">
+          <div className="space-y-1 grid">
             <label className="text-sm">Message</label>
             <textarea
-              className="p-3 rounded-[2rem] outline-none border-2 border-primary bg-transparent w-full"
+              className="p-3 rounded-[1rem] outline-none border-2 border-gray-700 bg-transparent w-full"
               placeholder="Enter your message here"
               {...register("message", {
                 required: "Message is required",
@@ -192,14 +172,14 @@ const ContactForm2 = ({ isDark }) => {
           </div>
           <button
             type="submit"
-            className="btn w-full bg-white text-black hover:bg-primary border border-primary"
+            className="btn bg-[#222222] hover:bg-black w-full text-white"
           >
-            Submit
+            Submit Now
           </button>
         </form>
-        <div className="space-y-4">
-          <h2 className="text1">Get It Touch</h2>
-          <div className="h-2 w-[18rem] bg-black"></div>
+        <div data-aos="fade-up" className="space-y-4">
+          <h2 className="text1 text-primary">Connect With Us</h2>
+          <div className="h-2 w-[24rem] bg-white"></div>
           <h5 className="text2">
             Let’s Build Something Extraordinary Together!
           </h5>
@@ -209,51 +189,39 @@ const ContactForm2 = ({ isDark }) => {
           </p>
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div
-                className={`${
-                  isDark ? "bg-white text-black" : "bg-black text-white"
-                } w-12 h-12 rounded-full flex items-center justify-center`}
-              >
-                <ImPhone size={24} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white">
+                <ImPhone size={24} className="text-black" />
               </div>
               <Link
                 to={`tel:${companyDetails.phone}`}
-                className="desc hover:text-primary1"
+                className="desc hover:text-primary"
               >
                 {companyDetails.phone}
               </Link>
             </div>
             <div className="flex items-center gap-2">
-              <div
-                className={`${
-                  isDark ? "bg-white text-black" : "bg-black text-white"
-                } w-12 h-12 rounded-full flex items-center justify-center`}
-              >
-                <IoMail size={24} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white">
+                <IoMail size={24} className="text-black" />
               </div>
               <Link
                 to={`mailto:${companyDetails.email}`}
-                className="desc hover:text-primary1"
+                className="desc hover:text-primary"
               >
                 {companyDetails.email}
               </Link>
             </div>
 
             <div className="flex gap-2">
-              <div
-                className={`${
-                  isDark ? "bg-white text-black" : "bg-black text-white"
-                } w-12 h-12 rounded-full flex items-center justify-center`}
-              >
-                <IoLocation size={28} />
+              <div className="w-12 h-12 rounded-full flex items-center justify-center bg-white">
+                <IoLocation size={28} className="text-black" />
               </div>
               <p className="desc max-w-[16rem]">{companyDetails.location}</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
-export default ContactForm2;
+export default ContactForm3;

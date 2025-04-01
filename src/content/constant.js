@@ -10,7 +10,8 @@ import { FaBrain } from "react-icons/fa";
 export { logo, circleImg, moonShapeImg };
 
 export const companyDetails = {
-  email: "support@specslo.com",
+  email: "specsloai@gmail.com",
+  // email: "support@specslo.com",
   location: "Archi Peace Park, Sector-4, Udaipur, India",
   phone: "+91-7597406130",
   whatsapp: "https://wa.me/917597406130",

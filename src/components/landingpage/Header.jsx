@@ -26,7 +26,13 @@ const Header = () => {
     <>
       <div className="bg-[#1D1D1D] fixed top-0 h-[5rem] sm:h-[6.5rem] flex items-center py-2 left-0 w-full z-[100]">
         <div className="wrapper w-full h-fit flex items-center justify-between gap-10">
-          <a data-aos="fade-down" href="/" className="flex items-center gap-2">
+          <Scroll
+            to="banner"
+            smooth={true}
+            duration={500}
+            data-aos="fade-down"
+            className="flex items-center gap-2 cursor-pointer"
+          >
             <img
               src={logo}
               alt="logo"
@@ -34,7 +40,7 @@ const Header = () => {
               height={38}
               className="w-[8rem] sm:w-[10rem]"
             />
-          </a>
+          </Scroll>
 
           {/* Desktop Navigation */}
           <div
