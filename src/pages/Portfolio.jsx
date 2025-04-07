@@ -3,11 +3,15 @@ import ContactForm2 from "../components/common/ContactForm2";
 import PortfolioItem from "../components/common/PortfolioItem";
 import {
   appDevelopmentPortfolio,
+  gameDevelopmentPortfolio,
   webDevelopmentPortfolio,
 } from "../content/constant";
 
 const Portfolio = () => {
-  const portfolio = webDevelopmentPortfolio.concat(appDevelopmentPortfolio);
+  const portfolio = webDevelopmentPortfolio.concat(
+    appDevelopmentPortfolio,
+    gameDevelopmentPortfolio
+  );
 
   // Shuffle the array (Fisher-Yates algorithm)
   for (let i = portfolio.length - 1; i > 0; i--) {

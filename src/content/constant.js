@@ -601,6 +601,22 @@ export const appDevelopmentPortfolio = [
   },
 ];
 
+// game development portfolio
+export const gameDevelopmentPortfolio = [
+  {
+    id: 1,
+    title: "3D Bowling Game",
+    image: require("../assets/images/portfolio/game development/3d bowling game.png"),
+    serviceType: "Game Development",
+  },
+  {
+    id: 2,
+    title: "Car Stunt Extreme Racing",
+    image: require("../assets/images/portfolio/game development/car stunt extreme racing.png"),
+    serviceType: "Game Development",
+  },
+];
+
 // web development services
 export const webDevelopmentServices = [
   {
