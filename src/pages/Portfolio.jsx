@@ -62,8 +62,8 @@ const Portfolio = () => {
       {/* Portfolio Section */}
       <section id="works" className="py-14">
         <div className="wrapper w-full">
-          <div data-aos="fade-up" className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-3">
+          <div data-aos="fade-up" className="text-center mb-8">
+            <h2 className="text1 mb-2">
               Featured <span className="text-primary">Works</span>
             </h2>
             <p className="text-white/70 desc max-w-2xl mx-auto">
