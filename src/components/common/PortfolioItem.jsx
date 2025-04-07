@@ -4,7 +4,7 @@ const PortfolioItem = ({ item, isServiceVisible }) => {
   return (
     <div
       data-aos="fade-up"
-      className="group relative aspect-square sm:w-[calc(100%/2-1.75rem)] lg:w-[calc(100%/3-1.75rem)] rounded-2xl overflow-hidden"
+      className="group relative aspect-square sm:w-[calc(100%/2-1.75rem)] md:w-[calc(100%/3-1.75rem)] xl:w-[calc(100%/4-1.75rem)] rounded-2xl overflow-hidden"
     >
       {isServiceVisible && (
         <p className="absolute z-10 right-1 top-1 rounded-2xl bg-black text-white text-sm px-4 py-2">
