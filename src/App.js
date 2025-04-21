@@ -14,6 +14,7 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import { Toaster } from "react-hot-toast";
 import WhatsappButton from "./components/common/WhatsappButton";
 import Blogs from "./pages/Blogs/Blogs";
+import PageTracker from "./components/common/PageTracker";
 
 const Home = lazy(() => import("./pages/Home/Home"));
 const AboutUs = lazy(() => import("./pages/AboutUs/AboutUs"));
@@ -33,6 +34,7 @@ Aos.init({
 });
 
 function App() {
+
   return (
     <Suspense fallback={<LoadingSpinner />}>
       <BrowserRouter>
@@ -40,6 +42,7 @@ function App() {
           <ScrollToTop />
           <WhatsappButton />
           <Toaster />
+          <PageTracker />
           <LoadingSpinnerContext />
           <Routes>
             <Route path="/" element={<WebsiteLayout />}>
