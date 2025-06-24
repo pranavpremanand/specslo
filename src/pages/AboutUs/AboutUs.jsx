@@ -1,30 +1,29 @@
-import banner from "../../assets/images/banners/banner.webp";
 import img1 from "../../assets/images/our-story.png";
 import img2 from "../../assets/images/client-engagement-and-support.png";
 import img3 from "../../assets/images/ongoing-support.png";
 import img4 from "../../assets/images/Partnership Beyond Projects.png";
-import { circleImg, futureGoals } from "../../content/constant";
+import { futureGoals } from "../../content/constant";
 import Testimonials from "../../components/common/Testimonials";
-import ContactForm2 from "../../components/common/ContactForm2";
 import { Link } from "react-router-dom";
 import ceo from "../../assets/images/ceo.webp";
+import ContactForm3 from "../../components/common/ContactForm3";
+import PageBanner from "../../components/common/PageBanner";
 
 const AboutUs = () => {
+  const aboutStats = [
+    { value: "20+", label: "Successful Projects" },
+    { value: "7+", label: "Industries Served" },
+    { value: "100%", label: "Client Satisfaction" }
+  ];
+
   return (
     <>
-      <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-black/40 z-[-1]"></div>
-        <img
-          src={banner}
-          className="object-cover w-full h-full absolute inset-0 z-[-2]"
-          alt="Banner"
-        />
-        <div className="wrapper flex h-full py-16 items-center">
-          <h1 data-aos="fade-right" className="text_xl">
-            About Specslo
-          </h1>
-        </div>
-      </section>
+      <PageBanner 
+        title="About Specslo" 
+        subtitle="We transform business specifications into powerful, scalable, and AI-driven digital solutions that drive meaningful impact."
+        stats={aboutStats}
+        highlightedWord="Specslo"
+      />
       <section className="py-14 bg-white text-black relative z-0">
         <div
           data-aos="fade-up"
@@ -189,7 +188,7 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="py-14 relative">
-        <img
+        {/* <img
           data-aos="fade-down-right"
           loading="lazy"
           src={circleImg}
@@ -202,7 +201,7 @@ const AboutUs = () => {
           src={circleImg}
           className="absolute bottom-0 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
           alt=""
-        />
+        /> */}
         <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
           <div data-aos="fade-up" className="space-y-3">
             <h3 className="text2">Ongoing Support</h3>
@@ -249,10 +248,12 @@ const AboutUs = () => {
         </div>
       </section>
       <section className="z-[-2] bg-white text-black py-14 relative overflow-hidden">
+        {/* 
         <div
           data-aos="fade-down-right"
           className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"
         ></div>
+        */}
         <div
           data-aos="fade-up-right"
           className="z-[-1] w-[15rem] h-[20rem] rounded-t-[6rem] bg-gradient-to-b from-primary to-transparent absolute bottom-[-2rem] right-[-2rem] drop-shadow-2xl"
@@ -274,31 +275,31 @@ const AboutUs = () => {
             </p>
             <ul className="space-y-5 pt-3">
               <li>
-                <span className="text4 text-primary2">Planning: </span>
+                <span className="text4">Planning: </span>
                 Insights for growth and adaptation.
               </li>
               <li>
-                <span className="text4 text-primary2">
+                <span className="text4">
                   Consistent Check-Ins:{" "}
                 </span>{" "}
                 Regular touchpoints to stay aligned.
               </li>
               <li>
-                <span className="text4 text-primary2">
+                <span className="text4">
                   Solution Enhancements:{" "}
                 </span>{" "}
                 Updates as your business evolves.
               </li>
               <li>
-                <span className="text4 text-primary2"> Priority Support: </span>{" "}
+                <span className="text4"> Priority Support: </span>{" "}
                 Fast assistance for ongoing needs.
               </li>
               <li>
-                <span className="text4 text-primary2">Industry Insights: </span>{" "}
+                <span className="text4">Industry Insights: </span>{" "}
                 Guidance to keep you competitive.
               </li>
               <li>
-                <span className="text4 text-primary2">Flexible Scaling: </span>{" "}
+                <span className="text4">Flexible Scaling: </span>{" "}
                 Adjustments as your demands grow.
               </li>
             </ul>
@@ -317,10 +318,10 @@ const AboutUs = () => {
           className="absolute z-[-1] top-[-3rem] right-0 h-[18rem] w-[8rem] bg-primary rounded-bl-[8rem]"
         />
         <div className="wrapper relative space-y-10">
-          <div
+          {/* <div
             data-aos="fade-up-right"
             className="z-[-1] w-[6rem] h-[6rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-full right-[15%] drop-shadow-2xl"
-          ></div>
+          ></div> */}
           <div className="space-y-3 flex flex-col items-start">
             <h2 data-aos="fade-up" className="text1">
               Vision
@@ -385,7 +386,7 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-[#242424]">
+      <section className="py-16 bg-black">
         <div className="wrapper space-y-9">
           <div className="space-y-3 flex flex-col items-center">
             <h2 data-aos="fade-up" className="text1 text-center">
@@ -459,7 +460,8 @@ const AboutUs = () => {
           </p>
         </div>
       </section>
-      <ContactForm2 isDark={true} />
+      {/* <ContactForm2 isDark={true} /> */}
+      <ContactForm3 isBlackBg={true} />
     </>
   );
 };

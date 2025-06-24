@@ -90,7 +90,8 @@ html {
   text-align: center;
 }
 .swiper-slide .content {
-  background-color: #999999b8;
+  /* background-color: #999999b8; */
+  background-color: #000000;
 }
 
 /* Active (middle) slide */
@@ -99,7 +100,7 @@ html {
   transform: scale(1) translateY(0) !important;
 }
 .swiper-slide-active .content {
-  background-color: #726f6f;
+  background-color: #000000;
 }
 
 /* loading spinner styles */

@@ -1,12 +1,12 @@
 import { useState } from "react";
-import banner from "../assets/images/banners/banner.webp";
-import ContactForm2 from "../components/common/ContactForm2";
 import PortfolioItem from "../components/common/PortfolioItem";
 import {
   appDevelopmentPortfolio,
   gameDevelopmentPortfolio,
   webDevelopmentPortfolio,
 } from "../content/constant";
+import ContactForm3 from "../components/common/ContactForm3";
+import PageBanner from "../components/common/PageBanner";
 
 // Shuffle function
 const shuffleArray = (array) => {
@@ -35,29 +35,20 @@ const Portfolio = () => {
     game: gameDevelopmentPortfolio,
   };
 
+  // const portfolioStats = [
+  //   { value: `${allCombined.length}+`, label: "Projects Completed" },
+  //   { value: "3", label: "Development Categories" },
+  //   { value: "100%", label: "Client Satisfaction" }
+  // ];
+
   return (
     <>
-      {/* Hero Banner */}
-      <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-gradient-to-t from-black/80 to-black/40 z-[-1]"></div>
-        <img
-          src={banner}
-          className="object-cover object-center w-full h-full absolute inset-0 z-[-2]"
-          alt="Our Portfolio Work"
-          loading="eager"
-        />
-        <div className="wrapper flex h-full py-16 items-center">
-          <div data-aos="fade-right" className="max-w-2xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-              Our Portfolio
-            </h1>
-            <p className="text-lg text-white/80">
-              Explore our diverse range of projects across web, app, and game
-              development
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageBanner 
+        title="Our Portfolio" 
+        subtitle="Explore our diverse range of projects across web, app, and game development that showcase our expertise and innovation."
+        // stats={portfolioStats}
+        dividerBg="bg-black"
+      />
 
       {/* Portfolio Section */}
       <section id="works" className="py-14">
@@ -116,7 +107,8 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <ContactForm2 isDark={true} />
+      {/* <ContactForm2 isDark={true} /> */}
+      <ContactForm3 isBlackBg={true} />
     </>
   );
 };

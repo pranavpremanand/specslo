@@ -1,79 +1,129 @@
 import React from "react";
 
+const steps = [
+  {
+    letter: "S",
+    title: "Solutions that Fit",
+    description: "Custom solutions designed specifically for your unique business needs."
+  },
+  {
+    letter: "P",
+    title: "Pushing Boundaries",
+    description: "Innovative approaches that keep you ahead of the competition."
+  },
+  {
+    letter: "E",
+    title: "End-to-End Excellence",
+    description: "Comprehensive service from initial concept to ongoing support."
+  },
+  {
+    letter: "C",
+    title: "Customer-Centric",
+    description: "Your goals and satisfaction are at the center of everything we do."
+  },
+  {
+    letter: "S",
+    title: "Scales as You Grow",
+    description: "Flexible solutions that evolve with your business needs."
+  },
+  {
+    letter: "L",
+    title: "Loyal Support",
+    description: "Dedicated team committed to your long-term success."
+  },
+  {
+    letter: "O",
+    title: "Outcomes That Matter",
+    description: "Focused on delivering real, measurable results for your business."
+  }
+];
+
 const WhyChooseUs = () => {
   return (
     <div className="py-14 z-[-2] bg-white text-black relative overflow-hidden">
-      <div
-        data-aos="fade-down-right"
-        className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute top-[-1.5rem] left-[-1.5rem] drop-shadow-2xl"
-      ></div>
-      <div
-        data-aos="fade-up-right"
-        className="z-[-1] w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-1/3 right-4 sm:right-[4rem] drop-shadow-2xl"
-      ></div>
+      <div className="wrapper space-y-8">
+        <div className="text-center space-y-3">
+          <h2 className="text1 text-center" data-aos="fade-up">
+            Why Brands Choose <span className="text-primary1">Specslo?</span>
+          </h2>
 
-      <div className="wrapper space-y-3">
-        <h2 className="text1 text-center">
-          Why Brands Choose <span className="text-primary1">Specslo?</span>
-        </h2>
+          <p className="desc max-w-4xl mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+            We're not just developers — we're your strategic tech partner, turning
+            ideas into intelligent, scalable digital solutions. Here's what sets
+            us apart:
+          </p>
+        </div>
 
-        <p className="desc max-w-4xl mx-auto text-center">
-          We’re not just developers — we’re your strategic tech partner, turning
-          ideas into intelligent, scalable digital solutions. Here’s what sets
-          us apart:
-        </p>
+        {/* Staircase Container */}
+        <div className="relative max-w-5xl mx-auto pt-10">
+          {/* Desktop Staircase (hidden on mobile) */}
+          <div className="hidden lg:block">
+            {steps.map((step, index) => (
+              <div 
+                key={index}
+                className="relative w-full"
+                style={{ 
+                  marginLeft: `${index * 10}%`,
+                  marginBottom: index === steps.length - 1 ? '0' : '1rem',
+                  zIndex: steps.length - index
+                }}
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="bg-black text-white shadow-lg rounded-s-lg rounded-e-full p-3 border-l-4 border-primary hover:shadow-xl transition-shadow duration-300 group w-1/2">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary1 flex items-center justify-center text-black text2 flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
+                      {step.letter}
+                    </div>
+                    <div className="space-y-2">
+                      <h3 className="font-bold text4">{step.title}</h3>
+                      {/* <p className="text-gray-600 text-sm">{step.description}</p> */}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Connector Line */}
+                {/* {index < steps.length - 1 && (
+                  <div 
+                    className="absolute bottom-0 right-0 w-[calc(100%-5%+1rem)] h-10 border-r-2 border-b-2 border-primary1/30 rounded-br-xl"
+                    style={{ 
+                      transform: 'translateY(50%)'
+                    }}
+                  ></div>
+                )} */}
+              </div>
+            ))}
+          </div>
 
-        <ul className="space-y-5 sm:space-y-8 pt-3 max-w-2xl mx-auto">
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              S
-            </span>{" "}
-            - <span className="font-bold text4">Smart Solutions</span> : Custom-built
-            tech aligned with your exact needs.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              P
-            </span>{" "}
-            - <span className="font-bold text4">Progressive Thinking</span> : We lead
-            with AI, automation, and next-gen tools.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              E
-            </span>{" "}
-            - <span className="font-bold text4">End-to-End Delivery</span> : From idea
-            to launch — we’ve got you covered.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              C
-            </span>{" "}
-            - <span className="font-bold text4">Customer-Centric</span> : Your vision
-            drives everything we create.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              S
-            </span>{" "}
-            - <span className="font-bold text4">Scalable Systems</span> : Solutions
-            that grow with your business.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              L
-            </span>{" "}
-            - <span className="font-bold text4">Long-Term Support</span> : Continuous
-            updates, improvements, and care.
-          </li>
-          <li className="relative pl-[1.8rem] sm:pl-[2.6rem]">
-            <span className="text-black text1 absolute inset-0 -top-[.4rem] sm:-top-[1.1rem]">
-              O
-            </span>{" "}
-            - <span className="font-bold text4">Outcome-Focused</span> : We don’t just
-            build. We help you succeed.
-          </li>
-        </ul>
+          {/* Mobile Staircase (visible only on mobile) */}
+          <div className="lg:hidden space-y-4">
+            {steps.map((step, index) => (
+              <div 
+                key={index}
+                className="relative"
+                data-aos="fade-up"
+                data-aos-delay={index * 50}
+              >
+                <div className="bg-black text-white shadow-lg rounded-lg p-4 border-l-4 border-primary hover:shadow-xl transition-shadow duration-300 group">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-full bg-primary1 flex items-center justify-center text-black text-xl font-bold flex-shrink-0 shadow-md group-hover:scale-110 transition-transform duration-300">
+                      {step.letter}
+                    </div>
+                    <div className="space-y-1">
+                      <h3 className="font-bold text4">{step.title}</h3>
+                      {/* <p className="text-gray-300 text-xs">{step.description}</p> */}
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Connector Line for Mobile */}
+                {/* {index < steps.length - 1 && (
+                  <div className="absolute left-5 bottom-0 w-0 h-4 border-l-2 border-primary1/30"></div>
+                )} */}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

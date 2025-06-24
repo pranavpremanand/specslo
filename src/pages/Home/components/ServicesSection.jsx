@@ -84,7 +84,7 @@ const ServicesSection = () => {
         className="wrapper pt-20 grid md:grid-cols-[40%_1fr] gap-6"
       >
         <div className="relative space-y-4">
-          <div className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div>
+          {/* <div className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div> */}
           <div
             data-aos="fade-right"
             className="flex items-center gap-4 z-[2] relative"

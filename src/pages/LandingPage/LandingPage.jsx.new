@@ -32,7 +32,7 @@ export default function LandingPage({ page }) {
 
   useEffect(() => {
     const tl = gsap.timeline();
-
+    
     // Robot animation
     tl.to("#robot", {
       translateY: -80,
@@ -41,6 +41,33 @@ export default function LandingPage({ page }) {
       repeat: -1,
       yoyo: true,
     });
+    
+    // Heading animation
+    gsap.from(".banner-heading", {
+      opacity: 0,
+      y: 50,
+      duration: 1.2,
+      delay: 0.5,
+      ease: "power3.out",
+    });
+    
+    // Description animation
+    gsap.from(".banner-desc", {
+      opacity: 0,
+      y: 30,
+      duration: 1.2,
+      delay: 0.8,
+      ease: "power3.out",
+    });
+    
+    // Button animation
+    gsap.from(".banner-button", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      delay: 1.2,
+      ease: "power3.out",
+    });
 
     return () => {
       tl.kill();
@@ -48,16 +75,13 @@ export default function LandingPage({ page }) {
   }, []);
   return (
     <>
-      <section
-        id="banner"
-        className="min-h-screen video-banner flex flex-col justify-center relative overflow-hidden"
-      >
+      <section id="banner" className="min-h-screen video-banner flex flex-col justify-center relative overflow-hidden">
         {/* Enhanced overlay with gradient */}
         <div className="h-full w-full absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80 z-[1]"></div>
-
+        
         {/* Animated particles effect */}
         <div className="absolute inset-0 z-[2] opacity-30 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgY3g9IjIiIGN5PSIyIiByPSIxIiBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjMiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjcGF0dGVybikiLz48L3N2Zz4=')]"></div>
-
+        
         {/* Video background */}
         <ReactPlayer
           className="h-full w-full object-cover"
@@ -78,7 +102,7 @@ export default function LandingPage({ page }) {
             },
           }}
         />
-
+        
         {/* Main content */}
         <div className="wrapper flex flex-col-reverse lg:grid grid-cols-[65%_1fr] items-center lg:items-end gap-8 relative z-10 py-16">
           <div
@@ -114,11 +138,11 @@ export default function LandingPage({ page }) {
               </Button>
             </div>
           </div>
-
+          
           <div className="h-[38vh] lg:h-[50vh] flex justify-start translate-y-1/3 lg:translate-y-0 relative">
             {/* Glow effect behind robot */}
-            {/* <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[200px] h-[200px] rounded-full bg-primary/20 filter blur-3xl"></div> */}
-
+            <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[200px] h-[200px] rounded-full bg-primary/20 filter blur-3xl"></div>
+            
             <img
               loading="lazy"
               id="robot"
@@ -139,13 +163,13 @@ export default function LandingPage({ page }) {
           <div data-aos="fade-right" className="space-y-5 py-4 w-full">
             <h3 className="text2">
               Welcome to{" "}
-              <span className="text-black">
+              <span className="text-primary1">
                 Specslo {isWeb ? "Web" : "App"} Solutions
               </span>
             </h3>
             <h3 className="text2">
               Where Your{" "}
-              <span className="text-black">
+              <span className="text-primary1">
                 {isWeb
                   ? "Vision Meets Our Expertise"
                   : "Ideas Turn into Powerful Apps"}
@@ -181,7 +205,7 @@ export default function LandingPage({ page }) {
               }}
             ></p>
             <h5 className="text4">
-              <span className="text-black">Specslo:</span>{" "}
+              <span className="text-[#FFD63C]">Specslo:</span>{" "}
               {isWeb
                 ? "Empowering Your Web Presence with Innovation."
                 : "Crafting the Future of Mobile Apps."}

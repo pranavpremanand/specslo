@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Divide as Hamburger } from "hamburger-react";
-import { companyDetails, logo } from "../../content/constant";
+import { logo } from "../../content/constant";
 import Drawer from "react-modern-drawer";
 import { Link, useLocation } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-[#1D1D1D] fixed top-0 h-[5rem] sm:h-[6.5rem] flex items-center py-2 left-0 w-full z-[100]">
+      <div className="bg-black fixed top-0 h-[5rem] sm:h-[6.5rem] flex items-center py-2 left-0 w-full z-[100]">
         <div className="wrapper w-full h-fit flex items-center justify-between gap-10">
           <a data-aos="fade-down" href="/" className="flex items-center gap-2">
             <img

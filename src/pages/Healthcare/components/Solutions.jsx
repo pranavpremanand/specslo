@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  circleImg,
   healthcareWebSolutions,
   moonShapeImg,
 } from "../../../content/constant";
@@ -60,7 +59,7 @@ const Solutions = () => {
   };
 
   return (
-    <section className="max-h-fit bg-[#242424] relative z-0 overflow-hidden">
+    <section className="max-h-fit bg-black relative z-0 overflow-hidden">
       <div ref={scrollRef} className="pt-14 wrapper">
         <img
           data-aos="fade-down-right"
@@ -79,7 +78,7 @@ const Solutions = () => {
           className="object-contain absolute w-[28rem] h-[20rem] bottom-[-7.5rem] right-[-9rem] scale-x-[-1] scale-y-[-1] z-[1]"
           alt=""
         />
-        <img
+        {/* <img
           data-aos="fade-down-right"
           loading="lazy"
           src={circleImg}
@@ -87,7 +86,7 @@ const Solutions = () => {
           height={150}
           className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] z-[-1]"
           alt=""
-        />
+        /> */}
         <h2 data-aos="fade-up" className="text1 text-center">
           Explore Healthcare <span className="text-primary"> Solutions</span>
         </h2>

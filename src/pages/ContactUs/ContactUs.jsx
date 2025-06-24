@@ -1,23 +1,21 @@
-import banner from "../../assets/images/banners/banner.webp";
 import MapComponent from "../../components/website/MapComponent";
 import ContactForm3 from "../../components/common/ContactForm3";
+import PageBanner from "../../components/common/PageBanner";
 
 const ContactUs = () => {
+  const contactStats = [
+    { value: "24/7", label: "Support Available" },
+    { value: "<24h", label: "Response Time" },
+  ];
+
   return (
     <>
-      <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-black/40 z-[-1]"></div>
-        <img
-          src={banner}
-          className="object-cover w-full h-full absolute inset-0 z-[-2]"
-          alt="Banner"
-        />
-        <div className="wrapper flex h-full py-[6rem] md:pt-[8rem] pb-16 items-center">
-          <h1 data-aos="fade-right" className="text_xl text-white">
-            Contact Us
-          </h1>
-        </div>
-      </section>
+      <PageBanner
+        title="Contact Us"
+        subtitle="Get in touch with our team to discuss your project requirements and how we can help bring your vision to life."
+        stats={contactStats}
+        dividerBg="bg-black"
+      />
       <ContactForm3 isBlackBg={true} />
       <MapComponent />
     </>

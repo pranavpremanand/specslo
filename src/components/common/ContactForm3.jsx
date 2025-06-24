@@ -7,6 +7,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { ImPhone } from "react-icons/im";
 import { IoLocation, IoMail } from "react-icons/io5";
+import { ourServices } from "../../content/ourServices";
 
 const ContactForm3 = ({ isBlackBg }) => {
   const { setLoading } = useContext(SpinnerContext);
@@ -29,6 +30,7 @@ const ContactForm3 = ({ isBlackBg }) => {
   const onSubmit = async (values) => {
     setLoading(true);
     try {
+      // Build the basic contact information
       let body =
         "Full Name : " +
         values.fullName +
@@ -39,14 +41,27 @@ const ContactForm3 = ({ isBlackBg }) => {
         "Phone : " +
         values.phone +
         "\n\n" +
-        "Message : " +
-        values.message +
-        "\n\n";
+        "Selected Services : \n";
+
+      // With react-hook-form and checkboxes, the requirements value will be an array of selected values
+      // Each checkbox with the same name creates an entry in the array when checked
+      const selectedServiceIds = Array.isArray(values.requirements)
+        ? values.requirements
+        : [values.requirements];
+
+      // Find the selected services by matching IDs
+      ourServices.forEach((service) => {
+        if (selectedServiceIds.includes(service.id.toString())) {
+          body += "• " + service.title + "\n";
+        }
+      });
+
+      body += "\n";
 
       const data = {
         body,
         name: "SPECSLO",
-        subject: values.subject,
+        subject: "New Contact Form Submission - Specslo",
         to: companyDetails.email,
       };
 
@@ -69,7 +84,7 @@ const ContactForm3 = ({ isBlackBg }) => {
     }
   };
   return (
-    <section className={`${isBlackBg ? "bg-black" : "bg-[#222222]"} py-14`}>
+    <section className={`${isBlackBg ? "bg-black" : "bg-[#111111]"} py-14`}>
       <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7">
         <form
           onSubmit={handleSubmit(onSubmit)}
@@ -134,6 +149,31 @@ const ContactForm3 = ({ isBlackBg }) => {
             <small className="text-red-500">{errors.phone?.message}</small>
           </div>
           <div className="space-y-1 grid">
+            <div className="space-y-2">
+              {ourServices.map((service) => (
+                <div key={service.id} className="flex items-center gap-2">
+                  <input
+                    id={service.id}
+                    type="checkbox"
+                    value={service.id}
+                    className="rounded-md accent-primary1 w-4 h-4"
+                    {...register("requirements", {
+                      required: "Please select at least one requirement",
+                    })}
+                  />
+                  <label htmlFor={service.id} className="cursor-pointer">
+                    {service.title}
+                  </label>
+                </div>
+              ))}
+            </div>
+            {errors.requirements && errors.requirements && (
+              <small className="text-red-500">
+                {errors.requirements.message}
+              </small>
+            )}
+          </div>
+          {/* <div className="space-y-1 grid">
             <label className="text-sm">Subject</label>
             <input
               type="text"
@@ -169,7 +209,7 @@ const ContactForm3 = ({ isBlackBg }) => {
             {errors.message && (
               <small className="text-red-500">{errors.message.message}</small>
             )}
-          </div>
+          </div> */}
           <button
             type="submit"
             className="btn bg-[#222222] hover:bg-black w-full text-white"

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { circleImg, companyDetails } from "../../content/constant";
+import { companyDetails } from "../../content/constant";
 import contactImg from "../../assets/images/contact.png";
 import { SpinnerContext } from "./SpinnerContext";
 import { useNavigate } from "react-router-dom";
@@ -69,7 +69,7 @@ const ContactForm1 = () => {
   };
   return (
     <div id="contact" className="relative pt-14 pb-4 overflow-hidden">
-      <img
+      {/* <img
         loading="lazy"
         src={circleImg}
         className="z-[-1] absolute top-[-2rem] left-[-2rem] w-[18rem] h-[18rem] object-contain aspect-square"
@@ -80,7 +80,7 @@ const ContactForm1 = () => {
         src={circleImg}
         className="absolute bottom-1/4 right-[2rem] w-[11rem] h-[11rem] object-contain aspect-square z-[-1]"
         alt=""
-      />
+      /> */}
       <div className="wrapper space-y-3">
         <p className="uppercase text-primary text-center">Contact Us</p>
         <h2 className="text1 text-center">Get a Quote Today</h2>

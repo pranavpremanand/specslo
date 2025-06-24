@@ -54,7 +54,7 @@ const Industries = () => {
       <div className="space-y-7">
         <div className="wrapper">
           <h2 className="text1 text-center">
-            <span className="text-primary1">Industries</span> We Serve
+            <span className="">Industries</span> We Serve
           </h2>
         </div>
 

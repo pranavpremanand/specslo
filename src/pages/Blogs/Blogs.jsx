@@ -1,24 +1,28 @@
 import React from "react";
-import banner from "../../assets/images/banners/banner.webp";
 import { blogs } from "../../content/blogs";
 import BlogItem from "../../components/website/BlogItem";
+import PageBanner from "../../components/common/PageBanner";
 
 const Blogs = () => {
+  // Calculate total number of blogs across all categories
+  const totalBlogs = Object.values(blogs).reduce(
+    (total, categoryBlogs) => total + categoryBlogs.length, 
+    0
+  );
+  
+  // const blogStats = [
+  //   { value: `${totalBlogs}+`, label: "Articles" },
+  //   { value: `${Object.keys(blogs).length}`, label: "Categories" }
+  // ];
+
   return (
     <>
-      <section className="relative w-full aspect-video min-h-[60vh] max-h-[80vh]">
-        <div className="absolute inset-0 h-full w-full bg-black/40 z-[-1]"></div>
-        <img
-          src={banner}
-          className="object-cover w-full h-full absolute inset-0 z-[-2]"
-          alt="Banner"
-        />
-        <div className="wrapper flex h-full py-[6rem] md:pt-[8rem] pb-16 items-center">
-          <h1 data-aos="fade-right" className="text_xl text-white">
-            Blogs
-          </h1>
-        </div>
-      </section>
+      <PageBanner 
+        title="Our Blog" 
+        subtitle="Insights, trends, and expert perspectives on technology, development, and digital transformation."
+        // stats={blogStats}
+        dividerBg="bg-black"
+      />
       <section className="py-14">
         <div className="wrapper space-y-[3rem]">
           <div className="space-y-2">

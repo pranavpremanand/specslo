@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ImPhone } from "react-icons/im";
 import { Link, useNavigate } from "react-router-dom";
-import { circleImg, companyDetails } from "../../content/constant";
+import { companyDetails } from "../../content/constant";
 import { IoLocation, IoMail } from "react-icons/io5";
 import { SpinnerContext } from "./SpinnerContext";
 import { useForm } from "react-hook-form";
@@ -75,7 +75,7 @@ const ContactForm2 = ({ isDark }) => {
         isDark ? "bg-black text-white" : "bg-white text-black"
       } text-black py-14 relative overflow-hidden`}
     >
-      {isDark ? (
+      {/* {isDark ? (
         <img
           data-aos="fade-up-right"
           loading="lazy"
@@ -90,7 +90,7 @@ const ContactForm2 = ({ isDark }) => {
           data-aos="fade-up-right"
           className="z-0 w-[8rem] md:w-[12rem] h-[8rem] md:h-[12rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute -bottom-4 -right-4 drop-shadow-2xl"
         ></div>
-      )}
+      )} */}
       <div className="wrapper flex flex-col-reverse md:grid grid-cols-2 gap-7 relative z-[1]">
         <form
           onSubmit={handleSubmit(onSubmit)}
