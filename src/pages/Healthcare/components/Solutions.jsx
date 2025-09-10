@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  healthcareWebSolutions,
-  moonShapeImg,
-} from "../../../content/constant";
+import { healthcareWebSolutions } from "../../../content/constant";
 import { useKeenSlider } from "keen-slider/react";
 import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import useScrollTriggerAnimations from "../../../hooks/useScrollTriggerAnimations";
@@ -61,32 +58,6 @@ const Solutions = () => {
   return (
     <section className="max-h-fit bg-black relative z-0 overflow-hidden">
       <div ref={scrollRef} className="pt-14 wrapper">
-        <img
-          data-aos="fade-down-right"
-          loading="lazy"
-          src={moonShapeImg}
-          width={400}
-          height={400}
-          className="object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] z-[-1]"
-          alt=""
-        />
-        <img
-          loading="lazy"
-          src={moonShapeImg}
-          width={400}
-          height={400}
-          className="object-contain absolute w-[28rem] h-[20rem] bottom-[-7.5rem] right-[-9rem] scale-x-[-1] scale-y-[-1] z-[1]"
-          alt=""
-        />
-        {/* <img
-          data-aos="fade-down-right"
-          loading="lazy"
-          src={circleImg}
-          width={150}
-          height={150}
-          className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] z-[-1]"
-          alt=""
-        /> */}
         <h2 data-aos="fade-up" className="text1 text-center">
           Explore Healthcare <span className="text-primary"> Solutions</span>
         </h2>

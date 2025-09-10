@@ -6,7 +6,6 @@ import WhyChooseUs from "../../components/common/WhyChooseUs";
 import { useEffect } from "react";
 import gsap from "gsap";
 import robot from "../../assets/images/ai-robot.png";
-// import ContactForm2 from "../../components/common/ContactForm2";
 import {
   appDevelopmentPortfolio,
   webDevelopmentPortfolio,
@@ -17,7 +16,9 @@ import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
 import ReactPlayer from "react-player";
 import banner from "../../assets/videos/banner.mp4";
-import ContactForm3 from "../../components/common/ContactForm3";
+import ContactForm from "../../components/common/ContactForm";
+import BlogsSlider from "../../components/website/BlogsSlider";
+import { CTA1 } from "../../components/common/CTA";
 
 export default function Home() {
   useEffect(() => {
@@ -72,22 +73,20 @@ export default function Home() {
             data-aos="fade-up"
             className="space-y-6 relative z-10 py-[3rem] lg:py-[6rem]"
           >
-            <div className="w-16 h-1 bg-primary rounded-full mb-4 hidden lg:block"></div>
-            <h1 className="banner-heading text1 font-montserrat max-w-[60rem] leading-tight">
-              Got Specs,{" "}
-              <span className="text-primary font-montserrat relative inline-block">
-                But No One's Building What You Actually Need?
+            <h1 className="text_xl max-w-[60rem] leading-tight">
+              You’ve Got <span className="bg-primary text-black">Specs</span>
+              <span className="text1 relative inline-block">
+                But No One Gets It Right ?<br />
+                <span className="text-primary font-glacial">
+                  We’ll Build What Matters.
+                </span>
                 <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary opacity-70"></span>
               </span>
             </h1>
             <p className="banner-desc desc max-w-2xl pb-3 text-gray-200 text-lg">
-              Let's fix that. At{" "}
-              <span className="font-bold text-white">Specslo</span>, with{" "}
-              <span className="text-primary font-bold">100+</span> successful
-              deployments across
-              <span className="text-primary font-bold"> 7</span> industries, we
-              merge AI, design, and development to transform your specs into
-              smart, scalable digital products — built for what's next.
+              At Specslo, we turn your specs into scalable digital products that
+              solve real problems. We build AI software, apps, and websites that
+              help you launch faster and lead your market.
             </p>
 
             {/* Moved buttons up for better flow */}
@@ -127,9 +126,9 @@ export default function Home() {
 
         {/* What to expect section */}
         <div className="relative z-10 w-full py-[4rem] wrapper text-center bg-gradient-to-b from-transparent to-black">
-          <div className="w-24 h-1 bg-primary mx-auto mb-6 rounded-full"></div>
-          <h2 className="text1 font-montserrat">
-            What You Can <span className="text-primary">Expect</span> From Us?
+          <h2 className="text2">
+            What You Can{" "}
+            <span className="text-primary font-glacial">Expect</span> From Us?
           </h2>
         </div>
       </section>
@@ -137,12 +136,21 @@ export default function Home() {
       <ServicesSection />
       <IndustriesSection />
       <WorkProcess />
-      <WhyChooseUs />
       <section className="py-14">
-        <div className="wrapper">
-          <h2 data-aos="fade-up" className="text1 text-center">
-            Few of <span className="text-primary"> Our Works</span>
+        <div className="wrapper text-center space-y-2">
+          <h2
+            data-aos="fade-up"
+            className="text1 border-b-2 pb-3 border-primary w-fit mx-auto"
+          >
+            Our{" "}
+            <span className="bg-primary text-black font-glacial p-1">
+              {" "}
+              Builds
+            </span>
           </h2>
+          <p data-aos="fade-up" className="desc">
+            A showcase of solutions crafted to fit and perform.
+          </p>
           <div className="flex flex-wrap justify-center gap-7 pt-8">
             {webDevelopmentPortfolio
               .slice(0, 2)
@@ -151,7 +159,7 @@ export default function Home() {
                 <PortfolioItem key={item.id} item={item} />
               ))}
           </div>
-          <div data-aos="fade-up" className="mt-10 flex justify-center">
+          <div data-aos="fade-up" className="pt-10 flex justify-center">
             <Link
               to="/portfolio"
               className="btn bg-primary text-black border border-primary min-w-[15rem] uppercase hover:bg-black hover:text-white hover:border-white hover:shadow-large hover:shadow-primary/60"
@@ -161,58 +169,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-14 bg-black">
-        <div data-aos="fade-up" className="wrapper">
-          <h2 className="text1 text-center">
-            Our Latest <span className="text-primary">Blogs</span>
-          </h2>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-7 pt-8">
-            {blogs.OTHER.sort((a, b) => b.id - a.id).map((blog) => (
-              <div
-                key={blog.id}
-                className="p-3 border border-primary2 rounded-xl flex justify-between flex-col gap-6"
-              >
-                <div className="flex flex-col gap-3">
-                  <Link
-                    to={blog.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group"
-                  >
-                    <div className="overflow-hidden aspect-[5/3] rounded-xl">
-                      <img
-                        src={blog.image}
-                        alt="Blog"
-                        className="object-cover w-full aspect-[5/3] group-hover:brightness-90 group-hover:scale-105 transition-all duration-300"
-                      />
-                    </div>
-                  </Link>
-                  <Link
-                    to={blog.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text3 !font-medium mt-2 link"
-                  >
-                    {blog.title}
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 flex justify-center">
-            <Link
-              to="/blogs"
-              className="btn bg-primary text-black border border-primary min-w-[15rem] uppercase hover:bg-black hover:text-white hover:border-white hover:shadow-large hover:shadow-primary/60"
-            >
-              View All Blogs
-            </Link>
-          </div>
-        </div>
-      </section>
       <Testimonials />
+      <BlogsSlider />
+      <CTA1 />
       <Faqs />
-      {/* <ContactForm2 isDark={true} /> */}
-      <ContactForm3 isBlackBg={true} />
+      <ContactForm />
     </>
   );
 }

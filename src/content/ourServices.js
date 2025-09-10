@@ -3,9 +3,8 @@ export const ourServices = [
   {
     id: 1,
     title: "Web Development",
-    subHeading: "Custom sites. Seamless experiences. Built around your brand.",
-    image: require("../assets/images/services/web-dev1.jpeg"),
-    desc: "From sleek landing pages to powerful e-commerce platforms, we build websites that load fast, look great, and convert — all aligned with your specs.",
+    image: require("../assets/images/services/1. Website Devlopment.webp"),
+    desc: "We craft fast, clear websites from scratch that align with your vision and drive real results.",
     serviceDetails: {
       banner: require("../assets/images/services/web-dev/banner.jpeg"),
       img1: require("../assets/images/services/web-dev/1.jpeg"),
@@ -152,9 +151,8 @@ export const ourServices = [
   {
     id: 2,
     title: "App Development",
-    subHeading: "Apps that move with your users — and your goals.",
-    image: require("../assets/images/services/app-dev1.jpeg"),
-    desc: "Whether Android or iOS, we create intuitive, feature-rich mobile apps tailored to your business logic, user flow, and long-term growth.",
+    image: require("../assets/images/services/2. Application Devlopment.webp"),
+    desc: "We build fast, reliable apps that streamline your workflows and adapt as your business evolves.",
     serviceDetails: {
       banner: require("../assets/images/services/app-dev/banner.jpeg"),
       img1: require("../assets/images/services/app-dev/1.jpeg"),
@@ -309,10 +307,9 @@ export const ourServices = [
   },
   {
     id: 3,
-    title: "Custom Software Development",
-    subHeading: "Your business is unique. Your software should be too.",
-    image: require("../assets/images/services/custom-software1.jpeg"),
-    desc: "We build scalable, secure, high-performance solutions that solve your real problems — not generic tools, but software shaped by your specs.",
+    title: "Software Development",
+    image: require("../assets/images/services/3. Software Devlopment.webp"),
+    desc: "We build robust, scalable software to replace patchwork systems and keep your business running efficiently.",
     serviceDetails: {
       banner: require("../assets/images/services/custom-software/banner.jpeg"),
       img1: require("../assets/images/services/custom-software/1.jpeg"),
@@ -459,9 +456,8 @@ export const ourServices = [
   {
     id: 4,
     title: "AI Solutions",
-    subHeading: "Make your systems smarter — the way you need them.",
-    image: require("../assets/images/services/ai1.png"),
-    desc: "We integrate AI where it matters most : automation, predictions, chatbots, and beyond — customized to optimize your workflows and decisions.",
+    image: require("../assets/images/services/4. AI Solutions.webp"),
+    desc: "We build AI-powered tools that automate repetitive tasks and help your team focus on what matters.",
     serviceDetails: {
       banner: require("../assets/images/services/ai/banner.jpeg"),
       img1: require("../assets/images/services/ai/1.png"),
@@ -624,10 +620,9 @@ export const ourServices = [
   },
   {
     id: 5,
-    title: "Data Science & Analytics",
-    subHeading: "From raw data to real impact.",
-    image: require("../assets/images/services/data-science1.jpeg"),
-    desc: "We turn your data into actionable insights with predictive models, dashboards, and trend analysis — helping you stay three steps ahead.",
+    title: "Data Science & Analystics",
+    image: require("../assets/images/services/5 .Data Science & Analystics.webp"),
+    desc: "We turn your data into clear insights that guide decisions and drive smarter business moves.",
     serviceDetails: {
       banner: require("../assets/images/services/data-science/banner.jpeg"),
       img1: require("../assets/images/services/data-science/1.png"),
@@ -787,9 +782,8 @@ export const ourServices = [
   {
     id: 6,
     title: "Game Development",
-    subHeading: "Bring your game specs to life — across any platform.",
-    image: require("../assets/images/services/game-dev1.jpeg"),
-    desc: "From concept to launch, we develop immersive 2D/3D games, multiplayer systems, and real-time environments tailored to your creative vision.",
+    image: require("../assets/images/services/6 Game Develpment.webp"),
+    desc: "We craft games that captivate players, tell stories, and turn ideas into interactive experiences.",
     serviceDetails: {
       banner: require("../assets/images/services/game-dev/banner.jpeg"),
       img1: require("../assets/images/services/game-dev/1.jpeg"),
@@ -932,9 +926,8 @@ export const ourServices = [
   {
     id: 7,
     title: "UI/UX Design",
-    subHeading: "Specs-led design that speaks to your users.",
-    image: require("../assets/images/services/uiux1.jpeg"),
-    desc: "Our design team creates interfaces that are not just beautiful — but functional, accessible, and aligned with your user journey and goals.",
+    image: require("../assets/images/services/7. UIUX Design.webp"),
+    desc: "We craft stunning, intuitive interfaces that keep users engaged and your product unforgettable.",
     serviceDetails: {
       banner: require("../assets/images/services/uiux/banner.jpeg"),
       img1: require("../assets/images/services/uiux/1.jpeg"),

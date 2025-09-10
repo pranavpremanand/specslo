@@ -1,13 +1,11 @@
 import logo from "../assets/logo/logo.png";
-import circleImg from "../assets/images/circle.png";
-import moonShapeImg from "../assets/images/yellow-moon-shape.png";
 import { IoChatbubblesOutline, IoDiamondOutline } from "react-icons/io5";
 import { RiTeamLine } from "react-icons/ri";
 import { IoMdGlobe } from "react-icons/io";
 import { LuBrainCircuit } from "react-icons/lu";
 import { FaBrain } from "react-icons/fa";
 
-export { logo, circleImg, moonShapeImg };
+export { logo };
 
 export const companyDetails = {
   email: "support@specslo.com",
@@ -26,44 +24,37 @@ export const industries = [
   {
     id: 1,
     title: "FinTech and Banking",
-    icon: "/assets/images/icons/FinTech and Banking.png",
-    image: require("../assets/images/industries/Finance & Banking.webp"),
+    image: require("../assets/images/industries/1. FinTech & Banking.webp"),
   },
   {
     id: 2,
     title: "Healthcare and Biotech",
-    icon: "/assets/images/icons/Healthcare and Biotech.png",
-    image: require("../assets/images/industries/Healthcare.webp"),
+    image: require("../assets/images/industries/2. Healthcare & Biotech.webp"),
   },
   {
     id: 3,
     title: "E-commerce and Retail",
-    icon: "/assets/images/icons/E-commerce and Retail.png",
-    image: require("../assets/images/industries/E-commerce & Retail.webp"),
+    image: require("../assets/images/industries/3. E-commerce and Retail.webp"),
   },
   {
     id: 4,
     title: "Gaming and Entertainment",
-    icon: "/assets/images/icons/Gaming and Entertainment.png",
-    image: require("../assets/images/industries/Game.webp"),
+    image: require("../assets/images/industries/4. Gaming and Entertainment.webp"),
   },
   {
     id: 5,
     title: "Logistics and Supply Chain Management",
-    icon: "/assets/images/icons/Logistics and Supply Chain Management.png",
-    image: require("../assets/images/industries/Logistics & Supply Chain.webp"),
+    image: require("../assets/images/industries/5. Logistics and Supply Chain Management.webp"),
   },
   {
     id: 6,
     title: "Education and E-Learning",
-    icon: "/assets/images/icons/Education and E-Learning.png",
-    image: require("../assets/images/industries/Education.webp"),
+    image: require("../assets/images/industries/6. Education and E-Learning.webp"),
   },
   {
     id: 7,
     title: "Restaurants and Hotels",
-    icon: "/assets/images/icons/Restaurants and Hotels.png",
-    image: require("../assets/images/industries/Restaurants and Hotels.webp"),
+    image: require("../assets/images/industries/7. Restaurants and Hotels.webp"),
   },
 ];
 
@@ -91,45 +82,6 @@ export const testimonials = [
       "Their Al and data science services revolutionized our analytics. We can now make smarter, data-driven decisions effortlessly.",
     position: "COO",
     company: "GLOBAL TRADE CORP",
-  },
-];
-
-export const futureGoals = [
-  {
-    icon: <LuBrainCircuit size={30} />,
-    title: "Lead with AI Innovation",
-    description:
-      "Advance real-world AI applications — especially in healthcare, where smart diagnostics, predictive care, and automated systems can transform patient outcomes.",
-  },
-  {
-    icon: <IoMdGlobe size={30} />,
-    title: "Go Global, Stay Custom",
-    description:
-      "Expand Specslo’s global reach while delivering personalized, specs-based solutions to every client, everywhere.",
-  },
-  {
-    icon: <RiTeamLine size={30} />,
-    title: "Redefine User Experience",
-    description:
-      "Deliver seamless, intuitive digital experiences across all platforms — making every interaction meaningful and efficient.",
-  },
-  {
-    icon: <IoChatbubblesOutline size={30} />,
-    title: "Expand Solutions for Modern Business",
-    description:
-      "Grow our services to meet evolving digital needs and become your go-to partner for transformative technology.",
-  },
-  {
-    icon: <IoDiamondOutline size={30} />,
-    title: "Build Sustainable Tech",
-    description:
-      "Blend innovation with responsibility by integrating eco-conscious, ethical development practices into everything we build.",
-  },
-  {
-    icon: <FaBrain size={30} />,
-    title: "Empower Through Data & Intelligence",
-    description:
-      "Leverage AI, ML, and data science to help businesses make smarter decisions, faster — shaping a future that’s proactive, not reactive.",
   },
 ];
 

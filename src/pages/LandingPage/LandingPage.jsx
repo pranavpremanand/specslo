@@ -87,17 +87,17 @@ export default function LandingPage({ page }) {
           >
             <div className="w-16 h-1 bg-primary rounded-full mb-4 hidden lg:block"></div>
             {isWeb ? (
-              <h1 className="banner-heading text1 font-montserrat max-w-[60rem] leading-tight">
+              <h1 className="banner-heading text1 font-glacial max-w-[60rem] leading-tight">
                 Elevate Your Business with Cutting-Edge{" "}
-                <span className="text-primary font-montserrat relative inline-block">
+                <span className="text-primary font-glacial relative inline-block">
                   Web Solutions
                   <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary opacity-70"></span>
                 </span>
               </h1>
             ) : (
-              <h1 className="banner-heading text1 font-montserrat max-w-[55rem] leading-tight">
+              <h1 className="banner-heading text1 font-glacial max-w-[55rem] leading-tight">
                 Elevate Your Business with Next-Generation{" "}
-                <span className="text-primary font-montserrat relative inline-block">
+                <span className="text-primary font-glacial relative inline-block">
                   Mobile Apps
                   <span className="absolute -bottom-2 left-0 w-full h-[3px] bg-primary opacity-70"></span>
                 </span>

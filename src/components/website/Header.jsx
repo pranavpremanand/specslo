@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { Divide as Hamburger } from "hamburger-react";
 import { logo } from "../../content/constant";
 import Drawer from "react-modern-drawer";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
 
 // Website links
 export const websiteLinks = [
   { id: 1, title: "Home", url: "/" },
-  { id: 2, title: "About Specslo", url: "/about-us" },
+  { id: 2, title: "Who We Are", url: "/about-us" },
   { id: 3, title: "Services", url: "/services" },
   { id: 4, title: "Healthcare Solutions", url: "/healthcare" },
   { id: 5, title: "Portfolio", url: "/portfolio" },
@@ -18,7 +18,6 @@ export const websiteLinks = [
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { pathname } = useLocation();
 
   const toggleDrawer = () => setIsOpen((prevState) => !prevState);
 
@@ -37,7 +36,7 @@ const Header = () => {
           </a>
 
           {/* Desktop Navigation */}
-          <div
+          {/* <div
             data-aos="fade-down"
             className="hidden lg:flex items-center gap-10"
           >
@@ -52,10 +51,10 @@ const Header = () => {
                 {link.title}
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Mobile Hamburger Button */}
-          <button data-aos="fade-down" className="lg:hidden">
+          <button data-aos="fade-down" className="">
             <Hamburger toggled={isOpen} toggle={setIsOpen} size={28} />
           </button>
         </div>

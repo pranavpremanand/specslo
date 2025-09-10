@@ -9,41 +9,14 @@ const IndustriesSection = () => {
       className="max-h-fit bg-black relative overflow-hidden"
     >
       <div className="pt-14 wrapper">
-        <img
-          loading="lazy"
-          src={moonShapeImg}
-          width={400}
-          height={400}
-          className="toTopLeft object-contain absolute w-[28rem] h-[20rem] top-[-7.5rem] left-[-10rem] -z-0"
-          alt=""
-        />
-        <img
-          loading="lazy"
-          src={moonShapeImg}
-          width={400}
-          height={400}
-          className="toBottomRight object-contain absolute w-[28rem] h-[20rem] bottom-[-7.5rem] right-[-9rem] scale-x-[-1] scale-y-[-1] -z-0"
-          alt=""
-        />
-        {/* <img
-          data-aos="fade-down-right"
-          loading="lazy"
-          src={circleImg}
-          width={150}
-          height={150}
-          className="fromLeftToTopRight object-contain absolute w-[10rem] h-[10rem] top-[2rem] right-[-2rem] -z-0"
-          alt=""
-        /> */}
         <div data-aos="fade-up" className="z-0 relative text-center space-y-3">
-          <h2 className="text1">
-            <span className="text-primary">Specs </span>
-            in Every Industry
+          <h2 className="text1 border-b w-fit mx-auto pb-2 border-primary">
+            <span className="font-glacial text-primary">Specs</span> That Fit Every{" "}
+            <span className="font-glacial text-primary">Industry</span>
           </h2>
-          <h4 className="text2">Your Specs. Our Tech. Real Impact.</h4>
           <p className="desc max-w-4xl mx-auto">
-            We don’t just serve industries — we decode their specs and deliver
-            exactly what’s needed. From custom workflows to AI-powered tools, we
-            build solutions that align perfectly with each sector’s demands.
+            We decode your specs and build tech that aligns with your industry's
+            unique demands.
           </p>
         </div>
       </div>
@@ -64,7 +37,7 @@ const IndustriesSection = () => {
                   className="absolute inset-0 w-full h-full object-cover z-[-1] grayscale group-hover:grayscale-0 transition-all duration-500"
                 />
               </div>
-              <h6 className="text4 !font-normal py-2 text-center">
+              <h6 className="text4 text-primary py-2 text-center">
                 {item.title}
               </h6>
             </div>

@@ -14,6 +14,7 @@ const PortfolioItem = ({ item, isServiceVisible }) => {
       <img
         src={item.image}
         alt={item.title}
+        loading="lazy"
         className="w-full h-full group-hover:scale-125 hover:rotate-12 transition-all duration-500"
       />
       <h5 className="text3 absolute w-full bottom-0 left-0 py-3 bg-primary text-black text-center">

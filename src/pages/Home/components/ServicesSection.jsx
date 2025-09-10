@@ -1,6 +1,5 @@
 import React from "react";
-import { BsArrowRight } from "react-icons/bs";
-import { GoArrowLeft, GoArrowRight } from "react-icons/go";
+import { PiCaretLeftBold, PiCaretRightBold } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import { useKeenSlider } from "keen-slider/react";
 import { createUrlParam } from "../../../utils/helper";
@@ -17,7 +16,7 @@ const ServicesSection = () => {
     drag: true,
     slides: {
       perView: 2,
-      spacing: 30,
+      spacing: 20,
       origin: "auto",
     },
     breakpoints: {
@@ -35,8 +34,8 @@ const ServicesSection = () => {
       },
       "(min-width: 1024px)": {
         slides: {
-          perView: 2,
-          spacing: 30,
+          perView: 3,
+          spacing: 20,
         },
       },
     },
@@ -64,89 +63,84 @@ const ServicesSection = () => {
   };
   return (
     <div className="bg-white text-black py-14">
-      <div className="py-3 border-y border-y-black/20">
+      <div className="py-3">
         <div
           data-aos="fade-right"
           className="wrapper flex justify-between items-center gap-7"
         >
-          <p className="uppercase">services</p>
-          <Link to="/services">
-            <BsArrowRight
-              className="text-primary1"
-              strokeWidth={0.5}
-              size={30}
-            />
+          <p className="text3 font-ibmPlex bg-primary p-2 rounded-lg">
+            Services
+          </p>
+          <Link
+            to="/services"
+            className="w-10 h-10 flex items-center justify-center bg-primary rounded-full hover:bg-black hover:text-primary transition-all duration-200"
+          >
+            <PiCaretRightBold strokeWidth={0.5} size={30} />
           </Link>
         </div>
       </div>
       <div
         ref={scrollRef}
-        className="wrapper pt-20 grid md:grid-cols-[40%_1fr] gap-6"
+        className="wrapper pt-10 grid lg:grid-cols-[25%_1fr] gap-6"
       >
         <div className="relative space-y-4">
-          {/* <div className="w-[8rem] h-[8rem] rounded-full bg-[radial-gradient(circle,_#FFFFFF,_#FFFF82)] absolute bottom-[1rem] right-4 sm:right-[4rem] drop-shadow-2xl z-[1]"></div> */}
+          <div className="h-[2px] w-full bg-black"></div>
+          <h2 data-aos="fade-right" className="text1 z-[2] relative">
+            <div
+              data-aos="fade-right"
+              className="absolute left-0 top-0 w-[3rem] h-full bg-primary z-0"
+            ></div>
+            <p className="pl-4">
+              <span className="relative z-[1] font-glacial">
+                Specs <br />
+                Inspired <br />
+                Services
+              </span>
+            </p>
+          </h2>
+          <div className="h-[1.5px] w-full bg-black"></div>
+          <p className="desc z-[2] relative">
+            We don’t believe in one-size-fits-all. Your specs shape every
+            service we offer
+          </p>
           <div
             data-aos="fade-right"
-            className="flex items-center gap-4 z-[2] relative"
+            className="flex ml-10 gap-5 z-[2] relative"
           >
-            <div className="h-[2px] w-[4rem] bg-primary1"></div>
-            <p className="font-semibold uppercase">Specs Inspired Services</p>
-          </div>
-          <h2 data-aos="fade-right" className="text1 z-[2] relative">
-            We Don’t Just Code — <br />{" "}
-            <span className="text-primary1">We Build Around Your </span>Specs
-            <br />
-          </h2>
-          <p className="desc z-[2] relative">
-            At Specslo , every service starts with your specifications. We don’t
-            believe in one-size-fits-all. We craft smart, scalable, and
-            purpose-built digital solutions — designed to fit, built to perform.
-          </p>
-          <div data-aos="fade-right" className="flex gap-5 z-[2] relative">
             <button
               onClick={prevClick}
-              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-black text-gray-500 btn hover:bg-primary hover:text-black"
+              className="w-10 h-10 flex items-center justify-center rounded-full btn text-black btn hover:bg-black hover:text-primary bg-primary"
             >
-              <GoArrowLeft size={35} />
+              <PiCaretLeftBold strokeWidth={0.5} size={30} />
             </button>
             <button
               onClick={nextClick}
-              className="h-[4rem] w-[4rem] flex items-center justify-center rounded-full p-2 btn bg-white border-2 border-primary1 text-black btn hover:bg-primary1"
+              className="w-10 h-10 flex items-center justify-center rounded-full btn text-black btn hover:bg-black hover:text-primary bg-primary"
             >
-              <GoArrowRight size={35} />
+              <PiCaretRightBold strokeWidth={0.5} size={30} />
             </button>
           </div>
         </div>
-        <div
-          data-aos="fade-up"
-          ref={sliderRef}
-          className="keen-slider md:!w-[60vw] py-10 md:px-2"
-        >
+        <div data-aos="fade-up" ref={sliderRef} className="keen-slider w-full">
           {ourServices.map((item) => (
-            <div key={item.title} className="keen-slider__slide rounded-2xl">
-              <div className="bg-[#eeefef] h-full border border-white shadow-large p-7 rounded-xl space-y-3 hover:bg-primary transition-all duration-300 shadow-black/20">
+            <Link
+              to={`/services/${createUrlParam(item.title)}`}
+              key={item.title}
+              className="keen-slider__slide border-4 border-primary"
+            >
+              <div className="bg-black hover:text-black text-white h-full px-4 py-2 shadow-large space-y-3 hover:bg-primary transition-all duration-300 shadow-black/20">
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="aspect-video object-cover rounded-xl"
-                  // className="aspect-[19/9] object-cover rounded-xl"
+                  className="aspect-square object-cover"
                 />
-                <div className="space-y-2 pt-3">
+                <div className="space-y-2 py-2 px-1">
                   <h4 className="text3">{item.title}</h4>
-                  <h6 className="text4 !font-medium text-gray-700">{item.subHeading}</h6>
                   <p className="desc">{item.desc}</p>
-                  <div className="pt-3">
-                    <Link
-                      to={`/services/${createUrlParam(item.title)}`}
-                      className="btn border border-black text-black uppercase hover:bg-primary1"
-                    >
-                      Read More
-                    </Link>
-                  </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

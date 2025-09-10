@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Testimonials from "../../components/common/Testimonials";
 import Faqs from "../../components/common/Faqs";
-import CTA from "../../components/common/CTA";
+import { CTA1 } from "../../components/common/CTA";
 import { ourServices } from "../../content/ourServices";
 import { createUrlParam } from "../../utils/helper";
 import PageBanner from "../../components/common/PageBanner";
@@ -50,7 +50,7 @@ const Services = () => {
         </div>
       </section>
       <Faqs />
-      <CTA />
+      <CTA1 />
       <Testimonials />
     </>
   );
